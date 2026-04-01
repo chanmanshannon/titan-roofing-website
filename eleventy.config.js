@@ -4,6 +4,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("*.png");
   eleventyConfig.addPassthroughCopy("*.pdf");
   eleventyConfig.addPassthroughCopy("admin");
+  eleventyConfig.addPassthroughCopy("images");
 
   return {
     dir: {
@@ -11,6 +12,7 @@ module.exports = function(eleventyConfig) {
       output: "_site",
       includes: "_includes",
       layouts: "_layouts"
-    }
+    },
+    templateFormats: ["html", "md", "njk"]
   };
 };
