@@ -1,0 +1,46 @@
+---
+layout: post
+title: Roofing Tips & Local Insights
+description: Expert roofing advice for Greater Houston homeowners from Titan Roofing — CertainTeed SELECT ShingleMaster and veteran-owned since 2002.
+---
+<style>
+  .blog-index { max-width: 900px; margin: 0 auto; padding: 56px 24px 80px; }
+  .blog-index h2 { font-family: 'Bebas Neue', sans-serif; font-size: 36px; letter-spacing: 1px; color: var(--titan-navy); margin-bottom: 8px; }
+  .blog-index .subtitle { font-size: 16px; color: var(--titan-gray); margin-bottom: 40px; }
+  .post-grid { display: grid; gap: 28px; }
+  .post-card { border: 1px solid #E5E7EB; border-radius: 10px; padding: 32px; transition: box-shadow 0.2s; }
+  .post-card:hover { box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+  .post-card-label { font-family: 'Barlow Condensed', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--titan-red); margin-bottom: 10px; }
+  .post-card h3 { font-family: 'Bebas Neue', sans-serif; font-size: 26px; letter-spacing: 0.5px; color: var(--titan-navy); margin-bottom: 10px; }
+  .post-card h3 a { text-decoration: none; color: inherit; }
+  .post-card h3 a:hover { color: var(--titan-red); }
+  .post-card p { font-size: 15px; color: #4B5563; line-height: 1.7; margin-bottom: 16px; }
+  .post-card-meta { font-size: 13px; color: var(--titan-gray); }
+  .empty-state { text-align: center; padding: 80px 24px; color: var(--titan-gray); }
+  .empty-state p { font-size: 16px; }
+</style>
+
+<div class="blog-index">
+  <h2>Roofing Tips & Local Insights</h2>
+  <p class="subtitle">Expert advice for Greater Houston homeowners — from the team that's installed 30,000+ roofs since 2002.</p>
+
+  <div class="post-grid">
+    {%- assign posts = collections.post | reverse -%}
+    {%- if posts.size > 0 -%}
+      {%- for post in posts -%}
+      <div class="post-card">
+        <div class="post-card-label">Titan Roofing Blog</div>
+        <h3><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
+        {%- if post.data.description -%}
+        <p>{{ post.data.description }}</p>
+        {%- endif -%}
+        <div class="post-card-meta">{{ post.date | date: "%B %d, %Y" }}</div>
+      </div>
+      {%- endfor -%}
+    {%- else -%}
+      <div class="empty-state">
+        <p>Articles coming soon. Check back shortly.</p>
+      </div>
+    {%- endif -%}
+  </div>
+</div>

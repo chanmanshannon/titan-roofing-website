@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title }} | Titan Roofing</title>
+  <meta name="description" content="{{ description }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,400;0,600;0,700;1,400&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --titan-navy: #1B2A4A;
+      --titan-red: #C41E3A;
+      --titan-red-dark: #A01830;
+      --titan-gold: #D4A853;
+      --titan-white: #FFFFFF;
+      --titan-light: #F8F9FA;
+      --titan-dark: #1A1A2E;
+      --titan-gray: #6B7280;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+      --radius: 6px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Barlow', sans-serif; color: var(--titan-dark); background: var(--titan-white); }
+
+    /* TOPBAR */
+    .topbar { background: var(--titan-navy); color: white; padding: 8px 0; font-size: 13px; }
+    .topbar .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+    .topbar a { color: white; text-decoration: none; font-weight: 600; }
+    .topbar-badges { display: flex; gap: 16px; align-items: center; }
+    .topbar-badge { display: inline-flex; align-items: center; gap: 5px; font-size: 12px; font-weight: 600; color: var(--titan-gold); letter-spacing: 0.5px; text-transform: uppercase; }
+    @media (max-width: 600px) { .topbar-badges { display: none; } }
+
+    /* NAVBAR */
+    .navbar { background: white; border-bottom: 1px solid #E5E7EB; position: sticky; top: 0; z-index: 100; box-shadow: var(--shadow-sm); }
+    .navbar .container { display: flex; justify-content: space-between; align-items: center; height: 70px; }
+    .nav-logo { font-family: 'Bebas Neue', sans-serif; font-size: 28px; color: var(--titan-navy); text-decoration: none; display: flex; align-items: center; gap: 10px; }
+    .nav-logo img { height: 48px; width: auto; object-fit: contain; }
+    .nav-links { display: flex; gap: 0; align-items: center; }
+    .nav-item { position: relative; padding: 0 14px; }
+    .nav-item > a { font-size: 14px; font-weight: 600; color: var(--titan-dark); text-decoration: none; letter-spacing: 0.3px; transition: color 0.2s; display: flex; align-items: center; gap: 4px; height: 70px; line-height: 70px; }
+    .nav-item > a:hover { color: var(--titan-red); }
+    .nav-cta { background: var(--titan-red); color: white !important; padding: 10px 22px; border-radius: var(--radius); margin-left: 14px; font-size: 14px; font-weight: 600; text-decoration: none; height: auto !important; line-height: normal !important; }
+    .nav-cta:hover { background: var(--titan-red-dark) !important; }
+    .mobile-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+    .mobile-toggle span { display: block; width: 24px; height: 2px; background: var(--titan-dark); margin: 5px 0; }
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 70px; left: 0; right: 0; background: white; box-shadow: 0 12px 24px rgba(0,0,0,0.1); padding: 16px 0; z-index: 100; }
+      .nav-links.open .nav-item > a { height: auto; line-height: normal; padding: 14px 24px; }
+      .nav-links.open .nav-cta { margin: 12px 24px; text-align: center; display: block; }
+      .mobile-toggle { display: block; }
+    }
+
+    /* ARTICLE */
+    .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+    .article-hero { background: linear-gradient(135deg, var(--titan-navy) 0%, #263B5E 100%); color: white; padding: 64px 0 48px; position: relative; }
+    .article-hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 4px; background: var(--titan-red); }
+    .article-label { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 3px; text-transform: uppercase; color: var(--titan-gold); margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
+    .article-label::before { content: ''; display: block; width: 30px; height: 2px; background: var(--titan-gold); }
+    .article-hero h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(32px, 5vw, 54px); line-height: 1.05; letter-spacing: 1.5px; margin-bottom: 20px; max-width: 800px; }
+    .article-meta { font-size: 14px; color: rgba(255,255,255,0.6); display: flex; gap: 20px; flex-wrap: wrap; }
+
+    .article-body { max-width: 760px; margin: 0 auto; padding: 56px 24px 80px; }
+    .article-body h2 { font-family: 'Barlow Condensed'; font-weight: 700; text-transform: none; letter-spacing: 0.3px, sans-serif; font-size: 32px; letter-spacing: 1px; color: var(--titan-navy); margin: 40px 0 16px; }
+    .article-body h3 { font-family: 'Barlow Condensed', sans-serif; font-size: 20px; font-weight: 700; color: var(--titan-navy); margin: 28px 0 12px; }
+    .article-body p { font-size: 16px; line-height: 1.8; color: #374151; margin-bottom: 20px; }
+    .article-body ul, .article-body ol { margin: 0 0 20px 24px; }
+    .article-body li { font-size: 16px; line-height: 1.8; color: #374151; margin-bottom: 8px; }
+    .article-body strong { color: var(--titan-navy); }
+    .article-body a { color: var(--titan-red); }
+    .article-body blockquote { border-left: 4px solid var(--titan-red); padding: 16px 24px; background: var(--titan-light); margin: 28px 0; border-radius: 0 var(--radius) var(--radius) 0; }
+    .article-body blockquote p { margin: 0; font-style: italic; color: var(--titan-navy); font-weight: 600; }
+
+    /* CTA BAND */
+    .cta-band { background: var(--titan-red); color: white; padding: 56px 0; text-align: center; }
+    .cta-band h2 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(28px, 4vw, 42px); letter-spacing: 1.5px; margin-bottom: 12px; }
+    .cta-band p { font-size: 16px; color: rgba(255,255,255,0.85); max-width: 560px; margin: 0 auto 24px; line-height: 1.7; }
+    .btn { display: inline-block; padding: 14px 32px; border-radius: var(--radius); font-family: 'Barlow', sans-serif; font-weight: 700; font-size: 15px; text-decoration: none; cursor: pointer; transition: all 0.2s; }
+    .btn-white { background: white; color: var(--titan-red); }
+    .btn-white:hover { background: #F3F4F6; }
+
+    /* FOOTER */
+    .footer { background: #0F1A2E; color: rgba(255,255,255,0.5); padding: 40px 0 24px; font-size: 13px; }
+    .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 32px; }
+    .footer-brand .footer-logo { font-family: 'Bebas Neue', sans-serif; font-size: 24px; color: white; margin-bottom: 12px; }
+    .footer-brand p { line-height: 1.65; max-width: 280px; }
+    .footer-col h4 { font-family: 'Barlow Condensed', sans-serif; font-size: 14px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: white; margin-bottom: 16px; }
+    .footer-col a { display: block; color: rgba(255,255,255,0.5); text-decoration: none; font-size: 13.5px; margin-bottom: 8px; }
+    .footer-col a:hover { color: white; }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 20px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+    @media (max-width: 900px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+  </style>
+</head>
+<body>
+
+  <!-- TOPBAR -->
+  <div class="topbar">
+    <div class="container">
+      <div><a href="tel:9362285061">(936) 228-5061</a></div>
+      <div class="topbar-badges">
+        <span class="topbar-badge">★ Veteran Owned</span>
+        <span class="topbar-badge">★ CertainTeed SELECT ShingleMaster</span>
+        <span class="topbar-badge">★ Since 2002</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="/" class="nav-logo">
+        <img src="/titanlogorevised_v3.png" alt="Titan Roofing">
+      </a>
+      <div class="nav-links" id="navLinks">
+        <div class="nav-item"><a href="/residential/">Residential</a></div>
+        <div class="nav-item"><a href="/commercial/">Commercial</a></div>
+        <div class="nav-item"><a href="/new-construction/">New Construction</a></div>
+        <div class="nav-item"><a href="/metal-accents/">Metal Accents</a></div>
+        <div class="nav-item"><a href="/storm-damage/">Storm Damage</a></div>
+        <div class="nav-item"><a href="/about/">About</a></div>
+        <div class="nav-item"><a href="/blog/">Blog</a></div>
+        <a href="/residential/#contact" class="nav-cta">Get a Quote</a>
+      </div>
+      <button class="mobile-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ARTICLE HERO -->
+  <div class="article-hero">
+    <div class="container">
+      <div class="article-label">Titan Roofing Blog</div>
+      <h1>{{ title }}</h1>
+      <div class="article-meta">
+        <span>{{ date | date: "%B %d, %Y" }}</span>
+        {% if author %}<span>By {{ author }}</span>{% endif %}
+      </div>
+    </div>
+  </div>
+
+  <!-- ARTICLE CONTENT -->
+  <div class="article-body">
+    {{ content }}
+  </div>
+
+  <!-- CTA BAND -->
+  <div class="cta-band">
+    <div class="container">
+      <h2>Ready for a Free Roof Inspection?</h2>
+      <p>Titan Roofing has installed 30,000+ roofs across Greater Houston since 2002. Let's talk about yours.</p>
+      <a href="tel:9362030034" class="btn btn-white">Call (936) 203-0034</a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">TITAN ROOFING</div>
+          <p>Veteran-owned. CertainTeed SELECT ShingleMaster. Serving Greater Houston since 2002.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <a href="/residential/">Residential Roofing</a>
+          <a href="/commercial/">Commercial Roofing</a>
+          <a href="/new-construction/">New Construction</a>
+          <a href="/metal-accents/">Metal Accents</a>
+          <a href="/storm-damage/">Storm Damage</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about/">About Us</a>
+          <a href="/blog/">Blog</a>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <a href="tel:9362285061">(936) 228-5061</a>
+          <a href="mailto:info@titanroofingtx.com">info@titanroofingtx.com</a>
+          <p style="margin-top:8px; color: rgba(255,255,255,0.35); font-size:12px;">Willis, TX — Serving Galveston to College Station</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 Titan Roofing. All rights reserved.</span>
+        <span>Licensed & Insured</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
