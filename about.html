@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Titan Roofing — Our Story | Veteran-Owned Since 2002</title>
+<meta name="description" content="Titan Roofing was founded in 2002 by Ed & Greg Brogdon — veteran brothers born into a family of carpenters. 30,000+ roofs built. CertainTeed SELECT ShingleMaster. Houston, TX.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --titan-navy: #1B2A4A; --titan-red: #C41E3A; --titan-red-dark: #A01830; --titan-white: #FFFFFF; --titan-light: #F4F5F7; --titan-warm: #FAF8F5; --titan-gray: #6B7280; --titan-dark: #111827; --titan-gold: #D4A853; --shadow-sm: 0 1px 3px rgba(0,0,0,0.08); --shadow-md: 0 4px 20px rgba(0,0,0,0.10); --shadow-lg: 0 12px 40px rgba(0,0,0,0.12); --radius: 6px; }
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Barlow', sans-serif; color: var(--titan-dark); background: var(--titan-white); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  .container { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+  .section { padding: 80px 0; }
+  .section-label { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 3px; text-transform: uppercase; color: var(--titan-red); margin-bottom: 10px; }
+  .section-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(32px, 5vw, 48px); letter-spacing: 1px; line-height: 1.1; color: var(--titan-navy); margin-bottom: 16px; }
+  .btn { display: inline-flex; align-items: center; gap: 8px; padding: 14px 28px; border-radius: var(--radius); font-family: 'Barlow', sans-serif; font-size: 15px; font-weight: 700; text-decoration: none; transition: all 0.25s; cursor: pointer; border: none; }
+  .btn-primary { background: var(--titan-red); color: white; }
+  .btn-primary:hover { background: var(--titan-red-dark); transform: translateY(-1px); }
+  .topbar { background: var(--titan-navy); color: rgba(255,255,255,0.8); font-size: 13px; padding: 8px 0; }
+  .topbar .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+  .topbar a { color: var(--titan-white); text-decoration: none; font-weight: 600; }
+  .topbar-badges { display: flex; gap: 16px; align-items: center; }
+  .topbar-badge { display: inline-flex; align-items: center; gap: 5px; font-size: 12px; font-weight: 600; color: var(--titan-gold); letter-spacing: 0.5px; text-transform: uppercase; }
+  @media (max-width: 600px) { .topbar-badges { display: none; } }
+  .navbar { background: var(--titan-white); border-bottom: 1px solid #E5E7EB; position: sticky; top: 0; z-index: 100; box-shadow: var(--shadow-sm); }
+  .navbar .container { display: flex; justify-content: space-between; align-items: center; height: 70px; }
+  .nav-logo { font-family: 'Bebas Neue', sans-serif; font-size: 28px; color: var(--titan-navy); text-decoration: none; display: flex; align-items: center; gap: 10px; }
+  .nav-logo img { height: 48px; width: auto; }
+  .nav-links { display: flex; gap: 0; align-items: center; }
+  .nav-item { position: relative; padding: 0 14px; }
+  .nav-item > a { font-size: 14px; font-weight: 600; color: var(--titan-dark); text-decoration: none; display: flex; align-items: center; gap: 4px; height: 70px; line-height: 70px; transition: color 0.2s; }
+  .nav-item > a:hover, .nav-item > a.active { color: var(--titan-red); }
+  .nav-arrow { font-size: 10px; transition: transform 0.2s; }
+  .nav-item:hover .nav-arrow { transform: rotate(180deg); }
+  .nav-dropdown { position: absolute; top: 100%; left: 0; background: white; min-width: 220px; border-radius: 0 0 8px 8px; box-shadow: 0 12px 32px rgba(0,0,0,0.12); border: 1px solid #E5E7EB; border-top: 3px solid var(--titan-red); opacity: 0; visibility: hidden; transform: translateY(-4px); transition: all 0.2s; z-index: 200; }
+  .nav-item:hover .nav-dropdown { opacity: 1; visibility: visible; transform: translateY(0); }
+  .nav-dropdown a { display: block; padding: 12px 20px; font-size: 14px; font-weight: 500; color: var(--titan-dark); text-decoration: none; border-bottom: 1px solid #F3F4F6; transition: all 0.15s; }
+  .nav-dropdown a:last-child { border-bottom: none; }
+  .nav-dropdown a:hover { background: var(--titan-light); color: var(--titan-red); padding-left: 24px; }
+  .nav-cta { background: var(--titan-red); color: var(--titan-white) !important; padding: 10px 22px; border-radius: var(--radius); margin-left: 14px; font-size: 14px; font-weight: 600; text-decoration: none; height: auto !important; line-height: normal !important; }
+  .nav-cta:hover { background: var(--titan-red-dark); }
+  .mobile-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+  .mobile-toggle span { display: block; width: 24px; height: 2px; background: var(--titan-dark); margin: 5px 0; }
+
+  .page-hero { background: linear-gradient(135deg, var(--titan-navy) 0%, #263B5E 50%, #1B2A4A 100%); color: white; padding: 80px 0 60px; position: relative; overflow: hidden; }
+  .page-hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 4px; background: var(--titan-red); }
+  .page-hero .container { position: relative; z-index: 2; }
+  .page-hero-label { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 3px; text-transform: uppercase; color: var(--titan-gold); margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
+  .page-hero-label::before { content: ''; display: block; width: 30px; height: 2px; background: var(--titan-gold); }
+  .page-hero h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(38px, 5.5vw, 58px); line-height: 1.05; letter-spacing: 1.5px; margin-bottom: 20px; }
+  .page-hero h1 em { color: var(--titan-red); font-style: normal; }
+  .page-hero p { font-size: 17px; line-height: 1.7; color: rgba(255,255,255,0.8); max-width: 640px; margin-bottom: 32px; }
+
+  /* Story */
+  .story-section { background: var(--titan-white); }
+  .story-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 56px; align-items: start; }
+  .story-content p { font-size: 15.5px; color: #4B5563; line-height: 1.8; margin-bottom: 16px; }
+  .story-content p:last-child { color: var(--titan-navy); font-weight: 600; font-style: italic; font-size: 16px; }
+  .story-values { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .story-value-card { background: var(--titan-light); border-radius: 10px; padding: 24px 20px; text-align: center; border: 1px solid transparent; transition: all 0.3s; }
+  .story-value-card:hover { border-color: #E5E7EB; box-shadow: var(--shadow-md); }
+  .story-value-icon { font-size: 28px; margin-bottom: 12px; }
+  .story-value-card h4 { font-family: 'Barlow Condensed', sans-serif; font-size: 16px; font-weight: 700; color: var(--titan-navy); margin-bottom: 6px; }
+  .story-value-card p { font-size: 13px; color: var(--titan-gray); line-height: 1.6; }
+
+  /* CertainTeed Section */
+  .cert-section { background: var(--titan-navy); color: white; }
+  .cert-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+  .cert-grid h3 { font-family: 'Barlow Condensed', sans-serif; font-size: 18px; font-weight: 700; margin-bottom: 14px; }
+  .cert-grid p { font-size: 15px; color: rgba(255,255,255,0.75); line-height: 1.75; margin-bottom: 16px; }
+  .cert-req { display: flex; gap: 10px; align-items: flex-start; margin-bottom: 10px; }
+  .cert-req-icon { color: var(--titan-red); font-weight: 700; flex-shrink: 0; }
+  .cert-req span { font-size: 14px; color: rgba(255,255,255,0.7); line-height: 1.6; }
+  .cert-warranty-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 20px; }
+  .cert-warranty-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); padding: 16px; border-radius: 8px; text-align: center; }
+  .cert-warranty-card strong { display: block; color: white; font-size: 14px; margin-bottom: 2px; }
+  .cert-warranty-card span { font-size: 12px; color: rgba(255,255,255,0.5); }
+
+  /* CTA */
+  .cta-band { background: var(--titan-red); color: white; padding: 48px 0; text-align: center; }
+  .cta-band h2 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(28px, 4vw, 42px); letter-spacing: 1.5px; margin-bottom: 12px; }
+  .cta-band p { font-size: 16px; color: rgba(255,255,255,0.85); max-width: 560px; margin: 0 auto 24px; line-height: 1.7; }
+  .cta-band .btn { background: white; color: var(--titan-red); }
+
+  .footer { background: #0F1A2E; color: rgba(255,255,255,0.5); padding: 40px 0 24px; font-size: 13px; }
+  .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 32px; }
+  .footer-brand .footer-logo { font-family: 'Bebas Neue', sans-serif; font-size: 24px; color: white; margin-bottom: 12px; }
+  .footer-brand p { line-height: 1.65; max-width: 280px; }
+  .footer-col h4 { font-family: 'Barlow Condensed', sans-serif; font-size: 14px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: white; margin-bottom: 16px; }
+  .footer-col a { display: block; color: rgba(255,255,255,0.5); text-decoration: none; font-size: 13.5px; margin-bottom: 8px; }
+  .footer-col a:hover { color: white; }
+  .footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 20px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+  @media (max-width: 900px) { .story-grid { grid-template-columns: 1fr; } .cert-grid { grid-template-columns: 1fr; } .footer-grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 768px) { .nav-links { display: none; } .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 70px; left: 0; right: 0; background: white; box-shadow: 0 12px 24px rgba(0,0,0,0.1); padding: 16px 0; z-index: 100; gap: 0; } .nav-links.open .nav-item { padding: 0; } .nav-links.open .nav-item > a { height: auto; line-height: normal; padding: 14px 24px; } .nav-links.open .nav-dropdown { position: static; opacity: 1; visibility: visible; transform: none; box-shadow: none; border: none; min-width: 100%; display: none; } .nav-links.open .nav-item.dropdown-open .nav-dropdown { display: block; } .nav-links.open .nav-dropdown a { padding-left: 44px; font-size: 13px; } .nav-links.open .nav-cta { margin: 12px 24px; text-align: center; display: block; } .mobile-toggle { display: block; } }
+
+  /* ── PROMO STICKY BAR ── */
+  .promo-bar {
+    background: var(--titan-red);
+    color: var(--titan-white);
+    text-align: center;
+    padding: 10px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    position: relative;
+    z-index: 101;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+  }
+  .promo-bar a {
+    color: var(--titan-gold);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    font-weight: 700;
+    margin-left: 6px;
+    white-space: nowrap;
+  }
+  .promo-bar .promo-bar-fine {
+    font-size: 11px;
+    font-weight: 400;
+    opacity: 0.75;
+    display: block;
+    margin-top: 4px;
+  }
+  @media (max-width: 600px) {
+    .promo-bar { font-size: 13px; padding: 10px 12px; line-height: 1.5; }
+  }
+
+</style>
+</head>
+<body>
+<!-- ── 250th ANNIVERSARY PROMO BAR ── -->
+<div class="promo-bar">
+  Celebrate America's 250th — <strong>$1,776 OFF</strong> your new roof! Must sign by July 4th.
+  <a href="tel:9362030034">Call to Claim Savings →</a>
+  <span class="promo-bar-fine">Reroofing &amp; metal accents only. Excludes insurance claims &amp; builder contracts.</span>
+</div>
+
+<div class="topbar"><div class="container"><span>Serving Greater Houston &nbsp;|&nbsp; <a href="tel:+19362285061">(936) 228-5061</a> &nbsp;|&nbsp; <a href="mailto:info@titanroofingtx.com">info@titanroofingtx.com</a></span><div class="topbar-badges"><span class="topbar-badge">★ Veteran Owned</span><span class="topbar-badge">★ Since 2002</span><span class="topbar-badge">★ CertainTeed SELECT ShingleMaster</span></div></div></div>
+
+<nav class="navbar"><div class="container">
+  <a href="index.html" class="nav-logo"><span class="logo-icon"><img src="titanlogorevised_v3.png" alt="Titan Roofing Logo"></span> Titan Roofing</a>
+  <div class="nav-links" id="navLinks">
+    <div class="nav-item"><a href="index.html">Home</a></div>
+    <div class="nav-item"><a href="#" onclick="return false;">Services <span class="nav-arrow">▾</span></a><div class="nav-dropdown"><a href="residential.html">Residential Reroofing</a><a href="storm-damage.html">Storm Damage &amp; Insurance</a><a href="new-construction.html">New Construction</a><a href="commercial.html">Commercial Roofing</a><a href="metal-accents.html">Metal Accents</a></div></div>
+    <div class="nav-item"><a href="#" onclick="return false;" class="active">Why Titan <span class="nav-arrow">▾</span></a><div class="nav-dropdown"><a href="about.html" style="color:var(--titan-red); font-weight:700;">Our Story</a><a href="#certainteed">CertainTeed Certification</a></div></div>
+    <div class="nav-item"><a href="index.html#reviews">Reviews</a></div>
+    <div class="nav-item"><a href="index.html#areas">Service Areas</a></div>
+    <a href="index.html#contact" class="nav-cta">Free Inspection →</a>
+  </div>
+  <button class="mobile-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')"><span></span><span></span><span></span></button>
+</div></nav>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero-label">About Titan Roofing</div>
+    <h1>ROOTED IN <em>FAMILY.</em><br>DRIVEN BY <em>CRAFT.</em></h1>
+    <p>Titan Roofing was founded in 2002 by Ed and Greg Brogdon — veteran brothers born into a family of carpenters with over three decades of construction experience between them.</p>
+  </div>
+</section>
+
+<!-- OUR STORY -->
+<section class="section story-section" id="our-story">
+  <div class="container">
+    <div class="story-grid">
+      <div>
+        <div class="section-label">Our Story</div>
+        <div class="section-title">How Titan Got Started</div>
+        <div class="story-content">
+          <p>Titan Roofing was founded in 2002 by Ed and Greg Brogdon — brothers born into a family of carpenters with sawdust in their veins and a handshake that still means something. Between them, they carry over three decades of construction experience, learned the old way: on job sites, from their father, one nail at a time.</p>
+          <p>Their vision was simple but stubborn — run a roofing company that does the same quality work on the 30,000th roof as it did on the first. No shortcuts. No excuses. A system rooted in consistency, where every crew member is trained to the same standard and every homeowner gets the same experience.</p>
+          <p>What makes Titan different isn't just experience — it's roots. Ed and Greg didn't move to Houston to chase storm work. They grew up here. They've raised their families here. And for 25 years, they've been installing roofs over the heads of their own neighbors. There's a good chance Titan originally roofed your home during new construction — and now they're the ones you call when it's time for a replacement.</p>
+          <p>That's not a sales pitch. That's just what happens when you stay in one place long enough, do good work, and treat people right.</p>
+        </div>
+      </div>
+      <div class="story-values">
+        <div class="story-value-card"><div class="story-value-icon">⚒️</div><h4>Family of Carpenters</h4><p>Construction isn't a career choice for the Brogdons — it's a family tradition passed down through generations.</p></div>
+        <div class="story-value-card"><div class="story-value-icon">🎖️</div><h4>Veteran Owned</h4><p>The same discipline, accountability, and commitment to service that defines military life defines how Titan operates.</p></div>
+        <div class="story-value-card"><div class="story-value-icon">📍</div><h4>Locally Rooted</h4><p>Based in Willis, TX — serving Greater Houston from Galveston to College Station. This is our home.</p></div>
+        <div class="story-value-card"><div class="story-value-icon">🤝</div><h4>Earned Reputation</h4><p>30,000+ roofs installed through word of mouth, repeat customers, and doing right by every homeowner.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CERTAINTEED CERTIFICATION -->
+<section class="section cert-section" id="certainteed">
+  <div class="container">
+    <div style="text-align: center; margin-bottom: 48px;">
+      <div class="section-label" style="color: var(--titan-gold);">Certification</div>
+      <div class="section-title" style="color: white;">CertainTeed SELECT ShingleMaster</div>
+      <p style="font-size: 17px; color: rgba(255,255,255,0.7); max-width: 660px; margin: 0 auto; line-height: 1.7;">The highest certification tier in the shingle roofing industry. Titan Roofing is proud to hold this designation, placing us in the top 1% of roofers nationwide.</p>
+    </div>
+    <div class="cert-grid">
+      <div>
+        <h3>What We Must Maintain</h3>
+        <p>To hold our SELECT ShingleMaster certification, Titan must continuously meet rigorous requirements:</p>
+        <div class="cert-req"><span class="cert-req-icon">✓</span><span>At least 50% of workforce must be Master Shingle Applicators, with at least one Shingle Quality Specialist</span></div>
+        <div class="cert-req"><span class="cert-req-icon">✓</span><span>Strict adherence to Code of Ethics and Professional Practices</span></div>
+        <div class="cert-req"><span class="cert-req-icon">✓</span><span>Current worker compensation and liability insurance at all times</span></div>
+        <div class="cert-req"><span class="cert-req-icon">✓</span><span>Regular testing and re-accreditation on the Shingle Applicators Manual</span></div>
+        <div class="cert-req"><span class="cert-req-icon">✓</span><span>Demonstrated product knowledge for client consultation</span></div>
+        <div class="cert-req"><span class="cert-req-icon">✓</span><span>Minimum 5 years in business or 1 year as ShingleMaster</span></div>
+        <div class="cert-req"><span class="cert-req-icon">✓</span><span>Company owner must pass Business Fiscal Responsibility exam</span></div>
+      </div>
+      <div>
+        <h3>SureStart PLUS 5-Star Warranty</h3>
+        <p>Only a SELECT ShingleMaster can unlock CertainTeed's strongest warranty — SureStart PLUS. When you choose all CertainTeed products, this upgrade adds expanded coverage including:</p>
+        <div class="cert-warranty-grid">
+          <div class="cert-warranty-card"><strong>Materials</strong><span>Full replacement</span></div>
+          <div class="cert-warranty-card"><strong>Labor</strong><span>25-year coverage</span></div>
+          <div class="cert-warranty-card"><strong>Tear-Off</strong><span>Covered</span></div>
+          <div class="cert-warranty-card"><strong>Disposal</strong><span>Covered</span></div>
+        </div>
+        <p style="margin-top: 20px;">A non-certified roofer simply cannot offer this warranty. It's the difference between a manufacturer-backed promise and a handshake from someone who may not be around in five years.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="container">
+    <h2>READY TO WORK WITH HOUSTON'S TOP 1%?</h2>
+    <p>Schedule a free inspection and see the Titan difference for yourself. No pressure, no obligation — just an honest assessment of your roof.</p>
+    <a href="index.html#contact" class="btn">Get a Free Inspection →</a>
+  </div>
+</section>
+
+<footer class="footer"><div class="container">
+  <div class="footer-grid">
+    <div class="footer-brand"><div class="footer-logo"><img src="titanlogorevised_v3.png" alt="Titan Roofing Logo" style="height: 60px; width: auto; margin-bottom: 12px; "><br>Titan Roofing</div><p>Veteran-owned. Locally operated. Serving Greater Houston since 2002.</p></div>
+    <div class="footer-col"><h4>Services</h4><a href="residential.html">Residential Reroofing</a><a href="storm-damage.html">Storm Restoration</a><a href="new-construction.html">New Construction</a><a href="commercial.html">Commercial Roofing</a><a href="metal-accents.html">Metal Accents</a></div>
+    <div class="footer-col"><h4>Company</h4><a href="about.html">Our Story</a><a href="about.html#certainteed">CertainTeed Certification</a><a href="index.html#reviews">Customer Reviews</a><a href="index.html#areas">Service Areas</a></div>
+      <div class="footer-col"><h4>Contact</h4><a href="tel:+19362285061">(936) 228-5061</a><a href="mailto:info@titanroofingtx.com">info@titanroofingtx.com</a><a href="#">Willis, Texas</a></div>
+  </div>
+  <div class="footer-bottom"><span>&copy; 2026 Titan Roofing. All rights reserved.</span><span>Veteran-Owned &amp; Operated &nbsp;|&nbsp; Licensed &amp; Insured</span></div>
+</div></footer>
+</body>
+</html>

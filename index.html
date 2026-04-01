@@ -1,0 +1,1783 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Titan Roofing — Houston's Most Trusted Name in Roofing Construction</title>
+<meta name="description" content="Veteran-owned roofing company serving Greater Houston since 2002. 30,000+ roofs built. CertainTeed SELECT ShingleMaster — top 1% of roofers nationwide. Free inspections.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --titan-navy: #1B2A4A;
+    --titan-red: #C41E3A;
+    --titan-red-dark: #A01830;
+    --titan-white: #FFFFFF;
+    --titan-light: #F4F5F7;
+    --titan-warm: #FAF8F5;
+    --titan-gray: #6B7280;
+    --titan-dark: #111827;
+    --titan-gold: #D4A853;
+    --titan-blue-light: #E8EDF5;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+    --shadow-md: 0 4px 20px rgba(0,0,0,0.10);
+    --shadow-lg: 0 12px 40px rgba(0,0,0,0.12);
+    --radius: 6px;
+  }
+
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Barlow', sans-serif;
+    color: var(--titan-dark);
+    background: var(--titan-white);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── UTILITY ── */
+  .container { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+  .section { padding: 80px 0; }
+  .section-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--titan-red);
+    margin-bottom: 10px;
+  }
+  .section-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(32px, 5vw, 48px);
+    letter-spacing: 1px;
+    line-height: 1.1;
+    color: var(--titan-navy);
+    margin-bottom: 16px;
+  }
+  .section-subtitle {
+    font-size: 17px;
+    color: var(--titan-gray);
+    max-width: 600px;
+    line-height: 1.7;
+  }
+
+  /* ── TOP BAR ── */
+  .topbar {
+    background: var(--titan-navy);
+    color: rgba(255,255,255,0.8);
+    font-size: 13px;
+    padding: 8px 0;
+  }
+  .topbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .topbar a { color: var(--titan-white); text-decoration: none; font-weight: 600; }
+  .topbar-badges { display: flex; gap: 16px; align-items: center; }
+  .topbar-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--titan-gold);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+  @media (max-width: 600px) {
+    .topbar-badges { display: none; }
+  }
+
+  /* ── NAV WITH DROPDOWNS ── */
+  .navbar {
+    background: var(--titan-white);
+    border-bottom: 1px solid #E5E7EB;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: var(--shadow-sm);
+  }
+  .navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+  }
+  .nav-logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 28px;
+    color: var(--titan-navy);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .nav-logo img {
+    height: 48px;
+    width: auto;
+    object-fit: contain;
+  }
+  .nav-links { display: flex; gap: 0; align-items: center; }
+  .nav-item {
+    position: relative;
+    padding: 0 14px;
+  }
+  .nav-item > a {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--titan-dark);
+    text-decoration: none;
+    letter-spacing: 0.3px;
+    transition: color 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    height: 70px;
+    line-height: 70px;
+  }
+  .nav-item > a:hover { color: var(--titan-red); }
+  .nav-arrow {
+    font-size: 10px;
+    transition: transform 0.2s;
+  }
+  .nav-item:hover .nav-arrow { transform: rotate(180deg); }
+
+  /* Dropdown */
+  .nav-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    min-width: 220px;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 12px 32px rgba(0,0,0,0.12);
+    border: 1px solid #E5E7EB;
+    border-top: 3px solid var(--titan-red);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-4px);
+    transition: all 0.2s ease;
+    z-index: 200;
+  }
+  .nav-item:hover .nav-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  .nav-dropdown a {
+    display: block;
+    padding: 12px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--titan-dark);
+    text-decoration: none;
+    transition: all 0.15s;
+    border-bottom: 1px solid #F3F4F6;
+  }
+  .nav-dropdown a:last-child { border-bottom: none; }
+  .nav-dropdown a:hover {
+    background: var(--titan-light);
+    color: var(--titan-red);
+    padding-left: 24px;
+  }
+  .nav-dropdown a .dd-desc {
+    display: block;
+    font-size: 12px;
+    color: var(--titan-gray);
+    font-weight: 400;
+    margin-top: 2px;
+  }
+
+  .nav-cta {
+    background: var(--titan-red);
+    color: var(--titan-white) !important;
+    padding: 10px 22px;
+    border-radius: var(--radius);
+    transition: background 0.2s;
+    white-space: nowrap;
+    margin-left: 14px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    height: auto !important;
+    line-height: normal !important;
+  }
+  .nav-cta:hover { background: var(--titan-red-dark); }
+
+  .mobile-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+  .mobile-toggle span { display: block; width: 24px; height: 2px; background: var(--titan-dark); margin: 5px 0; transition: 0.3s; }
+
+  /* ── HERO ── */
+  .hero {
+    background: linear-gradient(135deg, var(--titan-navy) 0%, #263B5E 50%, #1B2A4A 100%);
+    color: white;
+    padding: 100px 0 80px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(196,30,58,0.15) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--titan-red);
+  }
+  .hero .container { position: relative; z-index: 2; }
+  .hero-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 60px; align-items: center; }
+  .hero-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--titan-gold);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .hero-label::before { content: ''; display: block; width: 30px; height: 2px; background: var(--titan-gold); }
+  .hero h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(42px, 6vw, 64px);
+    line-height: 1.05;
+    letter-spacing: 1.5px;
+    margin-bottom: 20px;
+  }
+  .hero h1 em { color: var(--titan-red); font-style: normal; }
+  .hero p { font-size: 17px; line-height: 1.7; color: rgba(255,255,255,0.8); max-width: 520px; margin-bottom: 32px; }
+  .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 28px;
+    border-radius: var(--radius);
+    font-family: 'Barlow', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.25s;
+    cursor: pointer;
+    border: none;
+  }
+  .btn-primary { background: var(--titan-red); color: white; }
+  .btn-primary:hover { background: var(--titan-red-dark); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(196,30,58,0.35); }
+  .btn-outline { background: transparent; color: white; border: 2px solid rgba(255,255,255,0.3); }
+  .btn-outline:hover { border-color: white; background: rgba(255,255,255,0.08); }
+
+  .hero-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .stat-card {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 10px;
+    padding: 28px 24px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+  }
+  .stat-number {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 42px;
+    line-height: 1;
+    color: var(--titan-white);
+    margin-bottom: 4px;
+  }
+  .stat-number .accent { color: var(--titan-red); }
+  .stat-label {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+  }
+
+  /* ── BEFORE/AFTER SHOWCASE ── */
+  .showcase { background: var(--titan-white); padding: 72px 0; }
+  .showcase-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    margin-top: 36px;
+    border-radius: 12px;
+    box-shadow: var(--shadow-lg);
+    position: relative;
+  }
+  .showcase-panel {
+    position: relative;
+    min-height: 420px;
+    overflow: visible;
+    background-size: 200% 100%;
+    background-repeat: no-repeat;
+  }
+  .showcase-panel.before-panel {
+    background-position: 0% center;
+    border-radius: 12px 0 0 12px;
+  }
+  .showcase-panel.after-panel {
+    background-position: 100% center;
+    border-radius: 0 12px 12px 0;
+  }
+  .showcase-panel img { display: none; }
+  .showcase-divider {
+    position: absolute;
+    top: 0; bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    background: white;
+    z-index: 4;
+    box-shadow: 0 0 12px rgba(0,0,0,0.3);
+  }
+  .showcase-divider-icon {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 48px; height: 48px;
+    background: white;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 20px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.2);
+    z-index: 5;
+    color: var(--titan-navy);
+    font-weight: 700;
+  }
+
+  /* Hotspots */
+  .hotspot {
+    position: absolute;
+    cursor: pointer;
+    z-index: 3;
+  }
+  .hotspot.active {
+    z-index: 10;
+  }
+  .hotspot-dot {
+    width: 22px; height: 22px;
+    background: var(--titan-red);
+    border: 3px solid white;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(196,30,58,0.4);
+    animation: hotspotPulse 2s infinite;
+    position: relative;
+    z-index: 2;
+  }
+  .hotspot-green .hotspot-dot {
+    background: #16A34A;
+    box-shadow: 0 2px 8px rgba(22,163,74,0.4);
+    animation: hotspotPulseGreen 2s infinite;
+  }
+  @keyframes hotspotPulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(196,30,58,0.4); }
+    50% { box-shadow: 0 0 0 8px rgba(196,30,58,0); }
+  }
+  @keyframes hotspotPulseGreen {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(22,163,74,0.4); }
+    50% { box-shadow: 0 0 0 8px rgba(22,163,74,0); }
+  }
+  .hotspot-popup {
+    display: none;
+    position: fixed;
+    width: 320px;
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.2);
+    z-index: 9999;
+    border-top: 3px solid var(--titan-red);
+  }
+  .hotspot-green .hotspot-popup { border-top-color: #16A34A; }
+  .hotspot.active .hotspot-popup { display: block; }
+  .hotspot-close {
+    position: absolute;
+    top: 10px; right: 12px;
+    background: none; border: none;
+    font-size: 18px; cursor: pointer;
+    color: var(--titan-gray);
+    padding: 4px 6px;
+  }
+  .hotspot-popup h4 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 18px; font-weight: 700;
+    color: var(--titan-navy);
+    margin-bottom: 10px;
+    padding-right: 24px;
+  }
+  .hotspot-green .hotspot-popup h4 { color: #16A34A; }
+  .hotspot-popup p {
+    font-size: 13.5px;
+    color: #4B5563;
+    line-height: 1.65;
+    margin-bottom: 8px;
+  }
+  .hotspot-popup p:last-child { margin-bottom: 0; }
+
+  .showcase-bottom {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    margin-top: 24px;
+    flex-wrap: wrap;
+  }
+  .showcase-stat-text {
+    font-size: 14px;
+    color: var(--titan-gray);
+    line-height: 1.5;
+  }
+  .showcase-stat-text strong {
+    color: var(--titan-navy);
+    font-weight: 700;
+  }
+
+  @media (max-width: 600px) {
+    .showcase-grid { grid-template-columns: 1fr; }
+    .showcase-panel { min-height: 260px; }
+    .showcase-divider { display: none; }
+  }
+
+  /* ── SERVICE PATHWAYS ── */
+  .service-pathways { background: var(--titan-light); }
+  .pathways-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 40px;
+  }
+  .pathway-card {
+    background: white;
+    border-radius: 12px;
+    padding: 36px 28px;
+    text-align: center;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    position: relative;
+    overflow: hidden;
+  }
+  .pathway-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0; right: 0;
+    height: 4px;
+    background: var(--titan-red);
+    transform: scaleX(0);
+    transition: transform 0.3s;
+  }
+  .pathway-card:hover {
+    border-color: var(--titan-red);
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-4px);
+  }
+  .pathway-card:hover::after { transform: scaleX(1); }
+  .pathway-icon {
+    font-size: 36px;
+    margin-bottom: 16px;
+    display: block;
+  }
+  .pathway-card h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--titan-navy);
+    margin-bottom: 10px;
+    letter-spacing: 0.3px;
+  }
+  .pathway-card p {
+    font-size: 14px;
+    color: var(--titan-gray);
+    line-height: 1.6;
+    margin-bottom: 16px;
+  }
+  .pathway-link {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--titan-red);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font-family: 'Barlow Condensed', sans-serif;
+  }
+  .pathway-card:hover .pathway-link { text-decoration: underline; }
+  @media (max-width: 900px) { .pathways-grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 600px) { .pathways-grid { grid-template-columns: 1fr; } }
+
+  /* ── WHY TITAN ── */
+  .why-titan { background: var(--titan-white); }
+  .why-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 48px;
+    align-items: start;
+  }
+  .why-list { display: flex; flex-direction: column; gap: 20px; }
+  .why-item {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+  .why-item-icon {
+    width: 36px; height: 36px;
+    background: rgba(196,30,58,0.08);
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--titan-red);
+    font-weight: 700;
+    font-size: 16px;
+    flex-shrink: 0;
+  }
+  .why-item h4 {
+    font-family: 'Barlow', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--titan-navy);
+    margin-bottom: 4px;
+  }
+  .why-item p {
+    font-size: 14px;
+    color: var(--titan-gray);
+    line-height: 1.6;
+  }
+  .why-highlight {
+    background: var(--titan-navy);
+    border-radius: 12px;
+    padding: 36px;
+    color: white;
+  }
+  .why-highlight h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 28px;
+    letter-spacing: 1px;
+    margin-bottom: 14px;
+  }
+  .why-highlight p {
+    font-size: 14.5px;
+    line-height: 1.7;
+    color: rgba(255,255,255,0.75);
+    margin-bottom: 20px;
+  }
+  .cert-badge {
+    display: inline-block;
+    padding: 10px 20px;
+    background: rgba(212,168,83,0.15);
+    border: 1px solid var(--titan-gold);
+    border-radius: 6px;
+    color: var(--titan-gold);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .cert-badge:hover { background: rgba(212,168,83,0.25); }
+
+  /* ── PROCESS ── */
+  .process { background: var(--titan-light); }
+  .process-steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-top: 40px;
+  }
+  .process-step {
+    background: white;
+    border-radius: 10px;
+    padding: 32px 24px;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    position: relative;
+  }
+  .step-number {
+    width: 44px; height: 44px;
+    background: var(--titan-red);
+    color: white;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 22px;
+    margin: 0 auto 16px;
+  }
+  .process-step h4 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--titan-navy);
+    margin-bottom: 8px;
+  }
+  .process-step p {
+    font-size: 13.5px;
+    color: var(--titan-gray);
+    line-height: 1.6;
+  }
+  @media (max-width: 900px) { .process-steps { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 600px) { .process-steps { grid-template-columns: 1fr; } }
+
+  /* ── TESTIMONIALS ── */
+  .testimonials { background: var(--titan-white); }
+  .testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 40px;
+  }
+  .testimonial-card {
+    background: var(--titan-light);
+    border-radius: 10px;
+    padding: 32px 28px;
+    border: 1px solid #E5E7EB;
+  }
+  .testimonial-stars {
+    color: var(--titan-gold);
+    font-size: 18px;
+    letter-spacing: 2px;
+    margin-bottom: 14px;
+  }
+  .testimonial-text {
+    font-size: 14.5px;
+    color: #4B5563;
+    line-height: 1.7;
+    font-style: italic;
+    margin-bottom: 16px;
+  }
+  .testimonial-author {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--titan-navy);
+    letter-spacing: 0.3px;
+  }
+  @media (max-width: 900px) { .testimonial-grid { grid-template-columns: 1fr; } }
+
+  /* ── SERVICE AREAS ── */
+  .areas { background: var(--titan-warm); }
+  .areas-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 28px;
+    justify-content: center;
+  }
+  .area-tag {
+    padding: 10px 20px;
+    background: white;
+    border: 1px solid #E5E7EB;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--titan-navy);
+    transition: all 0.2s;
+  }
+  .area-tag:hover {
+    border-color: var(--titan-red);
+    color: var(--titan-red);
+    box-shadow: var(--shadow-sm);
+  }
+
+  /* ── CONTACT ── */
+  .contact { background: var(--titan-navy); color: white; }
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+  }
+  .contact h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(32px, 4.5vw, 48px);
+    line-height: 1.1;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+  }
+  .contact > .container > .contact-grid > div:first-child > p {
+    font-size: 16px;
+    color: rgba(255,255,255,0.7);
+    line-height: 1.7;
+    margin-bottom: 28px;
+  }
+  .contact-info { display: flex; flex-direction: column; gap: 16px; }
+  .contact-item { display: flex; gap: 14px; align-items: center; }
+  .contact-item-icon {
+    width: 44px; height: 44px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+  .contact-item-text { font-size: 15px; }
+  .contact-item-text strong { display: block; color: white; font-size: 14px; }
+  .contact-item-text span { color: rgba(255,255,255,0.6); font-size: 13px; }
+  .contact-item-text a { color: white; text-decoration: none; }
+
+  .contact-form {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 12px;
+    padding: 36px;
+  }
+  .contact-form h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    letter-spacing: 0.3px;
+  }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px; }
+  .form-group { margin-bottom: 14px; }
+  .form-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: rgba(255,255,255,0.7);
+  }
+  .form-group input, .form-group select, .form-group textarea {
+    width: 100%;
+    padding: 12px 14px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: var(--radius);
+    color: white;
+    font-family: 'Barlow', sans-serif;
+    font-size: 14px;
+    transition: border-color 0.2s;
+  }
+  .form-group input::placeholder, .form-group textarea::placeholder { color: rgba(255,255,255,0.35); }
+  .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: var(--titan-red);
+  }
+  .form-group select option { background: var(--titan-navy); color: white; }
+  .form-group textarea { resize: vertical; min-height: 80px; }
+  .form-submit {
+    width: 100%;
+    padding: 14px;
+    background: var(--titan-red);
+    color: white;
+    border: none;
+    border-radius: var(--radius);
+    font-family: 'Barlow', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 4px;
+  }
+  .form-submit:hover { background: var(--titan-red-dark); }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: #0F1A2E;
+    color: rgba(255,255,255,0.5);
+    padding: 40px 0 24px;
+    font-size: 13px;
+  }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 32px;
+  }
+  .footer-brand .footer-logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 24px;
+    color: white;
+    margin-bottom: 12px;
+  }
+  .footer-brand p { line-height: 1.65; max-width: 280px; }
+  .footer-col h4 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: white;
+    margin-bottom: 16px;
+  }
+  .footer-col a {
+    display: block;
+    color: rgba(255,255,255,0.5);
+    text-decoration: none;
+    font-size: 13.5px;
+    margin-bottom: 8px;
+    transition: color 0.2s;
+  }
+  .footer-col a:hover { color: white; }
+  .footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.08);
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    .hero-grid { grid-template-columns: 1fr; text-align: center; }
+    .hero p { margin: 0 auto 32px; }
+    .hero-actions { justify-content: center; }
+    .hero-label { justify-content: center; }
+    .why-grid { grid-template-columns: 1fr; }
+    .contact-grid { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 768px) {
+    .nav-links { display: none; }
+    .nav-links.open {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 70px;
+      left: 0; right: 0;
+      background: white;
+      box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+      padding: 16px 0;
+      z-index: 100;
+      gap: 0;
+    }
+    .nav-links.open .nav-item {
+      padding: 0;
+    }
+    .nav-links.open .nav-item > a {
+      height: auto;
+      line-height: normal;
+      padding: 14px 24px;
+    }
+    .nav-links.open .nav-dropdown {
+      position: static;
+      opacity: 1;
+      visibility: visible;
+      transform: none;
+      box-shadow: none;
+      border: none;
+      border-top: none;
+      border-radius: 0;
+      min-width: 100%;
+      display: none;
+    }
+    .nav-links.open .nav-item.dropdown-open .nav-dropdown {
+      display: block;
+    }
+    .nav-links.open .nav-dropdown a {
+      padding-left: 44px;
+      font-size: 13px;
+    }
+    .nav-links.open .nav-cta {
+      margin: 12px 24px;
+      text-align: center;
+      display: block;
+    }
+    .mobile-toggle { display: block; }
+  }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .animate-in { animation: fadeUp 0.6s ease-out both; }
+  .delay-1 { animation-delay: 0.1s; }
+  .delay-2 { animation-delay: 0.2s; }
+  .delay-3 { animation-delay: 0.3s; }
+  .delay-4 { animation-delay: 0.4s; }
+  /* ── PROMO STICKY BAR ── */
+  .promo-bar {
+    background: var(--titan-red);
+    color: var(--titan-white);
+    text-align: center;
+    padding: 10px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    position: relative;
+    z-index: 101;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+  }
+  .promo-bar a {
+    color: var(--titan-gold);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    font-weight: 700;
+    margin-left: 6px;
+    white-space: nowrap;
+  }
+  .promo-bar .promo-bar-fine {
+    font-size: 11px;
+    font-weight: 400;
+    opacity: 0.75;
+    display: block;
+    margin-top: 4px;
+  }
+  @media (max-width: 600px) {
+    .promo-bar { font-size: 13px; padding: 10px 12px; line-height: 1.5; }
+  }
+
+  /* ── PROMO HERO BANNER ── */
+  .promo-hero {
+    position: relative;
+    background: var(--titan-navy);
+    overflow: hidden;
+    padding: 70px 0 60px;
+  }
+  .promo-hero .flag-svg-wrap {
+    position: absolute;
+    top: -10%; left: -5%;
+    width: 110%; height: 120%;
+    opacity: 0.10;
+    pointer-events: none;
+    transform: rotate(-3deg);
+  }
+  .promo-hero .flag-svg-wrap svg { width: 100%; height: 100%; }
+  .promo-hero .container { position: relative; z-index: 2; text-align: center; }
+  .promo-stars-top { font-size: 16px; letter-spacing: 16px; color: var(--titan-gold); margin-bottom: 12px; opacity: 0.6; }
+  .promo-flag-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--titan-gold);
+    margin-bottom: 24px;
+  }
+  .promo-amount {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(72px, 12vw, 110px);
+    line-height: 1;
+    letter-spacing: 3px;
+    margin-bottom: 4px;
+    text-shadow: 0 4px 30px rgba(0,0,0,0.4);
+  }
+  .promo-amount .dollar { color: var(--titan-white); }
+  .promo-amount .number { color: var(--titan-gold); }
+  .promo-off {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(28px, 4vw, 44px);
+    color: var(--titan-red);
+    letter-spacing: 8px;
+    margin-bottom: 24px;
+  }
+  .promo-tagline { font-size: 18px; color: rgba(255,255,255,0.85); max-width: 560px; margin: 0 auto 10px; line-height: 1.6; }
+  .promo-tagline strong { color: var(--titan-white); }
+  .promo-deadline {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--titan-gold);
+    margin-top: 20px;
+  }
+  .promo-cta-row { display: flex; justify-content: center; gap: 16px; margin-top: 28px; flex-wrap: wrap; }
+  .promo-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 32px;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    text-decoration: none;
+    border-radius: 6px;
+    letter-spacing: 0.5px;
+    transition: all 0.2s;
+    cursor: pointer;
+    border: none;
+  }
+  .promo-btn-primary { background: var(--titan-red); color: var(--titan-white); }
+  .promo-btn-primary:hover { background: var(--titan-red-dark); }
+  .promo-btn-secondary { background: transparent; color: var(--titan-white); border: 2px solid rgba(255,255,255,0.3); }
+  .promo-btn-secondary:hover { border-color: var(--titan-white); }
+  .promo-fine-print { font-size: 12px; color: rgba(255,255,255,0.4); margin-top: 24px; line-height: 1.5; max-width: 600px; margin-left: auto; margin-right: auto; }
+  @media (max-width: 600px) {
+    .promo-hero { padding: 40px 0 36px; }
+    .promo-cta-row { flex-direction: column; align-items: center; }
+  }
+
+</style>
+</head>
+<body>
+
+<!-- ── PROMO STICKY BAR ── -->
+<div class="promo-bar">
+  Celebrate America's 250th — <strong>$1,776 OFF</strong> your new roof! Must sign by July 4th.
+  <a href="tel:9362030034">Call to Claim Savings →</a>
+  <span class="promo-bar-fine">Reroofing &amp; metal accents only. Excludes insurance claims &amp; builder contracts.</span>
+</div>
+
+<!-- ── TOP BAR ── -->
+<div class="topbar">
+  <div class="container">
+    <span>Serving Greater Houston — Galveston to College Station &nbsp;|&nbsp; <a href="tel:+19362285061">(936) 228-5061</a> &nbsp;|&nbsp; <a href="mailto:info@titanroofingtx.com">info@titanroofingtx.com</a></span>
+    <div class="topbar-badges">
+      <span class="topbar-badge">★ Veteran Owned</span>
+      <span class="topbar-badge">★ Since 2002</span>
+      <span class="topbar-badge">★ CertainTeed SELECT ShingleMaster</span>
+    </div>
+  </div>
+</div>
+
+<!-- ── NAVBAR WITH DROPDOWNS ── -->
+<nav class="navbar">
+  <div class="container">
+    <a href="index.html" class="nav-logo">
+      <span class="logo-icon"><img src="titanlogorevised_v3.png" alt="Titan Roofing Logo"></span>
+      Titan Roofing
+    </a>
+    <div class="nav-links" id="navLinks">
+      <div class="nav-item">
+        <a href="index.html">Home</a>
+      </div>
+      <div class="nav-item">
+        <a href="#" onclick="return false;">Services <span class="nav-arrow">▾</span></a>
+        <div class="nav-dropdown">
+          <a href="residential.html">Residential Reroofing <span class="dd-desc">Shingle replacement for homes</span></a>
+          <a href="storm-damage.html">Storm Damage &amp; Insurance <span class="dd-desc">Hail, wind &amp; claim support</span></a>
+          <a href="new-construction.html">New Construction <span class="dd-desc">Builder &amp; new home roofing</span></a>
+          <a href="commercial.html">Commercial Roofing <span class="dd-desc">Sloped roofs for businesses</span></a>
+          <a href="metal-accents.html">Metal Accents <span class="dd-desc">Porches, dormers &amp; bay windows</span></a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="#" onclick="return false;">Why Titan <span class="nav-arrow">▾</span></a>
+        <div class="nav-dropdown">
+          <a href="about.html">Our Story</a>
+          <a href="about.html#certainteed">CertainTeed Certification</a>
+          <a href="#process">How It Works</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="#reviews">Reviews</a>
+      </div>
+      <div class="nav-item">
+        <a href="#areas">Service Areas</a>
+      </div>
+      <a href="#contact" class="nav-cta">Free Inspection →</a>
+    </div>
+    <button class="mobile-toggle" onclick="toggleMobileMenu()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ── 250th ANNIVERSARY PROMO HERO ── -->
+<section class="promo-hero">
+  <div class="flag-svg-wrap">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1235 650" preserveAspectRatio="xMidYMid slice">
+      <!-- American Flag: Official proportions per Executive Order 10834 -->
+      <!-- 13 stripes (7 red, 6 white), canton (union) with 50 stars -->
+      <!-- Stripe height = 50 each, total flag = 650 tall, 1235 wide (≈1.9:1) -->
+      
+      <!-- White base (for white stripes) -->
+      <rect width="1235" height="650" fill="#FFFFFF"/>
+      
+      <!-- 7 Red stripes: 1st, 3rd, 5th, 7th, 9th, 11th, 13th -->
+      <rect y="0" width="1235" height="50" fill="#B22234"/>
+      <rect y="100" width="1235" height="50" fill="#B22234"/>
+      <rect y="200" width="1235" height="50" fill="#B22234"/>
+      <rect y="300" width="1235" height="50" fill="#B22234"/>
+      <rect y="400" width="1235" height="50" fill="#B22234"/>
+      <rect y="500" width="1235" height="50" fill="#B22234"/>
+      <rect y="600" width="1235" height="50" fill="#B22234"/>
+      
+      <!-- Canton (blue field) — spans 7 stripes high, ~40% of width -->
+      <rect width="494" height="350" fill="#3C3B6E"/>
+      
+      <!-- 50 Stars — 9 rows alternating 6 and 5 stars -->
+      <!-- Using proper 5-pointed star polygon paths -->
+      <g fill="#FFFFFF">
+        <!-- Row 1: 6 stars -->
+        <g transform="translate(41,19)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+        <g transform="translate(123,19)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+        <g transform="translate(205,19)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+        <g transform="translate(288,19)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+        <g transform="translate(370,19)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+        <g transform="translate(453,19)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+        <!-- Row 2: 5 stars (offset) -->
+        <g transform="translate(82,58)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+        <g transform="translate(164,58)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+        <g transform="translate(247,58)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+        <g transform="translate(329,58)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+        <g transform="translate(411,58)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+        <!-- Row 3: 6 stars -->
+        <g transform="translate(41,97)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+        <g transform="translate(123,97)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+        <g transform="translate(205,97)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+        <g transform="translate(288,97)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+        <g transform="translate(370,97)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+        <g transform="translate(453,97)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+        <!-- Row 4: 5 stars (offset) -->
+        <g transform="translate(82,136)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+        <g transform="translate(164,136)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+        <g transform="translate(247,136)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+        <g transform="translate(329,136)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+        <g transform="translate(411,136)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+        <!-- Row 5: 6 stars -->
+        <g transform="translate(41,175)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+        <g transform="translate(123,175)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+        <g transform="translate(205,175)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+        <g transform="translate(288,175)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+        <g transform="translate(370,175)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+        <g transform="translate(453,175)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+        <!-- Row 6: 5 stars (offset) -->
+        <g transform="translate(82,214)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+        <g transform="translate(164,214)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+        <g transform="translate(247,214)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+        <g transform="translate(329,214)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+        <g transform="translate(411,214)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+        <!-- Row 7: 6 stars -->
+        <g transform="translate(41,253)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+        <g transform="translate(123,253)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+        <g transform="translate(205,253)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+        <g transform="translate(288,253)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+        <g transform="translate(370,253)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+        <g transform="translate(453,253)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+        <!-- Row 8: 5 stars (offset) -->
+        <g transform="translate(82,292)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+        <g transform="translate(164,292)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+        <g transform="translate(247,292)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+        <g transform="translate(329,292)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+        <g transform="translate(411,292)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+        <!-- Row 9: 6 stars -->
+        <g transform="translate(41,331)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+        <g transform="translate(123,331)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+        <g transform="translate(205,331)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+        <g transform="translate(288,331)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+        <g transform="translate(370,331)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+        <g transform="translate(453,331)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+      </g>
+    </svg>
+  </div>
+
+  <div class="container">
+    <div class="promo-flag-label">Celebrate America's 250th Anniversary &bull; Veteran-Owned Since 2002</div>
+    <div class="promo-amount"><span class="dollar">$</span><span class="number">1,776</span></div>
+    <div class="promo-off">OFF YOUR NEW ROOF</div>
+    <p class="promo-tagline">Celebrate America's 250th with <strong>Houston's most trusted roofer</strong>. Secure your savings.</p>
+    <div class="promo-deadline">★ Must be signed by July 4th, 2026 ★</div>
+    <div class="promo-cta-row">
+      <a href="tel:9362030034" class="promo-btn promo-btn-primary">Call to Claim Your $1,776 Savings</a>
+      <a href="#contact" class="promo-btn promo-btn-secondary">Schedule Free Inspection</a>
+    </div>
+    <p class="promo-fine-print">Applies to residential &amp; commercial reroofing and homeowner-direct metal accent projects. Not valid on insurance-funded storm damage claims or new construction builder contracts. Cannot be combined with other offers. Discount applied at contract signing.</p>
+  </div>
+</section>
+
+<!-- ── HERO ── -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="animate-in">
+        <div class="hero-label">Houston's Most Trusted Roofer</div>
+        <h1>30,000+ ROOFS INSTALLED<br>ACROSS <em>HOUSTON</em></h1>
+        <p>From new construction to full reroofs — if it has a slope, we've roofed it. Bringing 25 years of craftsmanship directly to homeowners who need reroofing, storm restoration, and commercial sloped-roof replacement.</p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary">Get a Free Inspection →</a>
+          <a href="tel:+19362030034" class="btn btn-outline">☎ 936-203-0034</a>
+        </div>
+      </div>
+      <div class="hero-stats animate-in delay-2">
+        <div class="stat-card">
+          <div class="stat-number">30<span class="accent">K+</span></div>
+          <div class="stat-label">Roofs Installed</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">25<span class="accent">+</span></div>
+          <div class="stat-label">Years in Houston</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">TOP <span class="accent">1%</span></div>
+          <div class="stat-label">CertainTeed Certified</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">90<span class="accent">+</span></div>
+          <div class="stat-label">Square Capacity</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── BEFORE/AFTER SHOWCASE ── -->
+<section class="showcase" id="showcase">
+  <div class="container">
+    <div style="text-align: center;">
+      <div class="section-label">See The Difference</div>
+      <div class="section-title">Does Your Roof Look Like This?</div>
+      <p class="section-subtitle" style="text-align: center; margin: 0 auto;">Click the red hotspots to see what's wrong — then click the green hotspots to see how Titan fixes it.</p>
+    </div>
+    <div class="showcase-grid">
+      <!-- BEFORE PANEL -->
+      <div class="showcase-panel before-panel" style="background-image: url('before-after-roof.png');">
+        <div class="hotspot" style="top:48%; left:36%;" onclick="toggleHotspot(this)">
+          <div class="hotspot-dot"></div>
+          <div class="hotspot-popup">
+            <button class="hotspot-close" onclick="event.stopPropagation(); this.parentElement.parentElement.classList.remove('active');">✕</button>
+            <h4>Algae &amp; Discoloration</h4>
+            <p><strong>What you see:</strong> Dark streaks and discoloration across the roof surface.</p>
+            <p><strong>What it leads to:</strong> Algae retains moisture, accelerating granule loss and shingle breakdown.</p>
+          </div>
+        </div>
+        <div class="hotspot" style="top:30%; left:43%;" onclick="toggleHotspot(this)">
+          <div class="hotspot-dot"></div>
+          <div class="hotspot-popup">
+            <button class="hotspot-close" onclick="event.stopPropagation(); this.parentElement.parentElement.classList.remove('active');">✕</button>
+            <h4>Granule Loss &amp; Wear</h4>
+            <p><strong>What you see:</strong> Faded, uneven color with visible bare spots on shingle surfaces.</p>
+            <p><strong>What it leads to:</strong> Shingles become brittle, crack, and lose waterproofing ability. Check your gutters for granule buildup.</p>
+          </div>
+        </div>
+        <div class="hotspot" style="top:24%; left:67%;" onclick="toggleHotspot(this)">
+          <div class="hotspot-dot"></div>
+          <div class="hotspot-popup">
+            <button class="hotspot-close" onclick="event.stopPropagation(); this.parentElement.parentElement.classList.remove('active');">✕</button>
+            <h4>Missing Shingles</h4>
+            <p><strong>What you see:</strong> Bare spots where shingles have blown off, exposing dark underlayment or decking.</p>
+            <p><strong>What it leads to:</strong> Direct water entry. Rot, mold, and structural damage can begin within weeks.</p>
+          </div>
+        </div>
+        <div class="hotspot" style="top:31%; left:86%;" onclick="toggleHotspot(this)">
+          <div class="hotspot-dot"></div>
+          <div class="hotspot-popup">
+            <button class="hotspot-close" onclick="event.stopPropagation(); this.parentElement.parentElement.classList.remove('active');">✕</button>
+            <h4>Deteriorating Flashing</h4>
+            <p><strong>What you see:</strong> Worn, corroded, or separated flashing around the chimney base.</p>
+            <p><strong>What it leads to:</strong> Penetrations are the #1 source of roof leaks. Failed flashing sends water into your walls.</p>
+          </div>
+        </div>
+        <div class="hotspot" style="top:52%; left:88%;" onclick="toggleHotspot(this)">
+          <div class="hotspot-dot"></div>
+          <div class="hotspot-popup">
+            <button class="hotspot-close" onclick="event.stopPropagation(); this.parentElement.parentElement.classList.remove('active');">✕</button>
+            <h4>Mismatched Patch Repairs</h4>
+            <p><strong>What you see:</strong> Different-colored shingles patched over damaged areas.</p>
+            <p><strong>What it leads to:</strong> Patches rarely address underlying damage and create weak seams.</p>
+          </div>
+        </div>
+      </div>
+      <!-- AFTER PANEL -->
+      <div class="showcase-panel after-panel" style="background-image: url('before-after-roof.png');">
+        <div class="hotspot hotspot-green" style="top:48%; left:36%;" onclick="toggleHotspot(this)">
+          <div class="hotspot-dot"></div>
+          <div class="hotspot-popup">
+            <button class="hotspot-close" onclick="event.stopPropagation(); this.parentElement.parentElement.classList.remove('active');">✕</button>
+            <h4>StreakFighter® Algae Resistance</h4>
+            <p><strong>CertainTeed Landmark shingles</strong> include copper-infused granules that prevent algae growth — keeping your roof clean for decades, not just months.</p>
+          </div>
+        </div>
+        <div class="hotspot hotspot-green" style="top:30%; left:43%;" onclick="toggleHotspot(this)">
+          <div class="hotspot-dot"></div>
+          <div class="hotspot-popup">
+            <button class="hotspot-close" onclick="event.stopPropagation(); this.parentElement.parentElement.classList.remove('active');">✕</button>
+            <h4>Dual-Layer Laminated Construction</h4>
+            <p><strong>Two full layers of roofing material</strong> bonded together for superior granule adhesion and wind resistance. Rated for 110 mph+ winds.</p>
+          </div>
+        </div>
+        <div class="hotspot hotspot-green" style="top:24%; left:67%;" onclick="toggleHotspot(this)">
+          <div class="hotspot-dot"></div>
+          <div class="hotspot-popup">
+            <button class="hotspot-close" onclick="event.stopPropagation(); this.parentElement.parentElement.classList.remove('active');">✕</button>
+            <h4>Complete Tear-Off &amp; New Shingles</h4>
+            <p><strong>Full tear-off</strong> down to bare decking — never layered over old shingles. Every square foot inspected for rot and hidden damage before new Landmarks go on.</p>
+          </div>
+        </div>
+        <div class="hotspot hotspot-green" style="top:31%; left:86%;" onclick="toggleHotspot(this)">
+          <div class="hotspot-dot"></div>
+          <div class="hotspot-popup">
+            <button class="hotspot-close" onclick="event.stopPropagation(); this.parentElement.parentElement.classList.remove('active');">✕</button>
+            <h4>Professional-Grade Flashing</h4>
+            <p><strong>All new step &amp; counter flashing</strong> installed at every penetration. We never reuse old hardware.</p>
+          </div>
+        </div>
+        <div class="hotspot hotspot-green" style="top:52%; left:88%;" onclick="toggleHotspot(this)">
+          <div class="hotspot-dot"></div>
+          <div class="hotspot-popup">
+            <button class="hotspot-close" onclick="event.stopPropagation(); this.parentElement.parentElement.classList.remove('active');">✕</button>
+            <h4>Uniform, Warranty-Backed Installation</h4>
+            <p><strong>No patches, no mismatches.</strong> A complete roof system installed to CertainTeed specs — backed by their SureStart PLUS 5-Star warranty for 25 years.</p>
+          </div>
+        </div>
+      </div>
+      <div class="showcase-divider">
+        <div class="showcase-divider-icon">↔</div>
+      </div>
+    </div>
+    <div class="showcase-bottom">
+      <div class="showcase-stat"><span class="showcase-stat-text"><strong>Complete tear-off</strong> to bare decking</span></div>
+      <div class="showcase-stat"><span class="showcase-stat-text"><strong>CertainTeed Landmark</strong> 30-year shingles</span></div>
+      <div class="showcase-stat"><span class="showcase-stat-text"><strong>Most homes done</strong> in a single day</span></div>
+      <div class="showcase-stat"><span class="showcase-stat-text"><strong>Titan workmanship warranty</strong> included</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SERVICE PATHWAYS ── -->
+<section class="section service-pathways" id="services">
+  <div class="container">
+    <div style="text-align: center;">
+      <div class="section-label">What We Do</div>
+      <div class="section-title">How Can We Help?</div>
+      <p class="section-subtitle" style="margin: 0 auto;">Whether it's a full replacement, storm restoration, or a new build — choose your situation and we'll walk you through exactly what to expect.</p>
+    </div>
+    <div class="pathways-grid">
+      <a href="residential.html" class="pathway-card animate-in">
+        <span class="pathway-icon">🏠</span>
+        <h3>Residential Reroofing</h3>
+        <p>Your roof is aging, leaking, or just looks worn out. Time for a complete replacement with premium materials and a real warranty.</p>
+        <span class="pathway-link">Learn More →</span>
+      </a>
+      <a href="storm-damage.html" class="pathway-card animate-in delay-1">
+        <span class="pathway-icon">⛈️</span>
+        <h3>Storm Damage &amp; Insurance</h3>
+        <p>Your home was hit by hail, wind, or a major storm. We handle the inspection, documentation, and insurance coordination.</p>
+        <span class="pathway-link">Learn More →</span>
+      </a>
+      <a href="new-construction.html" class="pathway-card animate-in delay-2">
+        <span class="pathway-icon">🏗️</span>
+        <h3>New Construction</h3>
+        <p>You're a builder or building a custom home. We've been Houston's go-to new construction roofer for 25 years.</p>
+        <span class="pathway-link">Learn More →</span>
+      </a>
+      <a href="commercial.html" class="pathway-card animate-in delay-3">
+        <span class="pathway-icon">🏢</span>
+        <h3>Commercial Sloped Roofs</h3>
+        <p>Churches, office buildings, HOA clubhouses — up to 90+ squares. Same Titan quality, scaled to commercial size.</p>
+        <span class="pathway-link">Learn More →</span>
+      </a>
+      <a href="metal-accents.html" class="pathway-card animate-in delay-4">
+        <span class="pathway-icon">🔩</span>
+        <h3>Metal Accents</h3>
+        <p>Custom metal roofing for porches, porticos, bay windows, and dormers. Small details that make a big difference.</p>
+        <span class="pathway-link">Learn More →</span>
+      </a>
+      <a href="#contact" class="pathway-card animate-in delay-4">
+        <span class="pathway-icon">🔍</span>
+        <h3>Free Roof Inspection</h3>
+        <p>Not sure what your roof needs? We provide free professional inspections — so you know exactly where you stand.</p>
+        <span class="pathway-link">Schedule Now →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ── WHY TITAN ── -->
+<section class="section why-titan" id="why-titan">
+  <div class="container">
+    <div class="section-label">Why Titan</div>
+    <div class="section-title">What Sets Us Apart</div>
+    <div class="why-grid">
+      <div class="why-list">
+        <div class="why-item">
+          <div class="why-item-icon">✓</div>
+          <div>
+            <h4>Professional Crews, Decades Deep</h4>
+            <p>Many of Titan's roofing professionals have been part of the team for over 20 years — some since day one. These aren't day laborers. They're experienced roofers trained, certified, and held to a single standard.</p>
+          </div>
+        </div>
+        <div class="why-item">
+          <div class="why-item-icon">✓</div>
+          <div>
+            <h4>We Installed Many of These Roofs</h4>
+            <p>After 25 years of new construction in Houston, there's a good chance a Titan crew originally roofed your home.</p>
+          </div>
+        </div>
+        <div class="why-item">
+          <div class="why-item-icon">✓</div>
+          <div>
+            <h4>Veteran-Owned, Locally Operated</h4>
+            <p>Founded by Ed &amp; Greg Brogdon — brothers born into a family of carpenters. We live and work here.</p>
+          </div>
+        </div>
+        <div class="why-item">
+          <div class="why-item-icon">✓</div>
+          <div>
+            <h4>Established Crews &amp; Purchasing Power</h4>
+            <p>25 years of volume work means experienced crews and competitive material costs.</p>
+          </div>
+        </div>
+        <div class="why-item">
+          <div class="why-item-icon">✓</div>
+          <div>
+            <h4>Industry-Leading Warranty Options</h4>
+            <p>Titan's workmanship warranty covers installation defects. Upgrade to CertainTeed SureStart PLUS for up to 25 years of materials and workmanship coverage — available exclusively through certified installers.</p>
+          </div>
+        </div>
+      </div>
+      <div class="why-highlight">
+        <h3>Top 1% of Roofers Nationwide</h3>
+        <p>Titan Roofing holds the CertainTeed SELECT ShingleMaster designation — the highest certification tier available. Our installers are factory-trained, our materials carry the strongest warranties, and our workmanship is independently verified.</p>
+        <div class="cert-badge" onclick="document.getElementById('certModal').style.display='flex'">★ CertainTeed SELECT ShingleMaster</div>
+        <br>
+        <a href="#" onclick="event.preventDefault(); document.getElementById('certModal').style.display='flex'" style="display: inline-block; margin-top: 14px; color: rgba(255,255,255,0.6); font-size: 13px; font-weight: 600; text-decoration: none;" onmouseover="this.style.color='white'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">What is a CertainTeed SELECT ShingleMaster? →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PROCESS ── -->
+<section class="section process" id="process">
+  <div class="container">
+    <div class="section-label">How It Works</div>
+    <div class="section-title">From Inspection to Finished Roof</div>
+    <p class="section-subtitle">Most homes are completed in a single day. Here's what to expect.</p>
+    <div class="process-steps">
+      <div class="process-step">
+        <div class="step-number">1</div>
+        <h4>Free Inspection</h4>
+        <p>We assess your roof and document any damage with photos and detailed notes.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-number">2</div>
+        <h4>Estimate &amp; Claim</h4>
+        <p>Detailed proposal provided. Insurance assist if applicable — we handle the paperwork.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-number">3</div>
+        <h4>Schedule &amp; Build</h4>
+        <p>Crew on-site within days. Most homes done in one day with full tear-off and replacement.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-number">4</div>
+        <h4>Final Walkthrough</h4>
+        <p>Complete cleanup and walkthrough. We don't leave until you're satisfied.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── TESTIMONIALS ── -->
+<section class="section testimonials" id="reviews">
+  <div class="container">
+    <div class="section-label">What Our Customers Say</div>
+    <div class="section-title">Real Reviews from Houston Homeowners</div>
+    <div class="testimonial-grid">
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"These guys did our roof, it was an amazing job. No stress about the job being completed. They showed, cleaned up and made such an impact for us. They helped to work with our solar panels and even provided a better base to ensure no leaks after the panels were put back on."</p>
+        <div class="testimonial-author">— Randall S.</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"Just a great company to deal with, arrived on time with a crew of 14 men. Old roof was torn off and replaced in one day. They protected our shrubs and grass area. Everything was cleaned up and removed. They sent out an inspector who checked the roof and went inside the attic to make sure all vents and fans were in working order."</p>
+        <div class="testimonial-author">— Henry W.</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"Titan was awesome. They were on time and came out when promised. Job was well done and the clean up was perfect. We had approval from our insurance after a hail storm and they did an amazing job. Definitely recommend."</p>
+        <div class="testimonial-author">— James S.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ── SERVICE AREAS ── -->
+<section class="section areas" id="areas">
+  <div class="container">
+    <div style="text-align: center;">
+      <div class="section-label">Service Areas</div>
+      <div class="section-title">Serving Greater Houston &amp; Beyond</div>
+      <p class="section-subtitle" style="margin: 0 auto;">From Galveston to College Station — we cover the entire Greater Houston region. Based in Willis, TX.</p>
+    </div>
+    <div class="areas-grid">
+      <div class="area-tag">Houston</div>
+      <div class="area-tag">The Woodlands</div>
+      <div class="area-tag">Spring</div>
+      <div class="area-tag">Conroe</div>
+      <div class="area-tag">Willis</div>
+      <div class="area-tag">Huntsville</div>
+      <div class="area-tag">Katy</div>
+      <div class="area-tag">Sugar Land</div>
+      <div class="area-tag">Cypress</div>
+      <div class="area-tag">Tomball</div>
+      <div class="area-tag">Pearland</div>
+      <div class="area-tag">League City</div>
+      <div class="area-tag">Galveston</div>
+      <div class="area-tag">Humble</div>
+      <div class="area-tag">Kingwood</div>
+      <div class="area-tag">Magnolia</div>
+      <div class="area-tag">College Station</div>
+      <div class="area-tag">Richmond</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CONTACT ── -->
+<section class="section contact" id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div>
+        <div class="section-label" style="color: var(--titan-gold);">Get Started</div>
+        <h2>Ready for a Free<br>Roof Inspection?</h2>
+        <p style="font-size: 16px; color: rgba(255,255,255,0.7); line-height: 1.7; margin-bottom: 28px;">Fill out the form or give us a call. We'll schedule a no-cost, no-obligation inspection and provide you with an honest assessment of your roof's condition.</p>
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-item-icon">☎</div>
+            <div class="contact-item-text">
+              <strong><a href="tel:+19362285061">(936) 228-5061</a></strong>
+              <span>Main Office — Willis, TX</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">✉</div>
+            <div class="contact-item-text">
+              <strong><a href="mailto:info@titanroofingtx.com">info@titanroofingtx.com</a></strong>
+              <span>We respond within 24 hours on business days</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">📍</div>
+            <div class="contact-item-text">
+              <strong>Willis, Texas</strong>
+              <span>Serving Greater Houston — Galveston to College Station</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form">
+        <h3>Request a Free Quote</h3>
+        <form action="https://formsubmit.co/info@titanroofingtx.com" method="POST">
+        <input type="hidden" name="_subject" value="New Quote Request — Titan Roofing Website">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_next" value="https://titanroofingtx.com">
+        <div class="form-row">
+          <div class="form-group">
+            <label>First Name *</label>
+            <input type="text" name="First Name" placeholder="John" required>
+          </div>
+          <div class="form-group">
+            <label>Last Name</label>
+            <input type="text" name="Last Name" placeholder="Smith">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Email *</label>
+            <input type="email" name="Email" placeholder="john@example.com" required>
+          </div>
+          <div class="form-group">
+            <label>Phone</label>
+            <input type="tel" name="Phone" placeholder="(281) 555-1234">
+          </div>
+        </div>
+        <div class="form-group">
+          <label>What Are You Interested In?</label>
+          <select name="Service Interest">
+            <option value="">Select a service...</option>
+            <option>Residential Reroofing</option>
+            <option>Storm Damage / Insurance Claim</option>
+            <option>New Construction</option>
+            <option>Commercial Sloped Roof</option>
+            <option>Metal Accents</option>
+            <option>Free Roof Inspection</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>How Did You Hear About Us?</label>
+          <select name="Referral Source" id="referralSource" onchange="handleReferralChange(this.value)">
+            <option value="">Select one...</option>
+            <option>Google Search</option>
+            <option>Facebook</option>
+            <option>Instagram</option>
+            <option>Neighbor / Friend</option>
+            <option>Realtor</option>
+            <option>Insurance Agent</option>
+            <option>Contractor Referral</option>
+            <option>Saw Our Trucks / Crews</option>
+            <option>Titan Installed Your Original Roof</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group" id="referralName" style="display: none;">
+          <label>Who Referred You? <span style="font-weight:400; color: rgba(255,255,255,0.45);">(Name or company)</span></label>
+          <input type="text" name="Referred By" placeholder="e.g. John Smith, ABC Realty, State Farm - Mike Jones">
+        </div>
+        <div class="form-group" id="referralOther" style="display: none;">
+          <label>Please Specify</label>
+          <input type="text" name="Referral Other" placeholder="How did you find us?">
+        </div>
+        <div class="form-group">
+          <label>Message</label>
+          <textarea name="Message" placeholder="Tell us about your project or concerns..."></textarea>
+        </div>
+        <button type="submit" class="form-submit">Send Message →</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo"><img src="titanlogorevised_v3.png" alt="Titan Roofing Logo" style="height: 60px; width: auto; margin-bottom: 12px;"><br>Titan Roofing</div>
+        <p>Veteran-owned. Locally operated. Serving Greater Houston since 2002. CertainTeed SELECT ShingleMaster — top 1% of roofers nationwide.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="residential.html">Residential Reroofing</a>
+        <a href="storm-damage.html">Storm Restoration</a>
+        <a href="new-construction.html">New Construction</a>
+        <a href="commercial.html">Commercial Roofing</a>
+        <a href="metal-accents.html">Metal Accents</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="about.html">Our Story</a>
+        <a href="about.html#certainteed">CertainTeed Certification</a>
+        <a href="#process">How It Works</a>
+        <a href="#reviews">Customer Reviews</a>
+        <a href="#areas">Service Areas</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="tel:+19362285061">(936) 228-5061</a>
+        <a href="mailto:info@titanroofingtx.com">info@titanroofingtx.com</a>
+        <a href="#">Willis, Texas</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Titan Roofing. All rights reserved.</span>
+      <span>Veteran-Owned &amp; Operated &nbsp;|&nbsp; Licensed &amp; Insured</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ── CERTAINTEED MODAL ── -->
+<div id="certModal" style="display:none; position:fixed; inset:0; z-index:9999; background:rgba(0,0,0,0.7); backdrop-filter:blur(4px); align-items:center; justify-content:center; padding:24px;" onclick="if(event.target===this)this.style.display='none'">
+  <div style="background:white; border-radius:12px; max-width:680px; width:100%; max-height:85vh; overflow-y:auto; position:relative; box-shadow:0 24px 60px rgba(0,0,0,0.3);">
+    <div style="background:var(--titan-navy); padding:32px 36px 28px; border-radius:12px 12px 0 0; position:relative;">
+      <button onclick="document.getElementById('certModal').style.display='none'" style="position:absolute; top:16px; right:20px; background:rgba(255,255,255,0.15); border:none; color:white; width:32px; height:32px; border-radius:50%; cursor:pointer; font-size:18px; display:flex; align-items:center; justify-content:center;">✕</button>
+      <div style="font-family:'Barlow Condensed',sans-serif; font-weight:700; font-size:12px; letter-spacing:2.5px; text-transform:uppercase; color:var(--titan-gold); margin-bottom:8px;">Certification</div>
+      <h2 style="font-family:'Bebas Neue',sans-serif; font-size:32px; color:white; letter-spacing:1px; line-height:1.1; margin:0;">What Is a CertainTeed<br>SELECT ShingleMaster?</h2>
+    </div>
+    <div style="padding:32px 36px;">
+      <p style="font-size:15px; color:#4B5563; line-height:1.75; margin-bottom:20px;">The SELECT ShingleMaster credential represents the <strong style="color:var(--titan-navy);">highest standards in the shingle roofing industry</strong> and is offered by CertainTeed — a licensing body designed to assist homeowners in selecting a qualified contractor and premium roofing products. Titan Roofing holds this designation, placing us in the <strong style="color:var(--titan-navy);">top 1% of roofers nationwide.</strong></p>
+      <h3 style="font-family:'Barlow Condensed',sans-serif; font-size:18px; font-weight:700; color:var(--titan-navy); margin-bottom:14px;">What We Must Maintain</h3>
+      <div style="display:flex; flex-direction:column; gap:10px; margin-bottom:24px;">
+        <div style="display:flex; gap:10px; align-items:flex-start;"><span style="color:var(--titan-red); font-weight:700;">✓</span><span style="font-size:14px; color:#4B5563; line-height:1.6;">At least 50% of workforce must be Master Shingle Applicators</span></div>
+        <div style="display:flex; gap:10px; align-items:flex-start;"><span style="color:var(--titan-red); font-weight:700;">✓</span><span style="font-size:14px; color:#4B5563; line-height:1.6;">Strict adherence to Code of Ethics and Professional Practices</span></div>
+        <div style="display:flex; gap:10px; align-items:flex-start;"><span style="color:var(--titan-red); font-weight:700;">✓</span><span style="font-size:14px; color:#4B5563; line-height:1.6;">Current worker compensation and liability insurance</span></div>
+        <div style="display:flex; gap:10px; align-items:flex-start;"><span style="color:var(--titan-red); font-weight:700;">✓</span><span style="font-size:14px; color:#4B5563; line-height:1.6;">Regular testing and re-accreditation</span></div>
+        <div style="display:flex; gap:10px; align-items:flex-start;"><span style="color:var(--titan-red); font-weight:700;">✓</span><span style="font-size:14px; color:#4B5563; line-height:1.6;">Demonstrated product knowledge for client consultation</span></div>
+        <div style="display:flex; gap:10px; align-items:flex-start;"><span style="color:var(--titan-red); font-weight:700;">✓</span><span style="font-size:14px; color:#4B5563; line-height:1.6;">Minimum 5 years in business</span></div>
+        <div style="display:flex; gap:10px; align-items:flex-start;"><span style="color:var(--titan-red); font-weight:700;">✓</span><span style="font-size:14px; color:#4B5563; line-height:1.6;">Owner must pass Business Fiscal Responsibility exam</span></div>
+      </div>
+      <h3 style="font-family:'Barlow Condensed',sans-serif; font-size:18px; font-weight:700; color:var(--titan-navy); margin-bottom:14px;">SureStart PLUS 5-Star Warranty</h3>
+      <p style="font-size:14px; color:#4B5563; line-height:1.7; margin-bottom:16px;">Only a SELECT ShingleMaster can offer CertainTeed's SureStart PLUS warranty — which covers materials, labor, tear-off, disposal, and repair of defects for the warranty period. This is an available upgrade when you use all CertainTeed products on your roof.</p>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:20px;">
+        <div style="background:var(--titan-light); padding:16px; border-radius:8px; text-align:center;"><strong style="display:block; color:var(--titan-navy); font-size:14px;">Materials</strong><span style="font-size:12px; color:var(--titan-gray);">Full replacement</span></div>
+        <div style="background:var(--titan-light); padding:16px; border-radius:8px; text-align:center;"><strong style="display:block; color:var(--titan-navy); font-size:14px;">Labor</strong><span style="font-size:12px; color:var(--titan-gray);">25-year coverage</span></div>
+        <div style="background:var(--titan-light); padding:16px; border-radius:8px; text-align:center;"><strong style="display:block; color:var(--titan-navy); font-size:14px;">Tear-Off</strong><span style="font-size:12px; color:var(--titan-gray);">Covered</span></div>
+        <div style="background:var(--titan-light); padding:16px; border-radius:8px; text-align:center;"><strong style="display:block; color:var(--titan-navy); font-size:14px;">Disposal</strong><span style="font-size:12px; color:var(--titan-gray);">Covered</span></div>
+      </div>
+      <div style="text-align: center; padding-top: 8px;">
+        <a href="#contact" onclick="document.getElementById('certModal').style.display='none'" class="btn btn-primary" style="display:inline-flex;">Get a Free Inspection →</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// ── REFERRAL FIELD LOGIC ──
+function handleReferralChange(val) {
+  const referralSources = ['Neighbor / Friend', 'Realtor', 'Insurance Agent', 'Contractor Referral'];
+  document.getElementById('referralName').style.display = referralSources.includes(val) ? 'block' : 'none';
+  document.getElementById('referralOther').style.display = val === 'Other' ? 'block' : 'none';
+}
+
+// ── MOBILE MENU ──
+function toggleMobileMenu() {
+  const nav = document.getElementById('navLinks');
+  nav.classList.toggle('open');
+}
+
+// Mobile dropdown toggles
+document.querySelectorAll('.nav-item').forEach(item => {
+  item.querySelector('a')?.addEventListener('click', function(e) {
+    if (window.innerWidth <= 768 && item.querySelector('.nav-dropdown')) {
+      e.preventDefault();
+      item.classList.toggle('dropdown-open');
+    }
+  });
+});
+
+// ── HOTSPOT LOGIC ──
+function toggleHotspot(el) {
+  const wasActive = el.classList.contains('active');
+  // Close all hotspots
+  document.querySelectorAll('.hotspot').forEach(h => h.classList.remove('active'));
+  if (!wasActive) {
+    el.classList.add('active');
+    positionPopup(el);
+  }
+}
+
+function positionPopup(hotspot) {
+  const popup = hotspot.querySelector('.hotspot-popup');
+  if (!popup) return;
+  const dot = hotspot.querySelector('.hotspot-dot');
+  const dotRect = dot.getBoundingClientRect();
+  const popupWidth = 320;
+  const popupHeight = popup.scrollHeight || 200;
+
+  let left = dotRect.left + dotRect.width / 2 - popupWidth / 2;
+  let top = dotRect.bottom + 12;
+
+  if (left < 12) left = 12;
+  if (left + popupWidth > window.innerWidth - 12) left = window.innerWidth - popupWidth - 12;
+  if (top + popupHeight > window.innerHeight - 12) top = dotRect.top - popupHeight - 12;
+
+  popup.style.left = left + 'px';
+  popup.style.top = top + 'px';
+}
+
+// Close hotspots on outside click
+document.addEventListener('click', function(e) {
+  if (!e.target.closest('.hotspot')) {
+    document.querySelectorAll('.hotspot').forEach(h => h.classList.remove('active'));
+  }
+});
+
+// Reposition on scroll/resize
+['scroll', 'resize'].forEach(evt => {
+  window.addEventListener(evt, () => {
+    const active = document.querySelector('.hotspot.active');
+    if (active) positionPopup(active);
+  });
+});
+
+</script>
+</body>
+</html>

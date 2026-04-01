@@ -1,0 +1,1219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Residential Reroofing — Titan Roofing | Houston's Top 1% CertainTeed Roofer</title>
+<meta name="description" content="Complete residential roof replacement by Titan Roofing. CertainTeed Landmark 30-year shingles, full tear-off, synthetic underlayment, and 25-year warranty. Serving Greater Houston since 2002.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --titan-navy: #1B2A4A;
+    --titan-red: #C41E3A;
+    --titan-red-dark: #A01830;
+    --titan-white: #FFFFFF;
+    --titan-light: #F4F5F7;
+    --titan-warm: #FAF8F5;
+    --titan-gray: #6B7280;
+    --titan-dark: #111827;
+    --titan-gold: #D4A853;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+    --shadow-md: 0 4px 20px rgba(0,0,0,0.10);
+    --shadow-lg: 0 12px 40px rgba(0,0,0,0.12);
+    --radius: 6px;
+  }
+
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Barlow', sans-serif;
+    color: var(--titan-dark);
+    background: var(--titan-white);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .container { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+  .section { padding: 80px 0; }
+  .section-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700; font-size: 13px;
+    letter-spacing: 3px; text-transform: uppercase;
+    color: var(--titan-red); margin-bottom: 10px;
+  }
+  .section-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(32px, 5vw, 48px);
+    letter-spacing: 1px; line-height: 1.1;
+    color: var(--titan-navy); margin-bottom: 16px;
+  }
+  .section-subtitle {
+    font-size: 17px; color: var(--titan-gray);
+    max-width: 600px; line-height: 1.7;
+  }
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 14px 28px; border-radius: var(--radius);
+    font-family: 'Barlow', sans-serif; font-size: 15px; font-weight: 700;
+    text-decoration: none; transition: all 0.25s; cursor: pointer; border: none;
+  }
+  .btn-primary { background: var(--titan-red); color: white; }
+  .btn-primary:hover { background: var(--titan-red-dark); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(196,30,58,0.35); }
+  .btn-outline { background: transparent; color: white; border: 2px solid rgba(255,255,255,0.3); }
+  .btn-outline:hover { border-color: white; background: rgba(255,255,255,0.08); }
+
+  /* ── TOP BAR ── */
+  .topbar {
+    background: var(--titan-navy); color: rgba(255,255,255,0.8);
+    font-size: 13px; padding: 8px 0;
+  }
+  .topbar .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+  .topbar a { color: var(--titan-white); text-decoration: none; font-weight: 600; }
+  .topbar-badges { display: flex; gap: 16px; align-items: center; }
+  .topbar-badge { display: inline-flex; align-items: center; gap: 5px; font-size: 12px; font-weight: 600; color: var(--titan-gold); letter-spacing: 0.5px; text-transform: uppercase; }
+  @media (max-width: 600px) { .topbar-badges { display: none; } }
+
+  /* ── NAV ── */
+  .navbar { background: var(--titan-white); border-bottom: 1px solid #E5E7EB; position: sticky; top: 0; z-index: 100; box-shadow: var(--shadow-sm); }
+  .navbar .container { display: flex; justify-content: space-between; align-items: center; height: 70px; }
+  .nav-logo { font-family: 'Bebas Neue', sans-serif; font-size: 28px; color: var(--titan-navy); text-decoration: none; display: flex; align-items: center; gap: 10px; }
+  .nav-logo img { height: 48px; width: auto; object-fit: contain; }
+  .nav-links { display: flex; gap: 0; align-items: center; }
+  .nav-item { position: relative; padding: 0 14px; }
+  .nav-item > a { font-size: 14px; font-weight: 600; color: var(--titan-dark); text-decoration: none; letter-spacing: 0.3px; transition: color 0.2s; display: flex; align-items: center; gap: 4px; height: 70px; line-height: 70px; }
+  .nav-item > a:hover { color: var(--titan-red); }
+  .nav-item > a.active { color: var(--titan-red); }
+  .nav-arrow { font-size: 10px; transition: transform 0.2s; }
+  .nav-item:hover .nav-arrow { transform: rotate(180deg); }
+  .nav-dropdown { position: absolute; top: 100%; left: 0; background: white; min-width: 220px; border-radius: 0 0 8px 8px; box-shadow: 0 12px 32px rgba(0,0,0,0.12); border: 1px solid #E5E7EB; border-top: 3px solid var(--titan-red); opacity: 0; visibility: hidden; transform: translateY(-4px); transition: all 0.2s ease; z-index: 200; }
+  .nav-item:hover .nav-dropdown { opacity: 1; visibility: visible; transform: translateY(0); }
+  .nav-dropdown a { display: block; padding: 12px 20px; font-size: 14px; font-weight: 500; color: var(--titan-dark); text-decoration: none; transition: all 0.15s; border-bottom: 1px solid #F3F4F6; }
+  .nav-dropdown a:last-child { border-bottom: none; }
+  .nav-dropdown a:hover { background: var(--titan-light); color: var(--titan-red); padding-left: 24px; }
+  .nav-dropdown a .dd-desc { display: block; font-size: 12px; color: var(--titan-gray); font-weight: 400; margin-top: 2px; }
+  .nav-cta { background: var(--titan-red); color: var(--titan-white) !important; padding: 10px 22px; border-radius: var(--radius); transition: background 0.2s; white-space: nowrap; margin-left: 14px; font-size: 14px; font-weight: 600; text-decoration: none; height: auto !important; line-height: normal !important; }
+  .nav-cta:hover { background: var(--titan-red-dark); }
+  .mobile-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+  .mobile-toggle span { display: block; width: 24px; height: 2px; background: var(--titan-dark); margin: 5px 0; transition: 0.3s; }
+
+  /* ── PAGE HERO ── */
+  .page-hero {
+    background: linear-gradient(135deg, var(--titan-navy) 0%, #263B5E 50%, #1B2A4A 100%);
+    color: white; padding: 80px 0 60px;
+    position: relative; overflow: hidden;
+  }
+  .page-hero::before {
+    content: ''; position: absolute; top: -50%; right: -20%;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(196,30,58,0.15) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+  .page-hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 4px; background: var(--titan-red); }
+  .page-hero .container { position: relative; z-index: 2; }
+  .page-hero-label {
+    font-family: 'Barlow Condensed', sans-serif; font-weight: 700;
+    font-size: 13px; letter-spacing: 3px; text-transform: uppercase;
+    color: var(--titan-gold); margin-bottom: 16px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .page-hero-label::before { content: ''; display: block; width: 30px; height: 2px; background: var(--titan-gold); }
+  .page-hero h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(38px, 5.5vw, 58px);
+    line-height: 1.05; letter-spacing: 1.5px; margin-bottom: 20px;
+  }
+  .page-hero h1 em { color: var(--titan-red); font-style: normal; }
+  .page-hero p { font-size: 17px; line-height: 1.7; color: rgba(255,255,255,0.8); max-width: 640px; margin-bottom: 32px; }
+  .page-hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+
+  /* ── INTRO SECTION ── */
+  .intro-section { background: var(--titan-white); }
+  .intro-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center;
+  }
+  .intro-grid p {
+    font-size: 16px; color: #4B5563; line-height: 1.8; margin-bottom: 16px;
+  }
+  .intro-stats {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+  }
+  .intro-stat {
+    background: var(--titan-light); border-radius: 10px;
+    padding: 24px 20px; text-align: center;
+    border: 1px solid #E5E7EB;
+  }
+  .intro-stat-number {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 36px; color: var(--titan-red); line-height: 1;
+    margin-bottom: 4px;
+  }
+  .intro-stat-label {
+    font-size: 12px; font-weight: 600; letter-spacing: 1px;
+    text-transform: uppercase; color: var(--titan-gray);
+  }
+
+  /* ── 10 YEARS LATER ── */
+  .decade-compare {
+    background: var(--titan-navy); padding: 64px 0;
+    color: white; position: relative; overflow: hidden;
+  }
+  .decade-compare::before {
+    content: ''; position: absolute; inset: 0;
+    background: repeating-linear-gradient(135deg, transparent, transparent 40px, rgba(255,255,255,0.015) 40px, rgba(255,255,255,0.015) 80px);
+    pointer-events: none;
+  }
+  .decade-inner { position: relative; z-index: 2; }
+  .decade-header { text-align: center; margin-bottom: 40px; }
+  .decade-header .section-label { color: var(--titan-gold); }
+  .decade-header .section-title { color: white; }
+  .decade-header p { color: rgba(255,255,255,0.7); font-size: 16px; line-height: 1.7; max-width: 680px; margin: 0 auto; }
+  .decade-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .decade-card {
+    border-radius: 12px; padding: 32px 28px;
+    border: 1px solid rgba(255,255,255,0.1);
+  }
+  .decade-card-bad { background: rgba(196,30,58,0.08); border-color: rgba(196,30,58,0.2); }
+  .decade-card-good { background: rgba(22,163,74,0.08); border-color: rgba(22,163,74,0.2); }
+  .decade-card-badge {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 12px; font-weight: 700; letter-spacing: 2px;
+    text-transform: uppercase; margin-bottom: 12px;
+  }
+  .decade-card-bad .decade-card-badge { color: rgba(255,255,255,0.5); }
+  .decade-card-good .decade-card-badge { color: var(--titan-gold); }
+  .decade-card h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 24px; letter-spacing: 1px; margin-bottom: 12px;
+  }
+  .decade-card-bad h3 { color: #F87171; }
+  .decade-card-good h3 { color: #4ADE80; }
+  .decade-card > p { font-size: 14px; line-height: 1.7; color: rgba(255,255,255,0.65); margin-bottom: 20px; }
+  .decade-items { display: flex; flex-direction: column; gap: 14px; }
+  .decade-item { display: flex; gap: 12px; align-items: flex-start; font-size: 13.5px; line-height: 1.65; color: rgba(255,255,255,0.75); }
+  .decade-item-icon { font-weight: 700; font-size: 16px; flex-shrink: 0; margin-top: 1px; }
+  .decade-card-bad .decade-item-icon { color: #F87171; }
+  .decade-card-good .decade-item-icon { color: #4ADE80; }
+  .decade-quote {
+    text-align: center; margin-top: 40px;
+    padding: 32px; background: rgba(255,255,255,0.04);
+    border-radius: 12px; border: 1px solid rgba(255,255,255,0.08);
+  }
+  .decade-quote blockquote {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(20px, 3vw, 28px);
+    letter-spacing: 1.5px; color: white; margin-bottom: 12px;
+  }
+  .decade-quote p { font-size: 15px; color: rgba(255,255,255,0.6); line-height: 1.7; max-width: 600px; margin: 0 auto; }
+
+  /* ── SHINGLE ANATOMY ── */
+  .shingle-anatomy { background: var(--titan-warm); }
+  .shingle-compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 40px; }
+  .shingle-card { background: white; border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-md); }
+  .shingle-card-header { padding: 24px 28px; text-align: center; }
+  .shingle-card-header h3 { font-family: 'Bebas Neue', sans-serif; font-size: 22px; letter-spacing: 1.5px; margin-bottom: 4px; }
+  .shingle-card-header p { font-size: 13px; opacity: 0.8; }
+  .titan-header { background: var(--titan-navy); color: white; }
+  .budget-header { background: #6B7280; color: white; }
+  .shingle-layers { padding: 12px 0; }
+  .shingle-layer {
+    display: flex; gap: 14px; align-items: flex-start;
+    padding: 14px 24px; border-bottom: 1px solid #F3F4F6;
+    cursor: pointer; transition: background 0.15s;
+  }
+  .shingle-layer:hover { background: #FAFBFC; }
+  .shingle-layer:last-child { border-bottom: none; }
+  .shingle-layer-color {
+    width: 14px; height: 14px; border-radius: 3px;
+    flex-shrink: 0; margin-top: 3px;
+  }
+  .shingle-layer-name {
+    font-size: 14px; font-weight: 700; color: var(--titan-navy);
+    margin-bottom: 4px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+  }
+  .shingle-layer-desc {
+    font-size: 13px; color: var(--titan-gray); line-height: 1.6;
+    max-height: 0; overflow: hidden; transition: max-height 0.3s ease, margin 0.3s ease;
+  }
+  .shingle-layer.open .shingle-layer-desc { max-height: 200px; margin-top: 6px; }
+  .layer-tag {
+    font-size: 10px; font-weight: 700; letter-spacing: 0.5px;
+    padding: 2px 8px; border-radius: 3px; text-transform: uppercase;
+    font-family: 'Barlow Condensed', sans-serif;
+  }
+  .layer-tag-good { background: #DCFCE7; color: #166534; }
+  .layer-tag-bad { background: #FEE2E2; color: #991B1B; }
+
+  /* ── AGING TIMELINE ── */
+  .aging-section { background: var(--titan-light); }
+  .aging-timeline { margin-top: 40px; }
+  .aging-row-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 16px; font-weight: 700; letter-spacing: 1px;
+    text-transform: uppercase; margin-bottom: 12px; padding-left: 4px;
+  }
+  .aging-row-label.titan-label { color: #16A34A; }
+  .aging-row-label.budget-label { color: var(--titan-red); }
+  .aging-row {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 16px; margin-bottom: 32px;
+  }
+  .aging-step {
+    border-radius: 10px; padding: 24px 20px;
+    border: 1px solid #E5E7EB; background: white;
+  }
+  .aging-step-year {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 36px; line-height: 1;
+  }
+  .aging-step-year-label {
+    font-size: 11px; font-weight: 600; text-transform: uppercase;
+    letter-spacing: 1px; color: var(--titan-gray); margin-bottom: 10px;
+  }
+  .aging-step h4 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 16px; font-weight: 700; margin-bottom: 6px;
+  }
+  .aging-step p { font-size: 13px; color: var(--titan-gray); line-height: 1.6; }
+  .titan-aging .aging-step-year { color: #16A34A; }
+  .titan-aging h4 { color: #16A34A; }
+  .budget-aging .aging-step-year { color: var(--titan-red); }
+  .budget-aging h4 { color: var(--titan-red); }
+
+  /* ── COMPARISON TABLE ── */
+  .comparison { background: var(--titan-white); }
+  .compare-table-wrap { margin-top: 32px; overflow-x: auto; }
+  .compare-table {
+    width: 100%; border-collapse: collapse;
+    border-radius: 12px; overflow: hidden;
+    box-shadow: var(--shadow-md); background: white;
+  }
+  .compare-table th {
+    padding: 16px 20px; font-family: 'Barlow Condensed', sans-serif;
+    font-size: 14px; font-weight: 700; letter-spacing: 1px;
+    text-transform: uppercase; text-align: left;
+  }
+  .compare-layer-head { background: var(--titan-dark); color: white; width: 160px; }
+  .compare-titan-head { background: var(--titan-navy); color: white; }
+  .compare-other-head { background: #6B7280; color: white; }
+  .compare-row { cursor: pointer; transition: background 0.15s; }
+  .compare-row:hover { background: #F9FAFB; }
+  .compare-row td { padding: 14px 20px; font-size: 14px; border-bottom: 1px solid #E5E7EB; }
+  .compare-layer { font-weight: 700; color: var(--titan-navy); }
+  .compare-expand { float: right; font-size: 16px; color: var(--titan-gray); font-weight: 400; transition: transform 0.2s; }
+  .compare-row.open .compare-expand { transform: rotate(45deg); }
+  .cmark { color: #16A34A; font-weight: 700; margin-right: 4px; }
+  .xmark { color: var(--titan-red); font-weight: 700; margin-right: 4px; }
+  .compare-detail { display: none; }
+  .compare-row.open + .compare-detail { display: table-row; }
+  .compare-detail td {
+    padding: 12px 20px 16px; font-size: 13px;
+    line-height: 1.6; border-bottom: 1px solid #E5E7EB;
+  }
+  .detail-titan { color: #166534; background: #F0FDF4; }
+  .detail-other { color: #991B1B; background: #FEF2F2; }
+  .compare-row-last td { border-bottom: none; }
+
+  .compare-callout {
+    margin-top: 32px; background: var(--titan-light);
+    border-radius: 12px; padding: 32px;
+    border-left: 4px solid var(--titan-red);
+  }
+  .compare-callout h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 24px; color: var(--titan-navy);
+    letter-spacing: 1px; margin-bottom: 10px;
+  }
+  .compare-callout p {
+    font-size: 15px; color: #4B5563; line-height: 1.7;
+  }
+
+  /* ── PROCESS ── */
+  .process { background: var(--titan-light); }
+  .process-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 40px; }
+  .process-step { background: white; border-radius: 10px; padding: 32px 24px; text-align: center; box-shadow: var(--shadow-sm); }
+  .step-number { width: 44px; height: 44px; background: var(--titan-red); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Bebas Neue', sans-serif; font-size: 22px; margin: 0 auto 16px; }
+  .process-step h4 { font-family: 'Barlow Condensed', sans-serif; font-size: 18px; font-weight: 700; color: var(--titan-navy); margin-bottom: 8px; }
+  .process-step p { font-size: 13.5px; color: var(--titan-gray); line-height: 1.6; }
+
+  /* ── CTA BAND ── */
+  .cta-band {
+    background: var(--titan-red); color: white;
+    padding: 48px 0; text-align: center;
+  }
+  .cta-band h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(28px, 4vw, 42px);
+    letter-spacing: 1.5px; margin-bottom: 12px;
+  }
+  .cta-band p {
+    font-size: 16px; color: rgba(255,255,255,0.85);
+    max-width: 560px; margin: 0 auto 24px; line-height: 1.7;
+  }
+  .cta-band .btn { background: white; color: var(--titan-red); }
+  .cta-band .btn:hover { background: #F3F4F6; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.15); }
+
+  /* ── CONTACT ── */
+  .contact { background: var(--titan-navy); color: white; }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
+  .contact h2 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(32px, 4.5vw, 48px); line-height: 1.1; letter-spacing: 1px; margin-bottom: 16px; }
+  .contact-info { display: flex; flex-direction: column; gap: 16px; }
+  .contact-item { display: flex; gap: 14px; align-items: center; }
+  .contact-item-icon { width: 44px; height: 44px; background: rgba(255,255,255,0.08); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; }
+  .contact-item-text { font-size: 15px; }
+  .contact-item-text strong { display: block; color: white; font-size: 14px; }
+  .contact-item-text span { color: rgba(255,255,255,0.6); font-size: 13px; }
+  .contact-item-text a { color: white; text-decoration: none; }
+  .contact-form { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 36px; }
+  .contact-form h3 { font-family: 'Barlow Condensed', sans-serif; font-size: 22px; font-weight: 700; margin-bottom: 24px; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px; }
+  .form-group { margin-bottom: 14px; }
+  .form-group label { display: block; font-size: 13px; font-weight: 600; margin-bottom: 6px; color: rgba(255,255,255,0.7); }
+  .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 12px 14px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); border-radius: var(--radius); color: white; font-family: 'Barlow', sans-serif; font-size: 14px; transition: border-color 0.2s; }
+  .form-group input::placeholder, .form-group textarea::placeholder { color: rgba(255,255,255,0.35); }
+  .form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: var(--titan-red); }
+  .form-group select option { background: var(--titan-navy); color: white; }
+  .form-group textarea { resize: vertical; min-height: 80px; }
+  .form-submit { width: 100%; padding: 14px; background: var(--titan-red); color: white; border: none; border-radius: var(--radius); font-family: 'Barlow', sans-serif; font-size: 15px; font-weight: 700; cursor: pointer; transition: background 0.2s; margin-top: 4px; }
+  .form-submit:hover { background: var(--titan-red-dark); }
+
+  /* ── FOOTER ── */
+  .footer { background: #0F1A2E; color: rgba(255,255,255,0.5); padding: 40px 0 24px; font-size: 13px; }
+  .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 32px; }
+  .footer-brand .footer-logo { font-family: 'Bebas Neue', sans-serif; font-size: 24px; color: white; margin-bottom: 12px; }
+  .footer-brand p { line-height: 1.65; max-width: 280px; }
+  .footer-col h4 { font-family: 'Barlow Condensed', sans-serif; font-size: 14px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: white; margin-bottom: 16px; }
+  .footer-col a { display: block; color: rgba(255,255,255,0.5); text-decoration: none; font-size: 13.5px; margin-bottom: 8px; transition: color 0.2s; }
+  .footer-col a:hover { color: white; }
+  .footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 20px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    .intro-grid { grid-template-columns: 1fr; }
+    .decade-cards { grid-template-columns: 1fr; }
+    .shingle-compare-grid { grid-template-columns: 1fr; }
+    .aging-row { grid-template-columns: 1fr 1fr; }
+    .process-steps { grid-template-columns: 1fr 1fr; }
+    .contact-grid { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 768px) {
+    .nav-links { display: none; }
+    .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 70px; left: 0; right: 0; background: white; box-shadow: 0 12px 24px rgba(0,0,0,0.1); padding: 16px 0; z-index: 100; gap: 0; }
+    .nav-links.open .nav-item { padding: 0; }
+    .nav-links.open .nav-item > a { height: auto; line-height: normal; padding: 14px 24px; }
+    .nav-links.open .nav-dropdown { position: static; opacity: 1; visibility: visible; transform: none; box-shadow: none; border: none; border-radius: 0; min-width: 100%; display: none; }
+    .nav-links.open .nav-item.dropdown-open .nav-dropdown { display: block; }
+    .nav-links.open .nav-dropdown a { padding-left: 44px; font-size: 13px; }
+    .nav-links.open .nav-cta { margin: 12px 24px; text-align: center; display: block; }
+    .mobile-toggle { display: block; }
+  }
+  @media (max-width: 600px) {
+    .aging-row { grid-template-columns: 1fr; }
+    .process-steps { grid-template-columns: 1fr; }
+  }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+  .animate-in { animation: fadeUp 0.6s ease-out both; }
+  .delay-1 { animation-delay: 0.1s; }
+  .delay-2 { animation-delay: 0.2s; }
+
+  /* ── PROMO STICKY BAR ── */
+  .promo-bar {
+    background: var(--titan-red);
+    color: var(--titan-white);
+    text-align: center;
+    padding: 10px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    position: relative;
+    z-index: 101;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+  }
+  .promo-bar a {
+    color: var(--titan-gold);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    font-weight: 700;
+    margin-left: 6px;
+    white-space: nowrap;
+  }
+  .promo-bar .promo-bar-fine {
+    font-size: 11px;
+    font-weight: 400;
+    opacity: 0.75;
+    display: block;
+    margin-top: 4px;
+  }
+  @media (max-width: 600px) {
+    .promo-bar { font-size: 13px; padding: 10px 12px; line-height: 1.5; }
+  }
+
+  /* ── PROMO HERO BANNER ── */
+  .promo-hero {
+    position: relative;
+    background: var(--titan-navy);
+    overflow: hidden;
+    padding: 70px 0 60px;
+  }
+  .promo-hero .flag-svg-wrap {
+    position: absolute;
+    top: -10%; left: -5%;
+    width: 110%; height: 120%;
+    opacity: 0.10;
+    pointer-events: none;
+    transform: rotate(-3deg);
+  }
+  .promo-hero .flag-svg-wrap svg { width: 100%; height: 100%; }
+  .promo-hero .container { position: relative; z-index: 2; text-align: center; }
+  .promo-flag-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--titan-gold);
+    margin-bottom: 24px;
+  }
+  .promo-amount {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(72px, 12vw, 110px);
+    line-height: 1;
+    letter-spacing: 3px;
+    margin-bottom: 4px;
+    text-shadow: 0 4px 30px rgba(0,0,0,0.4);
+  }
+  .promo-amount .dollar { color: var(--titan-white); }
+  .promo-amount .number { color: var(--titan-gold); }
+  .promo-off {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(28px, 4vw, 44px);
+    color: var(--titan-red);
+    letter-spacing: 8px;
+    margin-bottom: 24px;
+  }
+  .promo-tagline { font-size: 18px; color: rgba(255,255,255,0.85); max-width: 560px; margin: 0 auto 10px; line-height: 1.6; }
+  .promo-tagline strong { color: var(--titan-white); }
+  .promo-deadline {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--titan-gold);
+    margin-top: 20px;
+  }
+  .promo-cta-row { display: flex; justify-content: center; gap: 16px; margin-top: 28px; flex-wrap: wrap; }
+  .promo-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 32px;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    text-decoration: none;
+    border-radius: 6px;
+    letter-spacing: 0.5px;
+    transition: all 0.2s;
+    cursor: pointer;
+    border: none;
+  }
+  .promo-btn-primary { background: var(--titan-red); color: var(--titan-white); }
+  .promo-btn-primary:hover { background: var(--titan-red-dark); }
+  .promo-btn-secondary { background: transparent; color: var(--titan-white); border: 2px solid rgba(255,255,255,0.3); }
+  .promo-btn-secondary:hover { border-color: var(--titan-white); }
+  .promo-fine-print { font-size: 12px; color: rgba(255,255,255,0.4); margin-top: 24px; line-height: 1.5; max-width: 600px; margin-left: auto; margin-right: auto; }
+  @media (max-width: 600px) {
+    .promo-hero { padding: 40px 0 36px; }
+    .promo-cta-row { flex-direction: column; align-items: center; }
+  }
+
+</style>
+</head>
+<body>
+
+<!-- ── TOP BAR ── -->
+<!-- ── 250th ANNIVERSARY PROMO BAR ── -->
+<div class="promo-bar">
+  Celebrate America's 250th — <strong>$1,776 OFF</strong> your new roof! Must sign by July 4th.
+  <a href="tel:9362030034">Call to Claim Savings →</a>
+  <span class="promo-bar-fine">Reroofing &amp; metal accents only. Excludes insurance claims &amp; builder contracts.</span>
+</div>
+
+<div class="topbar">
+  <div class="container">
+    <span>Serving Greater Houston — Galveston to College Station &nbsp;|&nbsp; <a href="tel:+19362285061">(936) 228-5061</a> &nbsp;|&nbsp; <a href="mailto:info@titanroofingtx.com">info@titanroofingtx.com</a></span>
+    <div class="topbar-badges">
+      <span class="topbar-badge">★ Veteran Owned</span>
+      <span class="topbar-badge">★ Since 2002</span>
+      <span class="topbar-badge">★ CertainTeed SELECT ShingleMaster</span>
+    </div>
+  </div>
+</div>
+
+<!-- ── NAVBAR ── -->
+<nav class="navbar">
+  <div class="container">
+    <a href="index.html" class="nav-logo">
+      <span class="logo-icon"><img src="titanlogorevised_v3.png" alt="Titan Roofing Logo"></span>
+      Titan Roofing
+    </a>
+    <div class="nav-links" id="navLinks">
+      <div class="nav-item"><a href="index.html">Home</a></div>
+      <div class="nav-item">
+        <a href="#" onclick="return false;" class="active">Services <span class="nav-arrow">▾</span></a>
+        <div class="nav-dropdown">
+          <a href="residential.html" style="color:var(--titan-red); font-weight:700;">Residential Reroofing</a>
+          <a href="storm-damage.html">Storm Damage &amp; Insurance</a>
+          <a href="new-construction.html">New Construction</a>
+          <a href="commercial.html">Commercial Roofing</a>
+          <a href="metal-accents.html">Metal Accents</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="#" onclick="return false;">Why Titan <span class="nav-arrow">▾</span></a>
+        <div class="nav-dropdown">
+          <a href="about.html">Our Story</a>
+          <a href="about.html#certainteed">CertainTeed Certification</a>
+          <a href="#process">How It Works</a>
+        </div>
+      </div>
+      <div class="nav-item"><a href="index.html#reviews">Reviews</a></div>
+      <div class="nav-item"><a href="index.html#areas">Service Areas</a></div>
+      <a href="#contact" class="nav-cta">Free Inspection →</a>
+    </div>
+    <button class="mobile-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ── 250th ANNIVERSARY PROMO HERO ── -->
+<section class="promo-hero">
+  <div class="flag-svg-wrap">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1235 650" preserveAspectRatio="xMidYMid slice">
+      <rect width="1235" height="650" fill="#FFFFFF"/>
+      <rect y="0" width="1235" height="50" fill="#B22234"/>
+      <rect y="100" width="1235" height="50" fill="#B22234"/>
+      <rect y="200" width="1235" height="50" fill="#B22234"/>
+      <rect y="300" width="1235" height="50" fill="#B22234"/>
+      <rect y="400" width="1235" height="50" fill="#B22234"/>
+      <rect y="500" width="1235" height="50" fill="#B22234"/>
+      <rect y="600" width="1235" height="50" fill="#B22234"/>
+      <rect width="494" height="350" fill="#3C3B6E"/>
+      <g fill="#FFFFFF">
+        <g transform="translate(41,19)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+        <g transform="translate(123,19)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+        <g transform="translate(205,19)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+        <g transform="translate(288,19)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+        <g transform="translate(370,19)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+        <g transform="translate(453,19)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+        <g transform="translate(82,58)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+        <g transform="translate(164,58)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+        <g transform="translate(247,58)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+        <g transform="translate(329,58)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+        <g transform="translate(411,58)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+        <g transform="translate(41,97)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+        <g transform="translate(123,97)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+        <g transform="translate(205,97)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+        <g transform="translate(288,97)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+        <g transform="translate(370,97)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+        <g transform="translate(453,97)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+        <g transform="translate(82,136)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+        <g transform="translate(164,136)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+        <g transform="translate(247,136)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+        <g transform="translate(329,136)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+        <g transform="translate(411,136)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+        <g transform="translate(41,175)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+        <g transform="translate(123,175)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+        <g transform="translate(205,175)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+        <g transform="translate(288,175)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+        <g transform="translate(370,175)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+        <g transform="translate(453,175)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+        <g transform="translate(82,214)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+        <g transform="translate(164,214)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+        <g transform="translate(247,214)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+        <g transform="translate(329,214)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+        <g transform="translate(411,214)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+        <g transform="translate(41,253)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+        <g transform="translate(123,253)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+        <g transform="translate(205,253)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+        <g transform="translate(288,253)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+        <g transform="translate(370,253)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+        <g transform="translate(453,253)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+        <g transform="translate(82,292)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+        <g transform="translate(164,292)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+        <g transform="translate(247,292)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+        <g transform="translate(329,292)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+        <g transform="translate(411,292)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+        <g transform="translate(41,331)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+        <g transform="translate(123,331)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+        <g transform="translate(205,331)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+        <g transform="translate(288,331)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+        <g transform="translate(370,331)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+        <g transform="translate(453,331)"><polygon points="0,-12 3.5,-4 12,-4 5.5,2 7.5,10.5 0,5.5 -7.5,10.5 -5.5,2 -12,-4 -3.5,-4"/></g>
+      </g>
+    </svg>
+  </div>
+
+  <div class="container">
+    <div class="promo-flag-label">Celebrate America's 250th Anniversary &bull; Veteran-Owned Since 2002</div>
+    <div class="promo-amount"><span class="dollar">$</span><span class="number">1,776</span></div>
+    <div class="promo-off">OFF YOUR NEW ROOF</div>
+    <p class="promo-tagline">Celebrate America's 250th with <strong>Houston's most trusted roofer</strong>. Secure your savings.</p>
+    <div class="promo-deadline">★ Must be signed by July 4th, 2026 ★</div>
+    <div class="promo-cta-row">
+      <a href="tel:9362030034" class="promo-btn promo-btn-primary">Call to Claim Your $1,776 Savings</a>
+      <a href="#contact" class="promo-btn promo-btn-secondary">Schedule Free Inspection</a>
+    </div>
+    <p class="promo-fine-print">Applies to residential &amp; commercial reroofing and homeowner-direct metal accent projects. Not valid on insurance-funded storm damage claims or new construction builder contracts. Cannot be combined with other offers. Discount applied at contract signing.</p>
+  </div>
+</section>
+
+<!-- ── PAGE HERO ── -->
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero-label">Residential Reroofing</div>
+    <h1>TIME FOR A NEW ROOF?<br>WE INSTALL THEM <em>RIGHT.</em></h1>
+    <p>If your home was roofed before 2010, your roof may be past its prime. Titan provides complete tear-off and replacement using CertainTeed Landmark 30-year shingles — Class 3 impact-rated, backed by Titan's workmanship warranty with CertainTeed SureStart PLUS upgrade available, and installed by professional crews — many with 20+ years on our team.</p>
+    <div class="page-hero-actions">
+      <a href="#contact" class="btn btn-primary">Get a Free Inspection →</a>
+      <a href="tel:+19362030034" class="btn btn-outline">☎ 936-203-0034</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── INTRO / WHAT TO EXPECT ── -->
+<section class="section intro-section">
+  <div class="container">
+    <div class="intro-grid">
+      <div>
+        <div class="section-label">What You Get</div>
+        <div class="section-title">A Roof Built to Last</div>
+        <p>Every Titan reroof starts with a complete tear-off down to bare decking — we never layer new shingles over old. This lets us inspect every square foot for rot, soft spots, and hidden damage before anything new goes on.</p>
+        <p>As a CertainTeed SELECT ShingleMaster — a certification held by fewer than 1% of roofers nationwide — we install CertainTeed Landmark architectural shingles with synthetic underlayment, all-new pipe boots and flashing, and proper nail placement in the manufacturer's zone. The result is a roofing system — not just a layer of shingles — backed by Titan's workmanship warranty. Upgrade to all-CertainTeed products to unlock SureStart PLUS coverage with up to 25 years of warranty protection.</p>
+        <p>Most homes are completed in a single day. Our crews have been with us since 2002 — they know exactly what they're doing, and they do it consistently on every job.</p>
+      </div>
+      <div class="intro-stats">
+        <div class="intro-stat">
+          <div class="intro-stat-number">30K+</div>
+          <div class="intro-stat-label">Roofs Installed</div>
+        </div>
+        <div class="intro-stat">
+          <div class="intro-stat-number">1-Day</div>
+          <div class="intro-stat-label">Install</div>
+        </div>
+        <div class="intro-stat">
+          <div class="intro-stat-number">Up to 25 Yr</div>
+          <div class="intro-stat-label">Warranty</div>
+        </div>
+        <div class="intro-stat">
+          <div class="intro-stat-number">Top 1%</div>
+          <div class="intro-stat-label">Nationwide</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── 10 YEARS LATER ── -->
+<section class="decade-compare">
+  <div class="container">
+    <div class="decade-inner">
+      <div class="decade-header">
+        <div class="section-label">The Real Difference</div>
+        <div class="section-title">What Your Roof Looks Like in 10 Years</div>
+        <p>Two roofs installed on the same day. Same house. Same Houston weather — the heat, the hail, the hurricanes. The only difference is who installed it and what they used.</p>
+      </div>
+      <div class="decade-cards">
+        <div class="decade-card decade-card-bad">
+          <div class="decade-card-badge">Typical Contractor</div>
+          <h3>BACK TO SQUARE ONE</h3>
+          <p>Cheaper materials and faster installs might look fine on day one — but three-tab shingles, felt underlayment, reused pipe boots, and high-nailed fasteners tell a different story a decade later:</p>
+          <div class="decade-items">
+            <div class="decade-item"><span class="decade-item-icon">✗</span><span><strong>Three-tab shingles curling and cracking</strong> — thin, single-layer shingles without impact rating. UV degrades them in 8–12 years.</span></div>
+            <div class="decade-item"><span class="decade-item-icon">✗</span><span><strong>Felt underlayment has failed</strong> — absorbs water, tears easily, lasts only 12–20 years. Your shingles sit on nothing but bare wood.</span></div>
+            <div class="decade-item"><span class="decade-item-icon">✗</span><span><strong>Reused pipe boots are cracked and leaking</strong> — old rubber dries out in UV. Ceiling stains or attic mold are common signs.</span></div>
+            <div class="decade-item"><span class="decade-item-icon">✗</span><span><strong>High-nailed shingles blowing off</strong> — nails placed above the manufacturer's zone means shingles peel off in the first major wind event.</span></div>
+            <div class="decade-item"><span class="decade-item-icon">✗</span><span><strong>Warranty? Expired or voided.</strong> Basic manufacturer warranty only, and improper installation voids even that.</span></div>
+          </div>
+        </div>
+        <div class="decade-card decade-card-good">
+          <div class="decade-card-badge">Titan Roofing</div>
+          <h3>STILL PROTECTING YOUR HOME</h3>
+          <p>Same ten years of Houston storms, summer heat, and seasonal hail — but your Titan roof was installed with premium materials and proper craftsmanship:</p>
+          <div class="decade-items">
+            <div class="decade-item"><span class="decade-item-icon">✓</span><span><strong>CertainTeed Landmark shingles still holding strong</strong> — Class 3 impact-rated, 30-year laminated, with StreakFighter algae resistance.</span></div>
+            <div class="decade-item"><span class="decade-item-icon">✓</span><span><strong>Synthetic underlayment fully intact</strong> — water-repellent, UV-resistant, rated to last 25–50 years.</span></div>
+            <div class="decade-item"><span class="decade-item-icon">✓</span><span><strong>All-new pipe boots and flashing sealed tight</strong> — every penetration replaced at install. No surprise leaks.</span></div>
+            <div class="decade-item"><span class="decade-item-icon">✓</span><span><strong>Shingles nailed in the manufacturer's zone</strong> — full wind resistance, warranty intact.</span></div>
+            <div class="decade-item"><span class="decade-item-icon">✓</span><span><strong>CertainTeed shingle warranty still in effect</strong> — 25 years prorated coverage on materials. SureStart PLUS upgrade extends protection further.</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="decade-quote">
+        <blockquote>"THE CHEAPEST ROOF IS THE ONE YOU NEVER HAVE TO REPLACE TWICE."</blockquote>
+        <p>Cutting corners on materials and installation doesn't save money — it just delays the real cost. Titan builds roofs that last, because that's the only kind worth building.</p>
+        <div style="margin-top: 20px;">
+          <a href="#contact" class="btn btn-primary">Get a Free Inspection →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SHINGLE ANATOMY ── -->
+<section class="section shingle-anatomy" id="shingle-anatomy">
+  <div class="container">
+    <div style="text-align: center;">
+      <div class="section-label">Under The Surface</div>
+      <div class="section-title">Not All Shingles Are Created Equal</div>
+      <p class="section-subtitle" style="margin: 0 auto;">The difference between a typical contractor and a Titan roof starts right here — the shingle itself. Click each layer to see what you're really getting.</p>
+    </div>
+    <div class="shingle-compare-grid">
+      <!-- TYPICAL CONTRACTOR SHINGLE (LEFT) -->
+      <div class="shingle-card">
+        <div class="shingle-card-header budget-header">
+          <h3>TYPICAL THREE-TAB SHINGLE</h3>
+          <p>20-Year Basic Single-Layer Shingle</p>
+        </div>
+        <div class="shingle-layers">
+          <div class="shingle-layer" onclick="this.classList.toggle('open')">
+            <div class="shingle-layer-color" style="background: #9CA3AF;"></div>
+            <div class="shingle-layer-content">
+              <div class="shingle-layer-name">Standard Granule Layer <span class="layer-tag layer-tag-bad">No Algae Protection</span></div>
+              <div class="shingle-layer-desc">Basic mineral granules with no algae treatment. In Houston's humidity, black streaks typically appear within 3–5 years.</div>
+            </div>
+          </div>
+          <div class="shingle-layer" onclick="this.classList.toggle('open')">
+            <div class="shingle-layer-color" style="background: #D1D5DB;"></div>
+            <div class="shingle-layer-content">
+              <div class="shingle-layer-name">No Impact Rating <span class="layer-tag layer-tag-bad">Hail Vulnerable</span></div>
+              <div class="shingle-layer-desc">Single-layer construction provides no rated hail protection. Golf-ball hail fractures the mat and dislodges granules.</div>
+            </div>
+          </div>
+          <div class="shingle-layer" onclick="this.classList.toggle('open')">
+            <div class="shingle-layer-color" style="background: #E5E7EB;"></div>
+            <div class="shingle-layer-content">
+              <div class="shingle-layer-name">Single-Layer Construction <span class="layer-tag layer-tag-bad">Bare Minimum</span></div>
+              <div class="shingle-layer-desc">One thin layer of fiberglass and asphalt. Significantly lighter and less durable — the cost savings come directly from less material.</div>
+            </div>
+          </div>
+          <div class="shingle-layer" onclick="this.classList.toggle('open')">
+            <div class="shingle-layer-color" style="background: #D1D5DB;"></div>
+            <div class="shingle-layer-content">
+              <div class="shingle-layer-name">Standard Asphalt <span class="layer-tag layer-tag-bad">UV Degradation</span></div>
+              <div class="shingle-layer-desc">Basic asphalt without UV stabilizers. Dries out and becomes brittle in Houston heat within 8–12 years.</div>
+            </div>
+          </div>
+          <div class="shingle-layer" onclick="this.classList.toggle('open')">
+            <div class="shingle-layer-color" style="background: #9CA3AF;"></div>
+            <div class="shingle-layer-content">
+              <div class="shingle-layer-name">No Nailing Guide <span class="layer-tag layer-tag-bad">Install Risk</span></div>
+              <div class="shingle-layer-desc">No printed guide means nailing zone is up to installer judgment. Crews routinely high-nail to work faster — voiding the warranty.</div>
+            </div>
+          </div>
+          <div class="shingle-layer" onclick="this.classList.toggle('open')">
+            <div class="shingle-layer-color" style="background: #D1D5DB;"></div>
+            <div class="shingle-layer-content">
+              <div class="shingle-layer-name">Basic Sealant Strip <span class="layer-tag layer-tag-bad">60 MPH Wind</span></div>
+              <div class="shingle-layer-desc">Standard adhesive rated for only 60 MPH — well below Houston's storm wind speeds. First major wind event can peel shingles off entirely.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- TITAN SHINGLE (RIGHT) -->
+      <div class="shingle-card">
+        <div class="shingle-card-header titan-header">
+          <h3>CERTAINTEED LANDMARK</h3>
+          <p>30-Year Laminated Architectural Shingle</p>
+        </div>
+        <div class="shingle-layers">
+          <div class="shingle-layer" onclick="this.classList.toggle('open')">
+            <div class="shingle-layer-color" style="background: #8B6914;"></div>
+            <div class="shingle-layer-content">
+              <div class="shingle-layer-name">Algae-Resistant Granule Layer <span class="layer-tag layer-tag-good">StreakFighter</span></div>
+              <div class="shingle-layer-desc">Ceramic-coated copper granules that actively prevent algae growth — the black streaks you see on older Houston roofs. Keeps your roof looking new for decades.</div>
+            </div>
+          </div>
+          <div class="shingle-layer" onclick="this.classList.toggle('open')">
+            <div class="shingle-layer-color" style="background: #4A4A4A;"></div>
+            <div class="shingle-layer-content">
+              <div class="shingle-layer-name">Class 3 Impact-Rated Surface <span class="layer-tag layer-tag-good">Hail Protection</span></div>
+              <div class="shingle-layer-desc">Engineered to withstand 1.75" hail (golf ball sized). Houston averages 4–6 significant hail events per year — this is the difference between filing a claim and not needing to.</div>
+            </div>
+          </div>
+          <div class="shingle-layer" onclick="this.classList.toggle('open')">
+            <div class="shingle-layer-color" style="background: #2C2C2C;"></div>
+            <div class="shingle-layer-content">
+              <div class="shingle-layer-name">Dual-Layer Laminated Construction <span class="layer-tag layer-tag-good">Durable</span></div>
+              <div class="shingle-layer-desc">Two layers of fiberglass mat bonded with weathering-grade asphalt. Thicker, heavier, and significantly more durable than single-layer three-tab shingles.</div>
+            </div>
+          </div>
+          <div class="shingle-layer" onclick="this.classList.toggle('open')">
+            <div class="shingle-layer-color" style="background: #5C7A3A;"></div>
+            <div class="shingle-layer-content">
+              <div class="shingle-layer-name">UV-Stabilized Asphalt Core <span class="layer-tag layer-tag-good">UV Protection</span></div>
+              <div class="shingle-layer-desc">Specially formulated asphalt that resists UV breakdown. Standard asphalt dries out and cracks in Houston summers — this stays flexible and waterproof year after year.</div>
+            </div>
+          </div>
+          <div class="shingle-layer" onclick="this.classList.toggle('open')">
+            <div class="shingle-layer-color" style="background: #C41E3A;"></div>
+            <div class="shingle-layer-content">
+              <div class="shingle-layer-name">NailTrak Nailing Guide <span class="layer-tag layer-tag-good">Patent</span></div>
+              <div class="shingle-layer-desc">Printed nailing zone ensures nails are placed exactly where the manufacturer specifies. Eliminates high-nailing — the #1 cause of blow-offs and voided warranties.</div>
+            </div>
+          </div>
+          <div class="shingle-layer" onclick="this.classList.toggle('open')">
+            <div class="shingle-layer-color" style="background: #1B2A4A;"></div>
+            <div class="shingle-layer-content">
+              <div class="shingle-layer-name">Tru-Bond Sealant Strip <span class="layer-tag layer-tag-good">130 MPH Wind</span></div>
+              <div class="shingle-layer-desc">Factory-applied adhesive bonds each shingle to the one below. Rated for 130 MPH wind resistance — critical for hurricane and derecho country.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── 10-YEAR AGING TIMELINE ── -->
+<section class="section aging-section">
+  <div class="container">
+    <div style="text-align: center;">
+      <div class="section-label">Over Time</div>
+      <div class="section-title">How Each Shingle Ages in Houston</div>
+      <p class="section-subtitle" style="margin: 0 auto;">Same weather, same neighborhood, same age. The only difference is the shingle and the installer.</p>
+    </div>
+    <div class="aging-timeline">
+      <div class="aging-row-label budget-label">✗ Typical Contractor — Three-Tab Shingle</div>
+      <div class="aging-row">
+        <div class="aging-step budget-aging">
+          <div class="aging-step-year">3</div>
+          <div class="aging-step-year-label">Years</div>
+          <h4>Algae Appears</h4>
+          <p>Black streaks forming on north-facing slopes. Granules washing into gutters. No algae resistance.</p>
+        </div>
+        <div class="aging-step budget-aging">
+          <div class="aging-step-year">5</div>
+          <div class="aging-step-year-label">Years</div>
+          <h4>Hail Damage Visible</h4>
+          <p>No impact rating — fractured mat and granule loss after first major hail. Pipe boot rubber cracking.</p>
+        </div>
+        <div class="aging-step budget-aging">
+          <div class="aging-step-year">10</div>
+          <div class="aging-step-year-label">Years</div>
+          <h4>Replacement Due</h4>
+          <p>Asphalt dried and brittle. Shingles curling. High-nailed tabs blowing off. Felt degrading. Active leaks likely.</p>
+        </div>
+        <div class="aging-step budget-aging">
+          <div class="aging-step-year">15</div>
+          <div class="aging-step-year-label">Years</div>
+          <h4>Second Roof Needed</h4>
+          <p>Structural damage from water intrusion. $15,000+ for a new roof — plus repairs to decking and interior.</p>
+        </div>
+      </div>
+
+      <div class="aging-row-label titan-label">✓ Titan — CertainTeed Landmark</div>
+      <div class="aging-row">
+        <div class="aging-step titan-aging">
+          <div class="aging-step-year">3</div>
+          <div class="aging-step-year-label">Years</div>
+          <h4>Still Like New</h4>
+          <p>StreakFighter algae resistance working. No granule loss. Color holding. Sealant strips fully bonded.</p>
+        </div>
+        <div class="aging-step titan-aging">
+          <div class="aging-step-year">5</div>
+          <div class="aging-step-year-label">Years</div>
+          <h4>Survived Major Hail</h4>
+          <p>Class 3 impact rating prevented fractures. No insurance claim needed. Neighbors with three-tab filing claims.</p>
+        </div>
+        <div class="aging-step titan-aging">
+          <div class="aging-step-year">10</div>
+          <div class="aging-step-year-label">Years</div>
+          <h4>Performing Strong</h4>
+          <p>Synthetic underlayment fully intact. No leaks, no wind damage, no visible wear. Still looks great from the street.</p>
+        </div>
+        <div class="aging-step titan-aging">
+          <div class="aging-step-year">25</div>
+          <div class="aging-step-year-label">Years</div>
+          <h4>End of Warranty</h4>
+          <p>Still functional. CertainTeed's prorated shingle warranty period winding down. Roof condition at this point depends on material quality and original installation.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── COMPARISON TABLE ── -->
+<section class="section comparison" id="compare">
+  <div class="container">
+    <div class="section-label">Know The Difference</div>
+    <div class="section-title">What's Really On Your Roof?</div>
+    <p class="section-subtitle">Not all quotes are equal. The price difference usually comes down to materials and installation quality.</p>
+
+    <div class="compare-table-wrap">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th class="compare-layer-head">Roof Layer</th>
+            <th class="compare-other-head">Typical Contractor</th>
+            <th class="compare-titan-head">Titan Roofing Standard</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="compare-row" onclick="this.classList.toggle('open')">
+            <td class="compare-layer">Shingles <span class="compare-expand">+</span></td>
+            <td class="compare-other"><span class="xmark">✗</span> CertainTeed Patriot or generic 3-tab</td>
+            <td class="compare-titan"><span class="cmark">✓</span> CertainTeed Landmark 30-Year, Class 3 IR</td>
+          </tr>
+          <tr class="compare-detail"><td></td><td class="detail-other">Cheaper, visibly thinner, less hail resistant, shorter lifespan.</td><td class="detail-titan">Two-layer laminated — thicker, more durable, better wind &amp; hail resistance.</td></tr>
+
+          <tr class="compare-row" onclick="this.classList.toggle('open')">
+            <td class="compare-layer">Underlayment <span class="compare-expand">+</span></td>
+            <td class="compare-other"><span class="xmark">✗</span> Asphalt-saturated felt — 12–20 years</td>
+            <td class="compare-titan"><span class="cmark">✓</span> Synthetic polymer — 25–50 years</td>
+          </tr>
+          <tr class="compare-detail"><td></td><td class="detail-other">Absorbs water, degrades in heat. Fails 10+ years before your shingles.</td><td class="detail-titan">Tear-proof, mold-resistant, UV-stable — lasts the life of your roof.</td></tr>
+
+          <tr class="compare-row" onclick="this.classList.toggle('open')">
+            <td class="compare-layer">Valley Protection <span class="compare-expand">+</span></td>
+            <td class="compare-other"><span class="xmark">✗</span> Felt paper only — or nothing</td>
+            <td class="compare-titan"><span class="cmark">✓</span> Ice &amp; water shield, self-sealing</td>
+          </tr>
+          <tr class="compare-detail"><td></td><td class="detail-other">Not required by TX code, so they skip it. Saves them ~$200–300.</td><td class="detail-titan">Valleys are leak spot #2 — waterproof bond to decking.</td></tr>
+
+          <tr class="compare-row" onclick="this.classList.toggle('open')">
+            <td class="compare-layer">Metal Joints <span class="compare-expand">+</span></td>
+            <td class="compare-other"><span class="xmark">✗</span> Caulked — dries in 2–5 years</td>
+            <td class="compare-titan"><span class="cmark">✓</span> Mechanically fastened &amp; soldered</td>
+          </tr>
+          <tr class="compare-detail"><td></td><td class="detail-other">Looks fine day one. Creates a hidden leak in 3–5 years.</td><td class="detail-titan">Solder doesn't crack or fail in heat cycling. Permanent bond.</td></tr>
+
+          <tr class="compare-row" onclick="this.classList.toggle('open')">
+            <td class="compare-layer">Pipe Boots <span class="compare-expand">+</span></td>
+            <td class="compare-other"><span class="xmark">~</span> Old boots reused if "they look okay"</td>
+            <td class="compare-titan"><span class="cmark">✓</span> All new — every penetration replaced</td>
+          </tr>
+          <tr class="compare-detail"><td></td><td class="detail-other">Cracked boots are the #1 cause of slow, hidden leaks.</td><td class="detail-titan">Penetrations are leak spot #1 — never reuse old rubber boots.</td></tr>
+
+          <tr class="compare-row" onclick="this.classList.toggle('open')">
+            <td class="compare-layer">Nailing <span class="compare-expand">+</span></td>
+            <td class="compare-other"><span class="xmark">✗</span> Often "high-nailed" to go faster</td>
+            <td class="compare-titan"><span class="cmark">✓</span> 4 nails in manufacturer zone</td>
+          </tr>
+          <tr class="compare-detail"><td></td><td class="detail-other">#1 cause of shingle blow-offs. Voids manufacturer warranty.</td><td class="detail-titan">Correct placement protects warranty and wind resistance.</td></tr>
+
+          <tr class="compare-row" onclick="this.classList.toggle('open')">
+            <td class="compare-layer">Tear-Off <span class="compare-expand">+</span></td>
+            <td class="compare-other"><span class="xmark">~</span> May overlay shingles over shingles</td>
+            <td class="compare-titan"><span class="cmark">✓</span> Complete tear-off to bare decking</td>
+          </tr>
+          <tr class="compare-detail"><td></td><td class="detail-other">Hides damage, adds weight, voids most warranties.</td><td class="detail-titan">Full deck inspection before install. Find hidden damage.</td></tr>
+
+          <tr class="compare-row compare-row-last">
+            <td class="compare-layer" style="font-weight:700;">Warranty</td>
+            <td class="compare-other"><span class="xmark">✗</span> Basic manufacturer only. 1-yr labor.</td>
+            <td class="compare-titan" style="font-weight:700;"><span class="cmark">✓</span> CertainTeed 25-yr shingle warranty (prorated). SureStart PLUS upgrade available.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="compare-callout">
+      <h3>It's Not About Price — It's About What You're Getting</h3>
+      <p>A lower quote usually means cheaper materials and installation shortcuts — skipped valley protection, reused pipe boots, high-nailed shingles. Those shortcuts don't show up on day one, but they do show up when a valley leaks, boots crack, or shingles blow off in the next storm. And by then, your warranty won't cover it. <strong>The cheapest roof is the one you never have to replace twice.</strong></p>
+    </div>
+
+    <div style="text-align: center; margin-top: 32px;">
+      <a href="7-questions-to-ask-your-roofer.pdf" download class="btn btn-primary" style="margin-right: 12px;">📄 Download: 7 Questions to Ask Before You Sign</a>
+      <a href="#contact" class="btn" style="background: var(--titan-navy); color: white;">Get a Free Inspection →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── PROCESS ── -->
+<section class="section process" id="process">
+  <div class="container">
+    <div class="section-label">How It Works</div>
+    <div class="section-title">From Inspection to Finished Roof</div>
+    <p class="section-subtitle">Most homes are completed in a single day. Here's what to expect.</p>
+    <div class="process-steps">
+      <div class="process-step">
+        <div class="step-number">1</div>
+        <h4>Free Inspection</h4>
+        <p>We assess your roof and document any damage with photos and detailed notes.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-number">2</div>
+        <h4>Estimate &amp; Claim</h4>
+        <p>Detailed proposal provided. Insurance assist if applicable — we handle the paperwork.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-number">3</div>
+        <h4>Schedule &amp; Build</h4>
+        <p>Crew on-site within days. Full tear-off, deck inspection, and complete replacement.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-number">4</div>
+        <h4>Final Walkthrough</h4>
+        <p>Complete cleanup and walkthrough. We don't leave until you're satisfied.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA BAND ── -->
+<section class="cta-band">
+  <div class="container">
+    <h2>READY TO SEE WHAT YOUR ROOF REALLY NEEDS?</h2>
+    <p>Schedule a free, no-obligation inspection. We'll give you an honest assessment and a detailed quote — no pressure, no surprises.</p>
+    <a href="#contact" class="btn">Get a Free Inspection →</a>
+  </div>
+</section>
+
+<!-- ── CONTACT ── -->
+<section class="section contact" id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div>
+        <div class="section-label" style="color: var(--titan-gold);">Get Started</div>
+        <h2>Ready for a Free<br>Roof Inspection?</h2>
+        <p style="font-size: 16px; color: rgba(255,255,255,0.7); line-height: 1.7; margin-bottom: 28px;">Fill out the form or give us a call. We'll schedule a no-cost, no-obligation inspection and provide you with an honest assessment.</p>
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-item-icon">☎</div>
+            <div class="contact-item-text">
+              <strong><a href="tel:+19362285061">(936) 228-5061</a></strong>
+              <span>Main Office — Willis, TX</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">✉</div>
+            <div class="contact-item-text">
+              <strong><a href="mailto:info@titanroofingtx.com">info@titanroofingtx.com</a></strong>
+              <span>We respond within 24 hours on business days</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">📍</div>
+            <div class="contact-item-text">
+              <strong>Willis, Texas</strong>
+              <span>Serving Greater Houston — Galveston to College Station</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form">
+        <h3>Request a Free Quote</h3>
+        <form action="https://formsubmit.co/info@titanroofingtx.com" method="POST">
+        <input type="hidden" name="_subject" value="New Quote Request — Residential Reroofing — Titan Roofing">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_next" value="https://titanroofingtx.com">
+        <input type="hidden" name="Service Interest" value="Residential Reroofing">
+        <div class="form-row">
+          <div class="form-group"><label>First Name *</label><input type="text" name="First Name" placeholder="John" required></div>
+          <div class="form-group"><label>Last Name</label><input type="text" name="Last Name" placeholder="Smith"></div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label>Email *</label><input type="email" name="Email" placeholder="john@example.com" required></div>
+          <div class="form-group"><label>Phone</label><input type="tel" name="Phone" placeholder="(281) 555-1234"></div>
+        </div>
+        <div class="form-group">
+          <label>How Did You Hear About Us?</label>
+          <select name="Referral Source" id="referralSource" onchange="handleReferralChange(this.value)">
+            <option value="">Select one...</option>
+            <option>Google Search</option>
+            <option>Facebook</option>
+            <option>Instagram</option>
+            <option>Neighbor / Friend</option>
+            <option>Realtor</option>
+            <option>Insurance Agent</option>
+            <option>Contractor Referral</option>
+            <option>Saw Our Trucks / Crews</option>
+            <option>Titan Installed Your Original Roof</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group" id="referralName" style="display: none;">
+          <label>Who Referred You? <span style="font-weight:400; color: rgba(255,255,255,0.45);">(Name or company)</span></label>
+          <input type="text" name="Referred By" placeholder="e.g. John Smith, ABC Realty, State Farm - Mike Jones">
+        </div>
+        <div class="form-group" id="referralOther" style="display: none;">
+          <label>Please Specify</label>
+          <input type="text" name="Referral Other" placeholder="How did you find us?">
+        </div>
+        <div class="form-group"><label>Message</label><textarea name="Message" placeholder="Tell us about your roof — age, issues, or any concerns..."></textarea></div>
+        <button type="submit" class="form-submit">Send Message →</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo"><img src="titanlogorevised_v3.png" alt="Titan Roofing Logo" style="height: 60px; width: auto; margin-bottom: 12px; "><br>Titan Roofing</div>
+        <p>Veteran-owned. Locally operated. Serving Greater Houston since 2002. CertainTeed SELECT ShingleMaster — top 1% of roofers nationwide.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="residential.html">Residential Reroofing</a>
+        <a href="storm-damage.html">Storm Restoration</a>
+        <a href="new-construction.html">New Construction</a>
+        <a href="commercial.html">Commercial Roofing</a>
+        <a href="metal-accents.html">Metal Accents</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="about.html">Our Story</a>
+        <a href="about.html#certainteed">CertainTeed Certification</a>
+        <a href="#process">How It Works</a>
+        <a href="index.html#reviews">Customer Reviews</a>
+        <a href="index.html#areas">Service Areas</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="tel:+19362285061">(936) 228-5061</a>
+        <a href="mailto:info@titanroofingtx.com">info@titanroofingtx.com</a>
+        <a href="#">Willis, Texas</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Titan Roofing. All rights reserved.</span>
+      <span>Veteran-Owned &amp; Operated &nbsp;|&nbsp; Licensed &amp; Insured</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Referral field logic
+function handleReferralChange(val) {
+  const referralSources = ['Neighbor / Friend', 'Realtor', 'Insurance Agent', 'Contractor Referral'];
+  document.getElementById('referralName').style.display = referralSources.includes(val) ? 'block' : 'none';
+  document.getElementById('referralOther').style.display = val === 'Other' ? 'block' : 'none';
+}
+
+// Mobile nav
+document.querySelectorAll('.nav-item').forEach(item => {
+  item.querySelector('a')?.addEventListener('click', function(e) {
+    if (window.innerWidth <= 768 && item.querySelector('.nav-dropdown')) {
+      e.preventDefault();
+      item.classList.toggle('dropdown-open');
+    }
+  });
+});
+</script>
+
+</body>
+</html>
