@@ -62,8 +62,9 @@
     .article-meta { font-size: 14px; color: rgba(255,255,255,0.6); display: flex; gap: 20px; flex-wrap: wrap; }
 
     .article-body { max-width: 760px; margin: 0 auto; padding: 56px 24px 80px; }
-    .article-body h2 { font-family: 'Barlow Condensed'; font-weight: 700; text-transform: none; letter-spacing: 0.3px, sans-serif; font-size: 32px; letter-spacing: 1px; color: var(--titan-navy); margin: 40px 0 16px; }
+    .article-body h2 { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 32px; letter-spacing: 1px; color: var(--titan-navy); margin: 40px 0 16px; }
     .article-body h3 { font-family: 'Barlow Condensed', sans-serif; font-size: 20px; font-weight: 700; color: var(--titan-navy); margin: 28px 0 12px; }
+    .article-body h4 { font-family: 'Barlow Condensed', sans-serif; font-size: 22px; font-weight: 700; color: var(--titan-navy); margin: 32px 0 14px; }
     .article-body p { font-size: 16px; line-height: 1.8; color: #374151; margin-bottom: 20px; }
     .article-body ul, .article-body ol { margin: 0 0 20px 24px; }
     .article-body li { font-size: 16px; line-height: 1.8; color: #374151; margin-bottom: 8px; }
@@ -71,6 +72,62 @@
     .article-body a { color: var(--titan-red); }
     .article-body blockquote { border-left: 4px solid var(--titan-red); padding: 16px 24px; background: var(--titan-light); margin: 28px 0; border-radius: 0 var(--radius) var(--radius) 0; }
     .article-body blockquote p { margin: 0; font-style: italic; color: var(--titan-navy); font-weight: 600; }
+
+    /* BLOG POST IMAGES */
+    .article-body img {
+      max-width: 75%;
+      height: auto;
+      display: block;
+      margin: 24px auto 8px;
+      border-radius: 6px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .article-body img:hover {
+      transform: scale(1.02);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.18);
+    }
+    /* Caption styling — italic paragraphs right after images */
+    .article-body img + em,
+    .article-body p > em:only-child {
+      display: block;
+      text-align: center;
+      font-size: 14px;
+      color: var(--titan-gray);
+      margin-bottom: 24px;
+    }
+
+    /* LIGHTBOX */
+    .img-lightbox {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.88);
+      z-index: 9999;
+      cursor: pointer;
+      justify-content: center;
+      align-items: center;
+    }
+    .img-lightbox.active { display: flex; }
+    .img-lightbox img {
+      max-width: 92vw;
+      max-height: 90vh;
+      border-radius: 8px;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.5);
+    }
+    .img-lightbox-close {
+      position: fixed;
+      top: 20px;
+      right: 28px;
+      color: white;
+      font-size: 36px;
+      font-weight: 300;
+      cursor: pointer;
+      z-index: 10000;
+      font-family: 'Barlow', sans-serif;
+      line-height: 1;
+    }
 
     /* CTA BAND */
     .cta-band { background: var(--titan-red); color: white; padding: 56px 0; text-align: center; }
@@ -90,9 +147,12 @@
     .footer-col a:hover { color: white; }
     .footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 20px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
     @media (max-width: 900px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 500px) {
+      .article-body img { max-width: 100%; }
+    }
   </style>
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-  </head>
+</head>
 <body>
 
   <!-- TOPBAR -->
@@ -184,11 +244,30 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <span>© 2025 Titan Roofing. All rights reserved.</span>
-        <span>Licensed & Insured</span>
+        <span>&copy; 2026 Titan Roofing. All rights reserved.</span>
+        <span>Licensed &amp; Insured</span>
       </div>
     </div>
   </footer>
+
+  <!-- LIGHTBOX SCRIPT -->
+  <script>
+  (function(){
+    var lb = document.createElement('div');
+    lb.className = 'img-lightbox';
+    lb.innerHTML = '<span class="img-lightbox-close">&times;</span><img src="" alt="">';
+    document.body.appendChild(lb);
+    lb.addEventListener('click', function(){ lb.classList.remove('active'); });
+    document.addEventListener('keydown', function(e){ if(e.key === 'Escape') lb.classList.remove('active'); });
+    document.querySelectorAll('.article-body img').forEach(function(img){
+      img.addEventListener('click', function(){
+        lb.querySelector('img').src = this.src;
+        lb.querySelector('img').alt = this.alt;
+        lb.classList.add('active');
+      });
+    });
+  })();
+  </script>
 
 </body>
 </html>
