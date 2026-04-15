@@ -8,13 +8,13 @@ author: Titan Roofing
 tags: post
 layout: post
 ---
-Last Thursday, the Houston roofing community traded nail guns for shotguns at the first annual Skeet Shoot at **Blackwood**.
+On April 2nd, Titan Roofing and DR Horton traded nail guns for shotguns at the first annual Skeet Shoot at **Blackwood**.
 
 ![Blackwood venue sign at Titan Roofing skeet shoot 2026](/images/uploads/titan-roofing-skeet-shoot-2026-blackwood.jpeg "Blackwood hosted the event")
 
 *Thank you to Blackwood for hosting. The facility, staff, and setup were first-class.*
 
-The event brought together over **60 people** from all across the Greater Houston roofing community for a day of clay shooting, competition, and camaraderie.
+The event brought together over **60 people** from all across Houston for a day of clay shooting, competition, and camaraderie.
 
 ![Over 60 people at Titan Roofing first annual skeet shoot at Blackwood](/images/uploads/titan-roofing-skeet-shoot-2026-crowd.jpeg "51 shooters across 13 teams")
 
@@ -58,7 +58,7 @@ Congratulations to **The Bourne Accuracy** — **Levi Bradshaw, Jordan Hudspe
 
 #### The People Who Made It Happen
 
-Events like this don't run themselves. **Summer** organized the entire competition — built the teams, designed the poster, coordinated logistics, took photos, and handled more behind the scenes than we can list here. This event doesn't happen without her. Thank you, Summer.
+Events like this don't run themselves. **Summer Cannon** organized the entire competition — built the teams, designed the poster, coordinated logistics, took photos, and handled more behind the scenes than we can list here. This event doesn't happen without her. Thank you, Summer.
 
 Ed and Greg Brogdon — the owners and founders of Titan Roofing — not only hosted the event but were out there all day either with shotguns in hand or making sure everyone was taken care of.
 
