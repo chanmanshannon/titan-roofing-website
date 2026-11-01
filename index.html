@@ -313,6 +313,13 @@
   }
 
   /* ── BEFORE/AFTER SHOWCASE ── */
+  /* ── QUOTE CHECK BAND ── */
+  .quote-check { background: var(--titan-navy); color: white; padding: 36px 0; border-top: 4px solid var(--titan-gold); }
+  .quote-check-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+  .quote-check-label { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 3px; text-transform: uppercase; color: var(--titan-gold); margin-bottom: 4px; }
+  .quote-check h2 { font-family: 'Bebas Neue', sans-serif; font-weight: 400; font-size: clamp(28px, 4vw, 40px); letter-spacing: 1px; line-height: 1.05; }
+  .quote-check p { color: rgba(255,255,255,0.75); font-size: 15px; margin-top: 4px; }
+
   .showcase { background: var(--titan-white); padding: 72px 0; }
   .showcase-grid {
     display: grid;
@@ -1022,6 +1029,19 @@
     .promo-cta-row { flex-direction: column; align-items: center; }
   }
 
+
+  /* Tighter nav between tablet and laptop widths so every item fits */
+  @media (min-width: 769px) and (max-width: 1060px) {
+    .nav-item { padding: 0 6px; }
+    .nav-item > a { font-size: 13px; white-space: nowrap; }
+    .nav-logo { white-space: nowrap; }
+    .nav-cta { margin-left: 8px; padding: 10px 14px; }
+    .nav-logo { font-size: 24px; }
+    .nav-logo img { height: 40px; }
+  }
+  @media (min-width: 769px) and (max-width: 920px) {
+    .nav-logo { font-size: 0; gap: 0; }
+  }
 </style>
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
@@ -1144,6 +1164,7 @@
           <a href="#process">How It Works</a>
         </div>
       </div>
+      <div class="nav-item"><a href="roof-estimate.html">Instant Estimate</a></div>
       <div class="nav-item">
         <a href="#reviews">Reviews</a>
       </div>
@@ -1303,6 +1324,18 @@
       <div class="showcase-stat"><span class="showcase-stat-text"><strong>Most homes done</strong> in a single day</span></div>
       <div class="showcase-stat"><span class="showcase-stat-text"><strong>Titan workmanship warranty</strong> included</span></div>
     </div>
+  </div>
+</section>
+
+<!-- ── QUOTE CHECK BAND ── -->
+<section class="quote-check">
+  <div class="container quote-check-inner">
+    <div>
+      <div class="quote-check-label">Already have a roofing quote?</div>
+      <h2>Check it against Titan's in 60 seconds.</h2>
+      <p>Satellite-measured estimate, line-by-line comparison, no phone number required.</p>
+    </div>
+    <a href="roof-estimate.html" class="btn btn-primary">Compare my quote →</a>
   </div>
 </section>
 
@@ -1637,6 +1670,7 @@
         <h4>Company</h4>
         <a href="about.html">Our Story</a>
         <a href="about.html#certainteed">CertainTeed Certification</a>
+        <a href="roof-estimate.html">Instant Roof Estimate</a>
         <a href="#process">How It Works</a>
         <a href="#reviews">Customer Reviews</a>
         <a href="#areas">Service Areas</a>

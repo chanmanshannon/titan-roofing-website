@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Roof Replacement Cost Estimator | Compare Your Roofing Quote — Titan Roofing Houston</title>
+<meta name="description" content="Got a roofing quote? Check it against Titan's in 60 seconds. Free Houston roof replacement estimator: satellite-measured roof, real CertainTeed pricing, line-by-line quote comparison. No phone number required.">
+<link rel="canonical" href="https://titanroofingtx.com/roof-estimate/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Got a roof quote? Check it against Titan's in 60 seconds.">
+<meta property="og:description" content="Free roof replacement estimator for Greater Houston. See your price range, compare it to your other quote, and see exactly what's included.">
+<meta property="og:url" content="https://titanroofingtx.com/roof-estimate/">
+<meta property="og:image" content="https://titanroofingtx.com/titanlogorevised_v3.png">
+<meta name="theme-color" content="#1B2A4A">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --titan-navy: #1B2A4A;
+    --titan-navy-2: #263B5E;
+    --titan-navy-deep: #0F1A2E;
+    --titan-red: #C41E3A;
+    --titan-red-dark: #A01830;
+    --titan-white: #FFFFFF;
+    --titan-light: #F4F5F7;
+    --titan-warm: #FAF8F5;
+    --titan-gray: #6B7280;
+    --titan-ink-2: #374151;
+    --titan-dark: #111827;
+    --titan-gold: #D4A853;
+    --titan-gold-soft: #F6EBD3;
+    --titan-blue-light: #E8EDF5;
+    --titan-select: #F3F6FB;
+    --line: #E5E7EB;
+    --good: #1F7A4D;
+    --good-bg: #E6F4EC;
+    --warn: #8A5A00;
+    --warn-bg: #FBF1DC;
+    --bad: #B42318;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+    --shadow-md: 0 4px 20px rgba(0,0,0,0.10);
+    --shadow-lg: 0 24px 60px rgba(15,26,46,0.28);
+    --radius: 6px;
+  }
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Barlow', sans-serif;
+    color: var(--titan-dark);
+    background: var(--titan-white);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  img { max-width: 100%; display: block; }
+  button, input, select { font: inherit; color: inherit; }
+  .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+  :focus-visible { outline: 3px solid var(--titan-gold); outline-offset: 2px; }
+
+  .container { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+  .section { padding: 80px 0; }
+  .section-label { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 3px; text-transform: uppercase; color: var(--titan-red); margin-bottom: 10px; }
+  .section-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(32px, 5vw, 48px); letter-spacing: 1px; line-height: 1.1; color: var(--titan-navy); margin-bottom: 16px; }
+  .section-subtitle { font-size: 17px; color: var(--titan-gray); max-width: 620px; line-height: 1.7; }
+
+  /* ── TOP BAR ── */
+  .topbar { background: var(--titan-navy); color: rgba(255,255,255,0.8); font-size: 13px; padding: 8px 0; }
+  .topbar .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+  .topbar a { color: var(--titan-white); text-decoration: none; font-weight: 600; }
+  .topbar-badges { display: flex; gap: 16px; align-items: center; }
+  .topbar-badge { display: inline-flex; align-items: center; gap: 5px; font-size: 12px; font-weight: 600; color: var(--titan-gold); letter-spacing: 0.5px; text-transform: uppercase; }
+  @media (max-width: 600px) { .topbar-badges { display: none; } }
+
+  /* ── NAV ── */
+  .navbar { background: var(--titan-white); border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 100; box-shadow: var(--shadow-sm); }
+  .navbar .container { display: flex; justify-content: space-between; align-items: center; height: 70px; }
+  .nav-logo { font-family: 'Bebas Neue', sans-serif; font-size: 28px; color: var(--titan-navy); text-decoration: none; display: flex; align-items: center; gap: 10px; }
+  .nav-logo img { height: 48px; width: auto; object-fit: contain; }
+  .nav-links { display: flex; gap: 0; align-items: center; }
+  .nav-item { position: relative; padding: 0 14px; }
+  .nav-item > a { font-size: 14px; font-weight: 600; color: var(--titan-dark); text-decoration: none; letter-spacing: 0.3px; transition: color 0.2s; display: flex; align-items: center; gap: 4px; height: 70px; line-height: 70px; }
+  .nav-item > a:hover, .nav-item > a.is-active { color: var(--titan-red); }
+  .nav-arrow { font-size: 10px; transition: transform 0.2s; }
+  .nav-item:hover .nav-arrow { transform: rotate(180deg); }
+  .nav-dropdown { position: absolute; top: 100%; left: 0; background: white; min-width: 220px; border-radius: 0 0 8px 8px; box-shadow: 0 12px 32px rgba(0,0,0,0.12); border: 1px solid var(--line); border-top: 3px solid var(--titan-red); opacity: 0; visibility: hidden; transform: translateY(-4px); transition: all 0.2s ease; z-index: 200; }
+  .nav-item:hover .nav-dropdown { opacity: 1; visibility: visible; transform: translateY(0); }
+  .nav-dropdown a { display: block; padding: 12px 20px; font-size: 14px; font-weight: 500; color: var(--titan-dark); text-decoration: none; transition: all 0.15s; border-bottom: 1px solid #F3F4F6; }
+  .nav-dropdown a:last-child { border-bottom: none; }
+  .nav-dropdown a:hover { background: var(--titan-light); color: var(--titan-red); padding-left: 24px; }
+  .nav-dropdown a .dd-desc { display: block; font-size: 12px; color: var(--titan-gray); font-weight: 400; margin-top: 2px; }
+  .nav-cta { background: var(--titan-red); color: var(--titan-white) !important; padding: 10px 22px; border-radius: var(--radius); transition: background 0.2s; white-space: nowrap; margin-left: 14px; font-size: 14px; font-weight: 600; text-decoration: none; }
+  .nav-cta:hover { background: var(--titan-red-dark); }
+  .mobile-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+  .mobile-toggle span { display: block; width: 24px; height: 2px; background: var(--titan-dark); margin: 5px 0; transition: 0.3s; }
+
+  /* ── BUTTONS ── */
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 14px 28px; border-radius: var(--radius); font-family: 'Barlow', sans-serif; font-size: 15px; font-weight: 700; text-decoration: none; transition: all 0.25s; cursor: pointer; border: none; }
+  .btn-primary { background: var(--titan-red); color: white; }
+  .btn-primary:hover { background: var(--titan-red-dark); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(196,30,58,0.35); }
+  .btn-primary:disabled { background: #D1D5DB; color: #6B7280; transform: none; box-shadow: none; cursor: not-allowed; }
+  .btn-ghost { background: transparent; color: var(--titan-navy); border: 1.5px solid #CBD2DC; }
+  .btn-ghost:hover { border-color: var(--titan-navy); background: var(--titan-select); }
+  .btn-outline { background: transparent; color: white; border: 2px solid rgba(255,255,255,0.3); }
+  .btn-outline:hover { border-color: white; background: rgba(255,255,255,0.08); }
+  .btn-block { width: 100%; }
+  .link-btn { background: none; border: none; color: var(--titan-navy); font-weight: 600; font-size: 14px; text-decoration: underline; text-underline-offset: 3px; text-decoration-color: rgba(27,42,74,0.35); cursor: pointer; padding: 6px 0; }
+  .link-btn:hover { color: var(--titan-red); text-decoration-color: currentColor; }
+
+  /* ── HERO ── */
+  .est-hero {
+    position: relative;
+    background:
+      linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px) 0 0 / 32px 32px,
+      linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px) 0 0 / 32px 32px,
+      linear-gradient(135deg, var(--titan-navy) 0%, var(--titan-navy-2) 55%, var(--titan-navy) 100%);
+    color: white;
+    padding: 64px 0 88px;
+    overflow: hidden;
+  }
+  .est-hero::after {
+    content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 120px;
+    background: linear-gradient(180deg, transparent, rgba(15,26,46,0.35));
+    pointer-events: none;
+  }
+  .hero-roofline { position: absolute; right: -60px; bottom: -10px; width: 760px; max-width: 80%; opacity: 0.08; pointer-events: none; }
+  .hero-grid { position: relative; z-index: 2; display: grid; grid-template-columns: 1fr 520px; gap: 56px; align-items: start; }
+  .hero-copy { padding-top: 28px; }
+  .hero-label { display: inline-flex; align-items: center; gap: 10px; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 3px; text-transform: uppercase; color: var(--titan-gold); margin-bottom: 18px; }
+  .hero-label::before { content: ""; width: 28px; height: 2px; background: var(--titan-gold); }
+  .hero-copy h1 { font-family: 'Bebas Neue', sans-serif; font-weight: 400; font-size: clamp(44px, 5.6vw, 72px); line-height: 0.98; letter-spacing: 1px; margin-bottom: 22px; }
+  .hero-copy h1 em { font-style: normal; color: var(--titan-gold); }
+  .hero-copy > p { font-size: 18px; line-height: 1.7; color: rgba(255,255,255,0.82); max-width: 500px; margin-bottom: 30px; }
+  .hero-points { list-style: none; display: grid; gap: 14px; margin-bottom: 34px; }
+  .hero-points li { display: flex; gap: 14px; align-items: flex-start; font-size: 15.5px; color: rgba(255,255,255,0.88); }
+  .hero-points svg { flex: none; width: 26px; height: 26px; margin-top: 1px; }
+  .hero-points strong { color: white; }
+  .hero-trust { display: flex; flex-wrap: wrap; gap: 10px 26px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.12); }
+  .hero-trust div { font-family: 'Bebas Neue', sans-serif; font-size: 30px; letter-spacing: 1px; line-height: 1; }
+  .hero-trust div small { display: block; font-family: 'Barlow', sans-serif; font-size: 11.5px; letter-spacing: 1.2px; text-transform: uppercase; color: rgba(255,255,255,0.6); margin-top: 6px; font-weight: 600; }
+  .hero-trust .accent { color: var(--titan-red); }
+
+  /* Results mode: the estimator takes the full width */
+  .hero-grid.is-wide { grid-template-columns: 1fr; }
+  .hero-grid.is-wide .hero-copy { display: none; }
+  .hero-grid.is-wide .wiz { max-width: 1040px; margin: 0 auto; width: 100%; }
+
+  /* ── WIZARD CARD ── */
+  .wiz {
+    position: relative;
+    background: white;
+    color: var(--titan-dark);
+    border-radius: 16px;
+    box-shadow: var(--shadow-lg);
+    overflow: hidden;
+    scroll-margin-top: 90px;
+  }
+  .wiz::before { content: ""; position: absolute; inset: 0 0 auto 0; height: 4px; background: linear-gradient(90deg, var(--titan-red) 0%, var(--titan-red) 40%, var(--titan-gold) 100%); }
+  .wiz-head { padding: 22px 28px 0; }
+  .progress { list-style: none; display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; }
+  .progress li { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 11.5px; letter-spacing: 1.4px; text-transform: uppercase; color: #9CA3AF; }
+  .progress li::before { content: ""; display: block; height: 4px; border-radius: 4px; background: #E5E7EB; margin-bottom: 8px; transition: background 0.4s; }
+  .progress li.is-done { color: var(--titan-navy); }
+  .progress li.is-done::before { background: var(--titan-navy); }
+  .progress li.is-current { color: var(--titan-red); }
+  .progress li.is-current::before { background: linear-gradient(90deg, var(--titan-red) 50%, #E5E7EB 50%); background-size: 200% 100%; background-position: 100% 0; animation: fillbar 0.6s ease forwards; }
+  @keyframes fillbar { to { background-position: 0 0; } }
+
+  .wiz-body { padding: 24px 28px 8px; min-height: 420px; }
+  .step { animation: stepIn 0.38s ease both; }
+  .step[hidden] { display: none; }
+  @keyframes stepIn { from { opacity: 0; transform: translateX(14px); } to { opacity: 1; transform: none; } }
+  .step.is-back { animation-name: stepBack; }
+  @keyframes stepBack { from { opacity: 0; transform: translateX(-14px); } to { opacity: 1; transform: none; } }
+  .step-title { font-family: 'Bebas Neue', sans-serif; font-weight: 400; font-size: 34px; letter-spacing: 0.6px; line-height: 1.05; color: var(--titan-navy); margin-bottom: 6px; }
+  .step-sub { font-size: 15px; color: var(--titan-gray); margin-bottom: 20px; }
+  .q-label { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 1.6px; text-transform: uppercase; color: var(--titan-navy); margin: 18px 0 9px; }
+  .q-label .q-hint { font-family: 'Barlow', sans-serif; font-size: 12.5px; letter-spacing: 0; text-transform: none; font-weight: 500; color: var(--titan-gray); }
+  .q-label:first-child { margin-top: 0; }
+
+  .wiz-foot { display: flex; align-items: center; justify-content: space-between; gap: 14px; padding: 16px 28px 22px; border-top: 1px solid #F0F1F3; margin-top: 18px; }
+  .wiz-foot[hidden] { display: none; }
+  .wiz-foot .btn { padding: 13px 24px; }
+  .running { flex: 1; text-align: center; min-width: 0; }
+  .running[hidden] { display: none; }
+  .running small { display: block; font-size: 11px; letter-spacing: 1.4px; text-transform: uppercase; color: var(--titan-gray); font-weight: 700; }
+  .running b { font-family: 'Bebas Neue', sans-serif; font-weight: 400; font-size: 24px; letter-spacing: 0.5px; color: var(--titan-navy); font-variant-numeric: tabular-nums; }
+  .draft-flag { display: inline-block; margin-left: 6px; padding: 1px 7px; border-radius: 3px; background: var(--warn-bg); color: var(--warn); font-size: 10px; letter-spacing: 1px; }
+
+  /* Address step */
+  .art-house { width: 100%; max-width: 380px; height: auto; margin: -4px auto 14px; display: block; }
+  .art-house .draw { stroke-dasharray: 600; stroke-dashoffset: 600; animation: draw 1.6s ease forwards; }
+  .art-house .dim { animation-delay: 0.9s; }
+  .art-house .fade { opacity: 0; animation: fadeIn 0.5s ease forwards; animation-delay: 1.5s; }
+  @keyframes draw { to { stroke-dashoffset: 0; } }
+  @keyframes fadeIn { to { opacity: 1; } }
+  .addr-field { position: relative; margin-bottom: 12px; }
+  .addr-field svg { position: absolute; left: 16px; top: 50%; transform: translateY(-50%); width: 20px; height: 20px; color: var(--titan-red); pointer-events: none; }
+  .addr-field input { width: 100%; height: 58px; padding: 0 16px 0 46px; border: 2px solid #D5DAE1; border-radius: 10px; font-size: 17px; font-weight: 500; background: white; transition: border-color 0.2s, box-shadow 0.2s; }
+  .addr-field input:focus { outline: none; border-color: var(--titan-navy); box-shadow: 0 0 0 4px rgba(27,42,74,0.1); }
+  .addr-field input[aria-invalid="true"] { border-color: var(--titan-red); }
+  .field-error { color: var(--bad); font-size: 13.5px; font-weight: 600; margin: -4px 0 10px; }
+  .field-error:empty { display: none; }
+  .alt-row { display: flex; justify-content: center; margin-top: 8px; }
+  .micro { display: flex; gap: 8px; align-items: flex-start; justify-content: center; text-align: center; font-size: 12.5px; color: var(--titan-gray); margin-top: 14px; }
+  .micro svg { flex: none; width: 14px; height: 14px; margin-top: 3px; }
+  .notice { display: flex; gap: 10px; align-items: flex-start; padding: 12px 14px; border-radius: 10px; background: var(--titan-gold-soft); color: #5C4310; font-size: 14px; margin-bottom: 18px; }
+  .notice svg { flex: none; width: 18px; height: 18px; margin-top: 2px; }
+  .notice[hidden] { display: none; }
+
+  /* Measuring step */
+  .measuring { display: grid; place-items: center; text-align: center; padding: 18px 0 8px; }
+  .scan { position: relative; width: 210px; height: 210px; border-radius: 50%; background: radial-gradient(circle, #24365A 0%, #1B2A4A 70%); box-shadow: inset 0 0 0 1px rgba(212,168,83,0.35), 0 0 0 10px #F3F6FB; overflow: hidden; margin-bottom: 26px; }
+  .scan::before { content: ""; position: absolute; inset: 0; background: conic-gradient(from 0deg, rgba(212,168,83,0.0) 0deg, rgba(212,168,83,0.0) 290deg, rgba(212,168,83,0.55) 360deg); animation: sweep 1.8s linear infinite; }
+  .scan::after { content: ""; position: absolute; inset: 0; background:
+      radial-gradient(circle, transparent 0 34%, rgba(255,255,255,0.08) 34.5% 35%, transparent 35.5% 64%, rgba(255,255,255,0.08) 64.5% 65%, transparent 65.5%); }
+  .scan svg { position: absolute; inset: 0; margin: auto; width: 130px; height: 130px; z-index: 2; }
+  @keyframes sweep { to { transform: rotate(360deg); } }
+  .scan-steps { list-style: none; display: grid; gap: 10px; text-align: left; font-size: 15px; font-weight: 600; color: var(--titan-gray); }
+  .scan-steps li { display: flex; align-items: center; gap: 10px; opacity: 0.45; transition: opacity 0.3s, color 0.3s; }
+  .scan-steps li i { width: 20px; height: 20px; border-radius: 50%; border: 2px solid #D1D5DB; display: grid; place-items: center; flex: none; }
+  .scan-steps li.is-on { opacity: 1; color: var(--titan-navy); }
+  .scan-steps li.is-on i { border-color: var(--titan-navy); border-top-color: transparent; animation: spin 0.8s linear infinite; }
+  .scan-steps li.is-done { opacity: 1; color: var(--titan-navy); }
+  .scan-steps li.is-done i { border-color: var(--good); background: var(--good); animation: none; }
+  .scan-steps li.is-done i::after { content: ""; width: 5px; height: 9px; border: solid white; border-width: 0 2px 2px 0; transform: translate(0,-1px) rotate(45deg); }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  /* Confirm step */
+  .sat { position: relative; border-radius: 12px; overflow: hidden; background: #2A3A57; aspect-ratio: 16 / 10; margin-bottom: 16px; }
+  .sat img { width: 100%; height: 100%; object-fit: cover; }
+  .sat-pin { position: absolute; left: 50%; top: 50%; width: 120px; height: 120px; transform: translate(-50%,-50%); border: 2px dashed rgba(212,168,83,0.95); border-radius: 50%; box-shadow: 0 0 0 999px rgba(15,26,46,0.18); pointer-events: none; }
+  .sat-pin::after { content: ""; position: absolute; left: 50%; top: 50%; width: 12px; height: 12px; margin: -6px 0 0 -6px; border-radius: 50%; background: var(--titan-red); box-shadow: 0 0 0 4px rgba(255,255,255,0.85); }
+  .sat-cap { position: absolute; left: 10px; bottom: 10px; background: rgba(15,26,46,0.82); color: white; font-size: 12px; font-weight: 600; padding: 5px 10px; border-radius: 6px; max-width: calc(100% - 20px); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .sat.no-img { display: none; }
+  .measure-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 6px; }
+  .mstat { background: var(--titan-light); border-radius: 10px; padding: 12px 12px 10px; }
+  .mstat b { display: block; font-family: 'Bebas Neue', sans-serif; font-weight: 400; font-size: 28px; line-height: 1; color: var(--titan-navy); letter-spacing: 0.5px; font-variant-numeric: tabular-nums; }
+  .mstat span { font-size: 11.5px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--titan-gray); }
+
+  /* Option cards (radio) */
+  .opts { display: grid; gap: 10px; }
+  .opts-2 { grid-template-columns: repeat(2, 1fr); }
+  .opts-3 { grid-template-columns: repeat(3, 1fr); }
+  .opts-4 { grid-template-columns: repeat(4, 1fr); }
+  .opt { position: relative; display: block; cursor: pointer; }
+  .opt input { position: absolute; opacity: 0; pointer-events: none; }
+  .opt-face { position: relative; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 4px; padding: 12px 8px 11px; border: 1.5px solid #DADFE6; border-radius: 10px; background: white; transition: border-color 0.18s, background 0.18s, box-shadow 0.18s, transform 0.18s; }
+  .opt:hover .opt-face { border-color: #9AA6B8; }
+  .opt input:focus-visible + .opt-face { outline: 3px solid var(--titan-gold); outline-offset: 2px; }
+  .opt input:checked + .opt-face { border-color: var(--titan-navy); background: var(--titan-select); box-shadow: inset 0 0 0 1px var(--titan-navy); }
+  .opt input:checked + .opt-face::after { content: ""; position: absolute; top: 7px; right: 7px; width: 18px; height: 18px; border-radius: 50%; background: var(--titan-red) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5 10.5l3.2 3L15 7' fill='none' stroke='white' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/14px no-repeat; }
+  .opt-face svg { width: 100%; max-width: 72px; height: 40px; color: var(--titan-navy); }
+  .opt-name { font-weight: 700; font-size: 14.5px; color: var(--titan-dark); line-height: 1.2; }
+  .opt-meta { font-size: 12px; color: var(--titan-gray); line-height: 1.3; }
+  .opt.compact .opt-face { flex-direction: row; padding: 11px 10px; }
+
+  /* Size slider */
+  .size-row { display: flex; align-items: center; gap: 16px; }
+  .size-row input[type=range] { flex: 1; -webkit-appearance: none; appearance: none; height: 6px; border-radius: 6px; background: linear-gradient(90deg, var(--titan-navy) var(--fill, 30%), #E1E5EB var(--fill, 30%)); cursor: pointer; }
+  .size-row input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; width: 26px; height: 26px; border-radius: 50%; background: white; border: 3px solid var(--titan-red); box-shadow: 0 2px 8px rgba(0,0,0,0.2); }
+  .size-row input[type=range]::-moz-range-thumb { width: 22px; height: 22px; border-radius: 50%; background: white; border: 3px solid var(--titan-red); box-shadow: 0 2px 8px rgba(0,0,0,0.2); }
+  .size-num { display: flex; align-items: baseline; gap: 6px; border: 1.5px solid #DADFE6; border-radius: 8px; padding: 6px 10px; width: 136px; }
+  .size-num input { width: 70px; border: none; font-family: 'Bebas Neue', sans-serif; font-size: 26px; letter-spacing: 0.5px; color: var(--titan-navy); background: transparent; font-variant-numeric: tabular-nums; }
+  .size-num input:focus { outline: none; }
+  .size-num span { font-size: 12px; color: var(--titan-gray); font-weight: 600; }
+
+  /* Material cards */
+  .mats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .mat .opt-face { align-items: stretch; text-align: left; justify-content: flex-start; padding: 0; overflow: hidden; gap: 0; }
+  .mat-swatch { height: 64px; width: 100%; display: block; }
+  .mat-swatch svg { width: 100%; height: 64px; max-width: none; display: block; }
+  .mat-body { padding: 10px 12px 12px; display: grid; gap: 3px; }
+  .mat-badge { position: absolute; top: 8px; left: 8px; font-family: 'Barlow Condensed', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; padding: 2px 8px; border-radius: 4px; background: rgba(255,255,255,0.94); color: var(--titan-navy); }
+  .mat-price { font-family: 'Bebas Neue', sans-serif; font-size: 22px; letter-spacing: 0.4px; color: var(--titan-navy); line-height: 1.1; margin-top: 4px; font-variant-numeric: tabular-nums; }
+  .mat-blurb { font-size: 12.5px; color: var(--titan-gray); line-height: 1.4; }
+  .mat-detail { margin-top: 14px; padding: 12px 14px; border-radius: 10px; background: var(--titan-light); font-size: 13.5px; color: var(--titan-ink-2); }
+  .mat-detail ul { list-style: none; display: flex; flex-wrap: wrap; gap: 6px 14px; margin-top: 6px; }
+  .mat-detail li::before { content: "✓ "; color: var(--good); font-weight: 700; }
+
+  /* Quote step */
+  .money-field { position: relative; }
+  .money-field span { position: absolute; left: 16px; top: 50%; transform: translateY(-50%); font-family: 'Bebas Neue', sans-serif; font-size: 28px; color: var(--titan-gray); }
+  .money-field input { width: 100%; height: 58px; padding: 0 16px 0 38px; border: 2px solid #D5DAE1; border-radius: 10px; font-family: 'Bebas Neue', sans-serif; font-size: 30px; letter-spacing: 0.6px; color: var(--titan-navy); font-variant-numeric: tabular-nums; }
+  .money-field input:focus { outline: none; border-color: var(--titan-navy); box-shadow: 0 0 0 4px rgba(27,42,74,0.1); }
+  .checks { display: grid; gap: 8px; }
+  .chk { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 10px; padding: 9px 10px 9px 14px; border: 1px solid var(--line); border-radius: 10px; }
+  .chk-name { font-size: 14px; font-weight: 600; line-height: 1.3; }
+  .seg { display: inline-flex; background: var(--titan-light); border-radius: 8px; padding: 3px; gap: 2px; }
+  .seg label { position: relative; cursor: pointer; }
+  .seg input { position: absolute; opacity: 0; pointer-events: none; }
+  .seg span { display: block; padding: 6px 10px; border-radius: 6px; font-size: 12.5px; font-weight: 700; color: var(--titan-gray); transition: all 0.15s; white-space: nowrap; }
+  .seg input:checked + span { background: white; color: var(--titan-navy); box-shadow: var(--shadow-sm); }
+  .seg input:checked + span.y { color: var(--good); }
+  .seg input:checked + span.n { color: var(--bad); }
+  .seg input:focus-visible + span { outline: 3px solid var(--titan-gold); }
+  .quote-box[hidden] { display: none; }
+  .quote-box .q-label:first-child { margin-top: 20px; }
+  .toggle-row { display: flex; align-items: center; gap: 12px; padding: 12px 14px; margin-top: 16px; border-radius: 10px; background: var(--titan-light); cursor: pointer; font-size: 14px; font-weight: 600; }
+  .toggle-row input { width: 18px; height: 18px; accent-color: var(--titan-navy); flex: none; }
+  .toggle-row small { display: block; font-weight: 500; color: var(--titan-gray); font-size: 12.5px; }
+
+  /* ── RESULTS ── */
+  .res { padding: 4px 0 6px; }
+  .draft-banner { display: flex; gap: 10px; align-items: center; padding: 10px 14px; border-radius: 8px; background: var(--warn-bg); color: var(--warn); font-size: 13px; font-weight: 600; margin-bottom: 18px; }
+  .res-top { display: grid; grid-template-columns: 1fr auto; gap: 20px; align-items: start; padding-bottom: 22px; border-bottom: 1px solid var(--line); }
+  .eyebrow { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--titan-red); margin-bottom: 4px; }
+  .res-range { font-family: 'Bebas Neue', sans-serif; font-size: clamp(46px, 7vw, 76px); line-height: 0.95; letter-spacing: 1px; color: var(--titan-navy); font-variant-numeric: tabular-nums; }
+  .res-range .dash { color: #B6BECB; margin: 0 6px; }
+  .res-mid { font-size: 16px; color: var(--titan-ink-2); margin-top: 8px; }
+  .res-mid b { color: var(--titan-navy); }
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px; }
+  .chip { font-size: 12.5px; font-weight: 600; padding: 4px 10px; border-radius: 999px; background: var(--titan-light); color: var(--titan-ink-2); }
+  .chip.sat-chip { background: var(--titan-blue-light); color: var(--titan-navy); }
+  .res-actions { display: flex; flex-direction: column; gap: 8px; }
+  .res-actions .btn { padding: 10px 16px; font-size: 14px; }
+
+  .cmp { margin-top: 24px; border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
+  .verdict { display: grid; grid-template-columns: auto 1fr; gap: 16px; align-items: start; padding: 20px 22px; }
+  .verdict-ico { width: 46px; height: 46px; border-radius: 12px; display: grid; place-items: center; }
+  .verdict-ico svg { width: 26px; height: 26px; }
+  .verdict.good { background: var(--good-bg); }
+  .verdict.good .verdict-ico { background: var(--good); color: white; }
+  .verdict.even { background: var(--titan-select); }
+  .verdict.even .verdict-ico { background: var(--titan-navy); color: white; }
+  .verdict.under { background: var(--titan-warm); }
+  .verdict.under .verdict-ico { background: var(--titan-gold); color: var(--titan-navy-deep); }
+  .verdict h3 { font-family: 'Bebas Neue', sans-serif; font-weight: 400; font-size: clamp(28px, 3.6vw, 38px); letter-spacing: 0.6px; line-height: 1.05; color: var(--titan-navy); }
+  .verdict p { font-size: 15px; color: var(--titan-ink-2); margin-top: 6px; max-width: 70ch; }
+  .chart-wrap { position: relative; padding: 18px 22px 8px; }
+  .chart-title { font-size: 13px; font-weight: 700; color: var(--titan-ink-2); margin-bottom: 4px; }
+  .rchart { width: 100%; height: auto; display: block; overflow: visible; }
+  .rchart text { font-family: 'Barlow', sans-serif; }
+  .rchart .hit { cursor: pointer; }
+  .tip { position: absolute; pointer-events: none; background: var(--titan-navy-deep); color: white; font-size: 12.5px; line-height: 1.45; padding: 8px 10px; border-radius: 8px; box-shadow: var(--shadow-md); max-width: 240px; opacity: 0; transform: translate(-50%, calc(-100% - 10px)); transition: opacity 0.12s; z-index: 5; }
+  .tip.is-on { opacity: 1; }
+  .tip b { display: block; font-size: 13px; }
+  .persq { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); }
+  .persq.two { grid-template-columns: repeat(2, 1fr); }
+  .persq div { padding: 14px 22px; }
+  .persq div + div { border-left: 1px solid var(--line); }
+  .persq b { display: block; font-family: 'Bebas Neue', sans-serif; font-weight: 400; font-size: 26px; letter-spacing: 0.5px; color: var(--titan-navy); line-height: 1.1; font-variant-numeric: tabular-nums; }
+  .persq span { font-size: 12px; color: var(--titan-gray); font-weight: 600; }
+
+  .spec-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  .spec-table caption { text-align: left; padding: 16px 22px 8px; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 14px; letter-spacing: 1.6px; text-transform: uppercase; color: var(--titan-navy); }
+  .spec-table th, .spec-table td { padding: 11px 22px; text-align: left; border-top: 1px solid #F0F1F3; vertical-align: top; }
+  .spec-table thead th { font-size: 11.5px; letter-spacing: 1.2px; text-transform: uppercase; color: var(--titan-gray); font-weight: 700; background: #FAFBFC; }
+  .spec-table td.titan { color: var(--good); font-weight: 700; white-space: nowrap; }
+  .tag { display: inline-flex; align-items: center; gap: 5px; font-weight: 700; white-space: nowrap; }
+  .tag.y { color: var(--good); }
+  .tag.n { color: var(--bad); }
+  .tag.u { color: var(--warn); }
+  .row-note { display: block; font-size: 12.5px; color: var(--titan-gray); font-weight: 500; margin-top: 2px; white-space: normal; }
+
+  .res-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 24px; }
+  .res-card { border: 1px solid var(--line); border-radius: 14px; padding: 18px 20px; }
+  .res-card h4 { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 14px; letter-spacing: 1.6px; text-transform: uppercase; color: var(--titan-navy); margin-bottom: 12px; }
+  .math-row { display: flex; justify-content: space-between; gap: 12px; font-size: 14px; padding: 6px 0; border-bottom: 1px dashed #E5E7EB; }
+  .math-row:last-child { border-bottom: none; }
+  .math-row span:first-child { color: var(--titan-gray); }
+  .math-row span:last-child { font-weight: 700; color: var(--titan-dark); text-align: right; font-variant-numeric: tabular-nums; }
+  .ticks { list-style: none; display: grid; gap: 7px; font-size: 14px; }
+  .ticks li { display: grid; grid-template-columns: 18px 1fr; gap: 8px; line-height: 1.45; }
+  .ticks li::before { content: "✓"; color: var(--good); font-weight: 800; }
+  .ticks.plus li::before { content: "+"; color: var(--warn); }
+
+  .lead { margin-top: 24px; display: grid; grid-template-columns: 1fr 1.15fr; border-radius: 16px; overflow: hidden; background: var(--titan-navy); color: white; box-shadow: 0 0 0 1.5px var(--titan-navy), var(--shadow-md); }
+  .lead-pitch { padding: 28px 28px 26px; background:
+      linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px) 0 0 / 24px 24px,
+      linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px) 0 0 / 24px 24px; }
+  .lead-pitch h3 { font-family: 'Bebas Neue', sans-serif; font-weight: 400; font-size: 36px; letter-spacing: 0.8px; line-height: 1.02; margin-bottom: 10px; }
+  .lead-pitch h3 em { font-style: normal; color: var(--titan-gold); }
+  .lead-pitch p { color: rgba(255,255,255,0.8); font-size: 15px; margin-bottom: 16px; }
+  .lead-pitch ol { list-style: none; counter-reset: s; display: grid; gap: 10px; margin-bottom: 20px; }
+  .lead-pitch ol li { counter-increment: s; display: grid; grid-template-columns: 26px 1fr; gap: 10px; font-size: 14.5px; color: rgba(255,255,255,0.88); }
+  .lead-pitch ol li::before { content: counter(s); width: 24px; height: 24px; border-radius: 50%; background: rgba(212,168,83,0.18); color: var(--titan-gold); font-weight: 700; font-size: 13px; display: grid; place-items: center; }
+  .lead-alt { display: flex; flex-wrap: wrap; gap: 8px; }
+  .lead-alt a { display: inline-flex; align-items: center; gap: 8px; color: white; text-decoration: none; font-weight: 700; font-size: 14px; padding: 9px 14px; border: 1.5px solid rgba(255,255,255,0.25); border-radius: 8px; }
+  .lead-alt a:hover { border-color: white; background: rgba(255,255,255,0.06); }
+  .lead-alt svg { width: 16px; height: 16px; }
+  .lead-form { background: white; color: var(--titan-dark); padding: 26px 28px; display: grid; gap: 12px; align-content: start; }
+  .lead-form .row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .fld label { display: block; font-size: 12.5px; font-weight: 700; letter-spacing: 0.4px; color: var(--titan-ink-2); margin-bottom: 5px; }
+  .fld label small { font-weight: 500; color: var(--titan-gray); }
+  .fld input { width: 100%; height: 48px; padding: 0 14px; border: 1.5px solid #D5DAE1; border-radius: 8px; font-size: 16px; background: white; }
+  .fld input:focus { outline: none; border-color: var(--titan-navy); box-shadow: 0 0 0 3px rgba(27,42,74,0.1); }
+  .fld input[aria-invalid="true"] { border-color: var(--titan-red); }
+  .lead-fine { font-size: 12px; color: var(--titan-gray); text-align: center; }
+  .lead-ok { text-align: center; padding: 18px 6px; }
+  .lead-ok .big-check { width: 64px; height: 64px; border-radius: 50%; background: var(--good-bg); color: var(--good); display: grid; place-items: center; margin: 0 auto 12px; }
+  .lead-ok .big-check svg { width: 32px; height: 32px; }
+  .lead-ok h4 { font-family: 'Bebas Neue', sans-serif; font-weight: 400; font-size: 32px; letter-spacing: 0.6px; color: var(--titan-navy); }
+  .lead-ok p { color: var(--titan-ink-2); font-size: 15px; }
+  .hp { position: absolute; left: -9999px; }
+  .res-fine { font-size: 12.5px; color: var(--titan-gray); margin-top: 18px; line-height: 1.6; }
+  .ins-note { margin-top: 24px; display: flex; gap: 12px; padding: 16px 18px; border-radius: 12px; background: var(--titan-blue-light); color: var(--titan-navy); font-size: 14.5px; }
+  .ins-note svg { flex: none; width: 22px; height: 22px; margin-top: 1px; }
+  .ins-note a { color: var(--titan-red); font-weight: 700; }
+
+  /* ── HOW IT WORKS ── */
+  .how { background: var(--titan-warm); }
+  .how-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 40px; }
+  .how-card { background: white; border-radius: 14px; padding: 28px 26px; box-shadow: var(--shadow-sm); border: 1px solid #EEE9E1; }
+  .how-card .n { font-family: 'Bebas Neue', sans-serif; font-size: 15px; letter-spacing: 2px; color: var(--titan-red); }
+  .how-card svg { width: 54px; height: 54px; margin: 10px 0 14px; color: var(--titan-navy); }
+  .how-card h3 { font-family: 'Barlow Condensed', sans-serif; font-size: 22px; font-weight: 700; color: var(--titan-navy); margin-bottom: 6px; }
+  .how-card p { font-size: 15px; color: var(--titan-gray); }
+
+  /* ── WHY ── */
+  .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+  .why-list { display: grid; gap: 18px; margin-top: 28px; }
+  .why-item { display: grid; grid-template-columns: 44px 1fr; gap: 16px; }
+  .why-item .ico { width: 44px; height: 44px; border-radius: 10px; background: var(--titan-select); display: grid; place-items: center; color: var(--titan-navy); }
+  .why-item .ico svg { width: 24px; height: 24px; }
+  .why-item h4 { font-weight: 700; font-size: 16.5px; color: var(--titan-navy); }
+  .why-item p { font-size: 14.5px; color: var(--titan-gray); }
+  .promise { background: var(--titan-navy); color: white; border-radius: 16px; padding: 34px 32px; position: relative; overflow: hidden; }
+  .promise::before { content: ""; position: absolute; right: -40px; top: -40px; width: 180px; height: 180px; border-radius: 50%; border: 28px solid rgba(212,168,83,0.12); }
+  .promise h3 { font-family: 'Bebas Neue', sans-serif; font-weight: 400; font-size: 34px; letter-spacing: 0.8px; line-height: 1.05; margin-bottom: 18px; position: relative; }
+  .promise ul { list-style: none; display: grid; gap: 14px; position: relative; }
+  .promise li { display: grid; grid-template-columns: 22px 1fr; gap: 12px; font-size: 15px; color: rgba(255,255,255,0.85); }
+  .promise li::before { content: "★"; color: var(--titan-gold); }
+  .promise li b { color: white; }
+
+  /* ── FAQ ── */
+  .faq { background: var(--titan-light); }
+  .faq-list { max-width: 820px; margin: 36px auto 0; display: grid; gap: 10px; }
+  .faq-list details { background: white; border-radius: 12px; border: 1px solid var(--line); }
+  .faq-list summary { list-style: none; cursor: pointer; padding: 18px 22px; font-weight: 700; font-size: 16.5px; color: var(--titan-navy); display: flex; justify-content: space-between; gap: 16px; align-items: center; }
+  .faq-list summary::-webkit-details-marker { display: none; }
+  .faq-list summary::after { content: "+"; font-size: 24px; font-weight: 500; color: var(--titan-red); line-height: 1; transition: transform 0.2s; }
+  .faq-list details[open] summary::after { transform: rotate(45deg); }
+  .faq-list details p { padding: 0 22px 20px; color: var(--titan-ink-2); font-size: 15px; }
+  .faq-list details a { color: var(--titan-red); font-weight: 600; }
+
+  /* ── CTA BAND ── */
+  .cta-band { background: var(--titan-red); color: white; text-align: center; padding: 56px 0; }
+  .cta-band h2 { font-family: 'Bebas Neue', sans-serif; font-weight: 400; font-size: clamp(32px, 4.5vw, 46px); letter-spacing: 1px; line-height: 1.05; margin-bottom: 10px; }
+  .cta-band p { color: rgba(255,255,255,0.88); margin-bottom: 24px; font-size: 17px; }
+  .cta-band .btn-white { background: white; color: var(--titan-red); }
+  .cta-band .btn-white:hover { transform: translateY(-1px); box-shadow: 0 8px 22px rgba(0,0,0,0.2); }
+  .cta-band .actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+
+  /* ── FOOTER ── */
+  .footer { background: var(--titan-navy-deep); color: rgba(255,255,255,0.5); padding: 40px 0 24px; font-size: 13px; }
+  .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 32px; }
+  .footer-brand .footer-logo { font-family: 'Bebas Neue', sans-serif; font-size: 24px; color: white; margin-bottom: 12px; }
+  .footer-brand p { line-height: 1.65; max-width: 280px; }
+  .footer-col h4 { font-family: 'Barlow Condensed', sans-serif; font-size: 14px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: white; margin-bottom: 16px; }
+  .footer-col a { display: block; color: rgba(255,255,255,0.5); text-decoration: none; font-size: 13.5px; margin-bottom: 8px; transition: color 0.2s; }
+  .footer-col a:hover { color: white; }
+  .footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 20px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 1080px) {
+    .hero-grid { grid-template-columns: 1fr 480px; gap: 36px; }
+  }
+  @media (max-width: 960px) {
+    .hero-grid { grid-template-columns: 1fr; }
+    .hero-copy { padding-top: 0; text-align: center; max-width: 640px; margin: 0 auto; }
+    .hero-copy > p { margin-left: auto; margin-right: auto; }
+    .hero-points, .hero-trust { display: none; }
+    .wiz { max-width: 600px; margin: 0 auto; width: 100%; }
+    .res-grid { grid-template-columns: 1fr; }
+    .lead { grid-template-columns: 1fr; }
+    .why-grid { grid-template-columns: 1fr; gap: 36px; }
+    .how-grid { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 768px) {
+    .nav-links { display: none; }
+    .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 70px; left: 0; right: 0; background: white; box-shadow: 0 12px 24px rgba(0,0,0,0.1); padding: 16px 0; z-index: 100; gap: 0; }
+    .nav-links.open .nav-item { padding: 0; }
+    .nav-links.open .nav-item > a { height: auto; line-height: normal; padding: 14px 24px; }
+    .nav-links.open .nav-dropdown { position: static; opacity: 1; visibility: visible; transform: none; box-shadow: none; border: none; border-top: none; border-radius: 0; min-width: 100%; display: none; }
+    .nav-links.open .nav-item.dropdown-open .nav-dropdown { display: block; }
+    .nav-links.open .nav-dropdown a { padding-left: 44px; font-size: 13px; }
+    .nav-links.open .nav-cta { margin: 12px 24px; text-align: center; display: block; }
+    .mobile-toggle { display: block; }
+  }
+  @media (max-width: 600px) {
+    .container { padding: 0 16px; }
+    .est-hero { padding: 32px 0 48px; }
+    .hero-label { font-size: 11px; letter-spacing: 2px; margin-bottom: 10px; }
+    .hero-copy h1 { font-size: 42px; margin-bottom: 12px; }
+    .hero-copy > p { font-size: 15.5px; margin-bottom: 22px; }
+    .wiz-head { padding: 18px 18px 0; }
+    .wiz-body { padding: 20px 18px 4px; min-height: 0; }
+    .wiz-foot { padding: 12px 18px 18px; flex-wrap: wrap; gap: 10px; }
+    .wiz-foot .btn { padding: 12px 16px; flex: 1; }
+    .wiz-foot #backBtn { flex: 0 0 auto; }
+    .running { order: -1; flex: 1 0 100%; display: flex; align-items: baseline; justify-content: space-between; gap: 8px; padding-bottom: 10px; border-bottom: 1px solid #F0F1F3; text-align: left; }
+    .running b { font-size: 22px; white-space: nowrap; }
+    .q-label { flex-direction: column; align-items: flex-start; gap: 2px; }
+    .progress li { font-size: 0; letter-spacing: 0; }
+    .progress li::before { margin-bottom: 0; }
+    .step-title { font-size: 30px; }
+    .opts-4 { grid-template-columns: repeat(2, 1fr); }
+    .mats { grid-template-columns: 1fr; }
+    .mat .opt-face { flex-direction: row; }
+    .mat-swatch { width: 92px; height: auto; flex: none; }
+    .mat-swatch svg { height: 100%; min-height: 96px; }
+    .mat-badge { top: auto; bottom: 8px; left: 6px; font-size: 9.5px; padding: 2px 5px; }
+    .measure-stats .mstat b { font-size: 24px; }
+    .chk { grid-template-columns: 1fr; gap: 6px; padding: 10px 12px; }
+    .seg { width: 100%; }
+    .seg label { flex: 1; text-align: center; }
+    .res-top { grid-template-columns: 1fr; }
+    .res-actions { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
+    .res-actions .btn { padding: 9px 4px; font-size: 12.5px; }
+    .verdict { grid-template-columns: 1fr; padding: 18px; }
+    .chart-wrap { padding: 14px 12px 6px; }
+    .persq, .persq.two { grid-template-columns: 1fr; }
+    .persq div + div { border-left: none; border-top: 1px solid var(--line); }
+    .persq div { padding: 10px 18px; }
+    .spec-table th, .spec-table td { padding: 10px 12px; }
+    .spec-table caption { padding: 14px 12px 6px; }
+    .spec-table thead th:nth-child(3), .spec-table td.titan { display: none; }
+    .lead-pitch, .lead-form { padding: 22px 18px; }
+    .lead-form .row2 { grid-template-columns: 1fr; }
+    .section { padding: 56px 0; }
+    .footer-grid { grid-template-columns: 1fr; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; scroll-behavior: auto !important; }
+    .art-house .draw { stroke-dashoffset: 0; }
+    .art-house .fade { opacity: 1; }
+  }
+
+  /* ── PRINT: just the estimate ── */
+  @media print {
+    .topbar, .navbar, .hero-copy, .wiz-head, .wiz-foot, .how, .why, .faq, .cta-band, .footer, .res-actions, .lead-form, .lead-alt, .hero-roofline { display: none !important; }
+    .est-hero { background: none; color: black; padding: 0; }
+    .wiz { box-shadow: none; border: none; }
+    .wiz::before { display: none; }
+    .lead { background: none; color: black; display: block; }
+    .lead-pitch { background: none; padding: 12px 0; }
+    .lead-pitch h3, .lead-pitch p, .lead-pitch ol li { color: black; }
+    .res-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  /* Tighter nav between tablet and laptop widths so every item fits */
+  @media (min-width: 769px) and (max-width: 1060px) {
+    .nav-item { padding: 0 6px; }
+    .nav-item > a { font-size: 13px; white-space: nowrap; }
+    .nav-logo { white-space: nowrap; }
+    .nav-cta { margin-left: 8px; padding: 10px 14px; }
+    .nav-logo { font-size: 24px; }
+    .nav-logo img { height: 40px; }
+  }
+  @media (min-width: 769px) and (max-width: 920px) {
+    .nav-logo { font-size: 0; gap: 0; }
+  }
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How accurate is the online roof estimate?",
+      "acceptedAnswer": { "@type": "Answer", "text": "When we can measure your roof from satellite imagery, the range is usually close to the final bid. If you enter your home size instead, the range is wider. The final price is set after a free inspection, which checks decking condition, the number of existing layers and ventilation." }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I have to give my phone number to see a price?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. You see your full estimate and quote comparison without entering any contact details. You only share them if you want a firm written bid." }
+    },
+    {
+      "@type": "Question",
+      "name": "Why can Titan sometimes beat another roofer's quote?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Titan has installed more than 30,000 roofs since 2002 with its own crews, not subcontractors, and most homes are finished in a single day. That volume and efficiency can let us price a better roofing system for the same money or less." }
+    },
+    {
+      "@type": "Question",
+      "name": "What if my other quote is lower than Titan's estimate?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Then compare what's included. Lower quotes often skip a full tear-off, synthetic underlayment, valley protection or new pipe boots. The estimator shows what those items would add so you can compare like for like." }
+    },
+    {
+      "@type": "Question",
+      "name": "Does insurance change what I pay?",
+      "acceptedAnswer": { "@type": "Answer", "text": "If storm damage qualifies for an insurance claim, you typically pay your deductible and the insurer pays the rest. Titan documents the damage and meets your adjuster on site." }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- ── TOP BAR ── -->
+<div class="topbar">
+  <div class="container">
+    <span>Serving Greater Houston — Galveston to College Station &nbsp;|&nbsp; <a href="tel:+19368271550">Colin: (936) 827-1550</a> &nbsp;|&nbsp; <a href="mailto:info@titanroofingtx.com">info@titanroofingtx.com</a></span>
+    <div class="topbar-badges">
+      <span class="topbar-badge">★ Veteran Owned</span>
+      <span class="topbar-badge">★ Since 2002</span>
+      <span class="topbar-badge">★ CertainTeed SELECT ShingleMaster</span>
+    </div>
+  </div>
+</div>
+
+<!-- ── NAVBAR ── -->
+<nav class="navbar">
+  <div class="container">
+    <a href="/index.html" class="nav-logo">
+      <span class="logo-icon"><img src="/titanlogorevised_v3.png" alt="Titan Roofing Logo"></span>
+      Titan Roofing
+    </a>
+    <div class="nav-links" id="navLinks">
+      <div class="nav-item"><a href="/index.html">Home</a></div>
+      <div class="nav-item">
+        <a href="#" onclick="return false;">Services <span class="nav-arrow">▾</span></a>
+        <div class="nav-dropdown">
+          <a href="/residential.html">Residential Reroofing <span class="dd-desc">Shingle replacement for homes</span></a>
+          <a href="/storm-damage.html">Storm Damage &amp; Insurance <span class="dd-desc">Hail, wind &amp; claim support</span></a>
+          <a href="/new-construction.html">New Construction <span class="dd-desc">Builder &amp; new home roofing</span></a>
+          <a href="/commercial.html">Commercial Roofing <span class="dd-desc">Sloped roofs for businesses</span></a>
+          <a href="/metal-accents.html">Metal Accents <span class="dd-desc">Porches, dormers &amp; bay windows</span></a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="#" onclick="return false;">Why Titan <span class="nav-arrow">▾</span></a>
+        <div class="nav-dropdown">
+          <a href="/about.html">Our Story</a>
+          <a href="/about.html#certainteed">CertainTeed Certification</a>
+          <a href="/index.html#process">How It Works</a>
+        </div>
+      </div>
+      <div class="nav-item"><a href="/roof-estimate.html" class="is-active" aria-current="page">Instant Estimate</a></div>
+      <div class="nav-item"><a href="/index.html#reviews">Reviews</a></div>
+      <a href="/index.html#contact" class="nav-cta">Free Inspection →</a>
+    </div>
+    <button class="mobile-toggle" onclick="toggleMobileMenu()" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ── HERO + ESTIMATOR ── -->
+<section class="est-hero">
+  <svg class="hero-roofline" viewBox="0 0 760 300" fill="none" stroke="white" stroke-width="3" aria-hidden="true">
+    <path d="M0 300 L0 210 L120 130 L240 210 L240 300"/>
+    <path d="M200 300 L200 180 L380 40 L560 180 L560 300"/>
+    <path d="M520 300 L520 200 L640 120 L760 200 L760 300"/>
+    <path d="M300 118 L460 118" stroke-dasharray="6 8"/>
+    <path d="M380 40 L380 300" stroke-dasharray="4 10" opacity="0.6"/>
+  </svg>
+  <div class="container">
+    <div class="hero-grid" id="heroGrid">
+      <div class="hero-copy">
+        <div class="hero-label">Free instant roof estimate</div>
+        <h1>Got a roof quote?<br><em>Check it</em> against Titan's.</h1>
+        <p>See what a Titan roof would cost for your home in about 60 seconds, then see exactly how it compares to the quote you already have. No phone number needed to see your price.</p>
+        <ul class="hero-points">
+          <li>
+            <svg viewBox="0 0 26 26" fill="none" aria-hidden="true"><circle cx="13" cy="13" r="12" stroke="#D4A853" stroke-width="1.5"/><path d="M8 13.5l3.2 3L18 9.5" stroke="#D4A853" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span><strong>Measured from satellite.</strong> Enter your address and we size your roof. No tape measure, no guessing.</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 26 26" fill="none" aria-hidden="true"><circle cx="13" cy="13" r="12" stroke="#D4A853" stroke-width="1.5"/><path d="M8 13.5l3.2 3L18 9.5" stroke="#D4A853" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span><strong>Line-by-line comparison.</strong> See your potential savings, and what the other quote may be leaving out.</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 26 26" fill="none" aria-hidden="true"><circle cx="13" cy="13" r="12" stroke="#D4A853" stroke-width="1.5"/><path d="M8 13.5l3.2 3L18 9.5" stroke="#D4A853" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span><strong>Real Titan pricing.</strong> CertainTeed systems installed by our own crews, not subcontractors.</span>
+          </li>
+        </ul>
+        <div class="hero-trust">
+          <div>30<span class="accent">K+</span><small>Roofs installed</small></div>
+          <div>Top <span class="accent">1%</span><small>CertainTeed certified</small></div>
+          <div>2002<small>Serving Houston since</small></div>
+        </div>
+      </div>
+
+      <!-- ── ESTIMATOR ── -->
+      <div class="wiz" id="estimator" aria-label="Roof estimate calculator">
+        <div class="wiz-head">
+          <ol class="progress" id="progress" aria-label="Progress">
+            <li>Address</li><li>Roof</li><li>Material</li><li>Compare</li><li>Estimate</li>
+          </ol>
+        </div>
+
+        <div class="wiz-body" id="wizBody">
+
+          <!-- STEP: ADDRESS -->
+          <section class="step" data-step="address" aria-labelledby="t-address">
+            <svg class="art-house" viewBox="0 0 380 150" fill="none" aria-hidden="true">
+              <defs>
+                <pattern id="shingles" width="16" height="9" patternUnits="userSpaceOnUse">
+                  <rect width="16" height="9" fill="#2B3B5C"/>
+                  <path d="M0 8.5h16" stroke="#1B2A4A" stroke-width="1"/>
+                  <path d="M8 0v8.5" stroke="#1B2A4A" stroke-width="1"/>
+                </pattern>
+              </defs>
+              <path d="M10 142 H370" stroke="#E5E7EB" stroke-width="2"/>
+              <rect x="96" y="90" width="188" height="52" fill="#F4F5F7" stroke="#1B2A4A" stroke-width="2"/>
+              <path d="M74 92 L150 38 L230 38 L306 92 Z" fill="url(#shingles)" stroke="#1B2A4A" stroke-width="2" stroke-linejoin="round"/>
+              <path d="M150 38 L166 92 M230 38 L214 92" stroke="#3A4D72" stroke-width="1.5"/>
+              <rect x="176" y="108" width="28" height="34" rx="2" fill="#C41E3A"/>
+              <rect x="118" y="104" width="34" height="22" rx="2" fill="white" stroke="#1B2A4A" stroke-width="2"/>
+              <rect x="228" y="104" width="34" height="22" rx="2" fill="white" stroke="#1B2A4A" stroke-width="2"/>
+              <path class="draw" d="M74 22 H306" stroke="#D4A853" stroke-width="2"/>
+              <path class="draw" d="M74 16 V28 M306 16 V28" stroke="#D4A853" stroke-width="2"/>
+              <g class="fade">
+                <rect x="148" y="10" width="84" height="24" rx="12" fill="#D4A853"/>
+                <text x="190" y="26.5" text-anchor="middle" font-family="Barlow, sans-serif" font-weight="700" font-size="12.5" fill="#0F1A2E">31.4 squares</text>
+              </g>
+              <path class="draw dim" d="M306 92 L338 92 M306 92 A30 30 0 0 0 330 76" stroke="#C41E3A" stroke-width="2"/>
+              <g class="fade">
+                <text x="342" y="82" font-family="Barlow, sans-serif" font-weight="700" font-size="13" fill="#C41E3A">6/12</text>
+              </g>
+            </svg>
+            <h2 class="step-title" id="t-address">Where's the roof?</h2>
+            <p class="step-sub">We measure it from satellite imagery, so you don't need a tape measure or a ladder.</p>
+            <div class="notice" id="addrNotice" hidden></div>
+            <form id="addrForm" novalidate>
+              <div class="addr-field">
+                <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1.5a6.5 6.5 0 0 0-6.5 6.5c0 4.6 5.6 10 6 10.4a.7.7 0 0 0 1 0c.4-.4 6-5.8 6-10.4A6.5 6.5 0 0 0 10 1.5zm0 9a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
+                <label class="sr-only" for="addr">Home address</label>
+                <input id="addr" name="address" type="text" autocomplete="street-address" placeholder="Street address, city" aria-describedby="addrErr">
+              </div>
+              <p class="field-error" id="addrErr" role="alert"></p>
+              <button type="submit" class="btn btn-primary btn-block">Measure my roof →</button>
+            </form>
+            <div class="alt-row"><button type="button" class="link-btn" data-go="manual">Rather not share your address? Use home size instead</button></div>
+            <p class="micro">
+              <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 1a3.5 3.5 0 0 0-3.5 3.5V6H4a1 1 0 0 0-1 1v6.5a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1h-.5V4.5A3.5 3.5 0 0 0 8 1zm2 5H6V4.5a2 2 0 1 1 4 0V6z"/></svg>
+              Your address is only used to measure your roof. Nobody contacts you unless you ask us to.
+            </p>
+          </section>
+
+          <!-- STEP: MEASURING -->
+          <section class="step" data-step="measuring" hidden aria-live="polite">
+            <div class="measuring">
+              <div class="scan" aria-hidden="true">
+                <svg viewBox="0 0 130 130" fill="none">
+                  <rect x="22" y="34" width="86" height="62" stroke="#D4A853" stroke-width="2.5" stroke-linejoin="round"/>
+                  <path d="M22 34 L46 65 L84 65 L108 34 M22 96 L46 65 M84 65 L108 96" stroke="#D4A853" stroke-width="2" stroke-linejoin="round"/>
+                  <circle cx="65" cy="65" r="4" fill="#C41E3A"/>
+                </svg>
+              </div>
+              <h2 class="step-title">Measuring your roof</h2>
+              <ul class="scan-steps" id="scanSteps">
+                <li><i></i>Finding your home</li>
+                <li><i></i>Measuring each roof plane</li>
+                <li><i></i>Calculating pitch and area</li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- STEP: CONFIRM (satellite result) -->
+          <section class="step" data-step="confirm" hidden aria-labelledby="t-confirm">
+            <h2 class="step-title" id="t-confirm">Here's your roof</h2>
+            <p class="step-sub" id="confirmSub">Check that the circle is on your home.</p>
+            <figure class="sat" id="satFig">
+              <img id="satImg" alt="Satellite view of your home" loading="eager">
+              <div class="sat-pin"></div>
+              <figcaption class="sat-cap" id="satCap"></figcaption>
+            </figure>
+            <div class="notice" id="confirmNotice" hidden></div>
+            <div class="measure-stats">
+              <div class="mstat"><b id="mArea">–</b><span>Roof sq ft</span></div>
+              <div class="mstat"><b id="mPitch">–</b><span>Main pitch</span></div>
+              <div class="mstat"><b id="mPlanes">–</b><span>Roof planes</span></div>
+            </div>
+            <div class="q-label">Roof shape <span class="q-hint">We guessed from the planes. Adjust if needed.</span></div>
+            <div class="opts opts-3" data-group="complexity"></div>
+            <div class="q-label">Stories</div>
+            <div class="opts opts-2" data-group="stories"></div>
+            <div class="alt-row"><button type="button" class="link-btn" data-go="manual">Not my home? Enter size instead</button></div>
+          </section>
+
+          <!-- STEP: MANUAL -->
+          <section class="step" data-step="manual" hidden aria-labelledby="t-manual">
+            <h2 class="step-title" id="t-manual">Tell us about your home</h2>
+            <p class="step-sub">Rough answers are fine. We'll confirm everything on a free inspection.</p>
+            <div class="notice" id="manualNotice" hidden></div>
+            <div class="q-label"><label for="homeSize">Home size (living area)</label> <span class="q-hint">It's on your appraisal or listing</span></div>
+            <div class="size-row">
+              <input type="range" id="homeSize" min="800" max="6000" step="50" value="2200" aria-describedby="homeSizeOut">
+              <div class="size-num"><input id="homeSizeNum" type="text" inputmode="numeric" value="2,200" aria-label="Home size in square feet"><span>sq ft</span></div>
+            </div>
+            <div class="q-label">Stories</div>
+            <div class="opts opts-2" data-group="stories"></div>
+            <div class="q-label">Attached garage under the same roof?</div>
+            <div class="opts opts-2" data-group="garage"></div>
+            <div class="q-label">Roof shape <span class="q-hint">Seen from above</span></div>
+            <div class="opts opts-3" data-group="complexity"></div>
+            <div class="q-label">Roof pitch <span class="q-hint">Not sure? Most Houston homes are Standard</span></div>
+            <div class="opts opts-4" data-group="pitch"></div>
+          </section>
+
+          <!-- STEP: MATERIAL -->
+          <section class="step" data-step="material" hidden aria-labelledby="t-material">
+            <h2 class="step-title" id="t-material">Pick your roof</h2>
+            <p class="step-sub">Prices are for your roof, fully installed. Tap one to compare.</p>
+            <div class="mats" data-group="material"></div>
+            <div class="mat-detail" id="matDetail"></div>
+          </section>
+
+          <!-- STEP: QUOTE -->
+          <section class="step" data-step="quote" hidden aria-labelledby="t-quote">
+            <h2 class="step-title" id="t-quote">Have another quote?</h2>
+            <p class="step-sub">Add it and we'll show you the difference, line by line. Optional.</p>
+            <div class="opts opts-2" data-group="hasQuote"></div>
+            <div class="quote-box" id="quoteBox" hidden>
+              <div class="q-label"><label for="quoteAmt">Their total price</label></div>
+              <div class="money-field"><span>$</span><input id="quoteAmt" type="text" inputmode="numeric" placeholder="16,500" autocomplete="off"></div>
+              <p class="field-error" id="quoteErr" role="alert"></p>
+              <div class="q-label">What does their quote include? <span class="q-hint">Check the paperwork</span></div>
+              <div class="checks" id="checks"></div>
+            </div>
+            <label class="toggle-row">
+              <input type="checkbox" id="insurance">
+              <span>This is for hail or storm damage<small>Insurance may cover most of the cost</small></span>
+            </label>
+          </section>
+
+          <!-- STEP: RESULTS -->
+          <section class="step" data-step="results" hidden aria-live="polite">
+            <div id="results"></div>
+          </section>
+        </div>
+
+        <div class="wiz-foot" id="wizFoot" hidden>
+          <button type="button" class="btn btn-ghost" id="backBtn">← Back</button>
+          <div class="running" id="running" hidden><small>Estimate so far</small><b id="runningVal">–</b></div>
+          <button type="button" class="btn btn-primary" id="nextBtn">Continue →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── HOW IT WORKS ── -->
+<section class="section how" id="how">
+  <div class="container">
+    <div style="text-align:center;">
+      <div class="section-label">How it works</div>
+      <h2 class="section-title">An honest number in three steps</h2>
+      <p class="section-subtitle" style="margin:0 auto;">Shopping around is smart. This tool makes it fast, and it shows you what to look for in every quote, including ours.</p>
+    </div>
+    <div class="how-grid">
+      <div class="how-card">
+        <div class="n">01</div>
+        <svg viewBox="0 0 54 54" fill="none" aria-hidden="true"><circle cx="27" cy="27" r="25" stroke="currentColor" stroke-width="2"/><rect x="14" y="17" width="26" height="20" stroke="currentColor" stroke-width="2"/><path d="M14 17l8 10h10l8-10M14 37l8-10M32 27l8 10" stroke="#C41E3A" stroke-width="2"/></svg>
+        <h3>We measure your roof</h3>
+        <p>Enter your address and we pull your roof's size, pitch and number of planes from satellite imagery. No address? Your home's square footage works too.</p>
+      </div>
+      <div class="how-card">
+        <div class="n">02</div>
+        <svg viewBox="0 0 54 54" fill="none" aria-hidden="true"><rect x="6" y="10" width="42" height="34" rx="4" stroke="currentColor" stroke-width="2"/><path d="M6 21h42M6 32h42" stroke="currentColor" stroke-width="2"/><path d="M14 10v11M24 21v11M18 32v12M34 10v11M40 21v11M30 32v12" stroke="#C41E3A" stroke-width="2"/></svg>
+        <h3>You pick the shingle</h3>
+        <p>See installed prices for every CertainTeed option we install, from our standard Landmark system to Class 4 impact-resistant shingles and standing seam metal.</p>
+      </div>
+      <div class="how-card">
+        <div class="n">03</div>
+        <svg viewBox="0 0 54 54" fill="none" aria-hidden="true"><path d="M8 44V22M20 44V12M32 44V28M44 44V18" stroke="currentColor" stroke-width="5" stroke-linecap="round"/><path d="M4 48h46" stroke="#C41E3A" stroke-width="2"/></svg>
+        <h3>You compare</h3>
+        <p>Add your other quote and see the price gap, your potential savings, and which items it may be leaving out. Then decide, with or without us.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── WHY ── -->
+<section class="section why" id="why">
+  <div class="container">
+    <div class="why-grid">
+      <div>
+        <div class="section-label">Why compare with Titan</div>
+        <h2 class="section-title">Often less money. Never less roof.</h2>
+        <p class="section-subtitle">Most price gaps come down to materials and shortcuts you can't see from the driveway. Here's what sits behind a Titan number.</p>
+        <div class="why-list">
+          <div class="why-item">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2l3 6.5 7 .8-5.2 4.8 1.4 7L12 17.6 5.8 21l1.4-7L2 9.3l7-.8z"/></svg></div>
+            <div><h4>Top 1% of roofers nationwide</h4><p>CertainTeed SELECT ShingleMaster, the only way to offer SureStart PLUS warranty coverage.</p></div>
+          </div>
+          <div class="why-item">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/><path d="M9 21v-7h6v7"/></svg></div>
+            <div><h4>30,000+ roofs since 2002</h4><p>Volume and experience let us price a better system without cutting corners on it.</p></div>
+          </div>
+          <div class="why-item">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.5 3.4-5.5 6.5-5.5s5.7 2 6.5 5.5"/><circle cx="17.5" cy="9" r="2.5"/><path d="M16 14.6c2.6.1 4.6 1.9 5.3 5.4"/></svg></div>
+            <div><h4>Our own crews, never subcontracted</h4><p>Many of our installers have 20+ years with Titan. Most homes are finished in a single day.</p></div>
+          </div>
+          <div class="why-item">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.4 8-8 9-4.6-1-8-4.5-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></div>
+            <div><h4>Veteran-owned and local</h4><p>Based in Willis, serving Galveston to College Station. We'll be here when you call about your warranty.</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="promise">
+        <h3>Our promise about this estimate</h3>
+        <ul>
+          <li><span><b>No bait pricing.</b> The range is built from Titan's own installed prices, not a teaser rate.</span></li>
+          <li><span><b>No contact details required</b> to see your number or your comparison.</span></li>
+          <li><span><b>Full tear-off included</b> on every reroof. We never lay new shingles over old.</span></li>
+          <li><span><b>Straight answers.</b> If your other quote is a better deal for the same roof, we'll tell you.</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FAQ ── -->
+<section class="section faq" id="faq">
+  <div class="container">
+    <div style="text-align:center;">
+      <div class="section-label">Questions</div>
+      <h2 class="section-title">Before you compare</h2>
+    </div>
+    <div class="faq-list">
+      <details>
+        <summary>How accurate is the online estimate?</summary>
+        <p>When we can measure your roof from satellite imagery, the range is usually close to the final bid. If you enter your home size instead, the range is wider. The final price is set after a free inspection, which checks decking condition, the number of existing layers and ventilation.</p>
+      </details>
+      <details>
+        <summary>Do I have to give my phone number to see a price?</summary>
+        <p>No. You see your full estimate and quote comparison without entering any contact details. You only share them if you want a firm written bid.</p>
+      </details>
+      <details>
+        <summary>Why can Titan sometimes beat another roofer's quote?</summary>
+        <p>We've installed more than 30,000 roofs since 2002 with our own crews, not subcontractors, and most homes are finished in a single day. That volume and efficiency can let us price a better roofing system for the same money or less.</p>
+      </details>
+      <details>
+        <summary>What if my other quote is lower than Titan's estimate?</summary>
+        <p>Then compare what's included. Lower quotes often skip a full tear-off, synthetic underlayment, valley protection or new pipe boots. The estimator shows what those items would add so you can compare like for like. Want a second opinion? Download <a href="/7-questions-to-ask-your-roofer.pdf">7 Questions to Ask Before You Sign</a>.</p>
+      </details>
+      <details>
+        <summary>Does insurance change what I pay?</summary>
+        <p>If storm damage qualifies for an insurance claim, you typically pay your deductible and the insurer pays the rest. We document the damage and meet your adjuster on site. <a href="/storm-damage.html">How storm claims work →</a></p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA BAND ── -->
+<section class="cta-band">
+  <div class="container">
+    <h2>Rather talk to a person?</h2>
+    <p>Call or text Colin. Send a photo of your other quote and we'll review it line by line, free.</p>
+    <div class="actions">
+      <a href="tel:+19368271550" class="btn btn-white">☎ Call (936) 827-1550</a>
+      <a href="sms:+19368271550" class="btn btn-outline">Text a photo of your quote</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo"><img src="/titanlogorevised_v3.png" alt="Titan Roofing Logo" style="height: 60px; width: auto; margin-bottom: 12px;"><br>Titan Roofing</div>
+        <p>Veteran-owned. Locally operated. Serving Greater Houston since 2002. CertainTeed SELECT ShingleMaster — top 1% of roofers nationwide.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="/residential.html">Residential Reroofing</a>
+        <a href="/storm-damage.html">Storm Restoration</a>
+        <a href="/new-construction.html">New Construction</a>
+        <a href="/commercial.html">Commercial Roofing</a>
+        <a href="/metal-accents.html">Metal Accents</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="/about.html">Our Story</a>
+        <a href="/about.html#certainteed">CertainTeed Certification</a>
+        <a href="/roof-estimate.html">Instant Roof Estimate</a>
+        <a href="/index.html#reviews">Customer Reviews</a>
+        <a href="/index.html#areas">Service Areas</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="tel:+19368271550">Residential — Colin — (936) 827-1550</a>
+        <a href="tel:+12817430839">New Construction — Greg — (281) 743-0839</a>
+        <a href="tel:+19362285061">Office — (936) 228-5061</a>
+        <a href="mailto:info@titanroofingtx.com">info@titanroofingtx.com</a>
+        <a href="#">Willis, Texas</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Titan Roofing. All rights reserved.</span>
+      <span>Veteran-Owned &amp; Operated &nbsp;|&nbsp; Licensed &amp; Insured</span>
+    </div>
+  </div>
+</footer>
+
+<div class="tip" id="tip" role="tooltip"></div>
+
+<script>
+function toggleMobileMenu() { document.getElementById('navLinks').classList.toggle('open'); }
+document.querySelectorAll('.nav-item').forEach(function (item) {
+  var a = item.querySelector('a');
+  if (a) a.addEventListener('click', function (e) {
+    if (window.innerWidth <= 768 && item.querySelector('.nav-dropdown')) { e.preventDefault(); item.classList.toggle('dropdown-open'); }
+  });
+});
+</script>
+<script src="/estimator/pricing-config.js"></script>
+<script src="/estimator/estimator.js"></script>
+</body>
+</html>

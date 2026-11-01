@@ -534,6 +534,19 @@
     .promo-cta-row { flex-direction: column; align-items: center; }
   }
 
+
+  /* Tighter nav between tablet and laptop widths so every item fits */
+  @media (min-width: 769px) and (max-width: 1060px) {
+    .nav-item { padding: 0 6px; }
+    .nav-item > a { font-size: 13px; white-space: nowrap; }
+    .nav-logo { white-space: nowrap; }
+    .nav-cta { margin-left: 8px; padding: 10px 14px; }
+    .nav-logo { font-size: 24px; }
+    .nav-logo img { height: 40px; }
+  }
+  @media (min-width: 769px) and (max-width: 920px) {
+    .nav-logo { font-size: 0; gap: 0; }
+  }
 </style>
 </head>
 <body>
@@ -577,6 +590,7 @@
           <a href="#process">How It Works</a>
         </div>
       </div>
+      <div class="nav-item"><a href="roof-estimate.html">Instant Estimate</a></div>
       <div class="nav-item"><a href="index.html#reviews">Reviews</a></div>
       <div class="nav-item"><a href="index.html#areas">Service Areas</a></div>
       <a href="#contact" class="nav-cta">Free Inspection →</a>
@@ -944,6 +958,7 @@
 
     <div style="text-align: center; margin-top: 32px;">
       <a href="7-questions-to-ask-your-roofer.pdf" download class="btn btn-primary" style="margin-right: 12px;">📄 Download: 7 Questions to Ask Before You Sign</a>
+      <a href="roof-estimate.html" class="btn" style="background: var(--titan-gold); color: var(--titan-navy); margin-right: 12px;">Compare Your Quote Instantly →</a>
       <a href="#contact" class="btn" style="background: var(--titan-navy); color: white;">Get a Free Inspection →</a>
     </div>
   </div>
@@ -1103,6 +1118,7 @@
         <h4>Company</h4>
         <a href="about.html">Our Story</a>
         <a href="about.html#certainteed">CertainTeed Certification</a>
+        <a href="roof-estimate.html">Instant Roof Estimate</a>
         <a href="#process">How It Works</a>
         <a href="index.html#reviews">Customer Reviews</a>
         <a href="index.html#areas">Service Areas</a>

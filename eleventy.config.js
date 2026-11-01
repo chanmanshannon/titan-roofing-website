@@ -5,6 +5,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("*.pdf");
   eleventyConfig.addPassthroughCopy("admin");
   eleventyConfig.addPassthroughCopy("images");
+  eleventyConfig.addPassthroughCopy("estimator/*.js");
 
   return {
     dir: {

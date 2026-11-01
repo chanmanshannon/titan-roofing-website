@@ -150,7 +150,20 @@
     @media (max-width: 500px) {
       .article-body img { max-width: 100%; }
     }
-  </style>
+  
+  /* Tighter nav between tablet and laptop widths so every item fits */
+  @media (min-width: 769px) and (max-width: 1060px) {
+    .nav-item { padding: 0 6px; }
+    .nav-item > a { font-size: 13px; white-space: nowrap; }
+    .nav-logo { white-space: nowrap; }
+    .nav-cta { margin-left: 8px; padding: 10px 14px; }
+    .nav-logo { font-size: 24px; }
+    .nav-logo img { height: 40px; }
+  }
+  @media (min-width: 769px) and (max-width: 920px) {
+    .nav-logo { font-size: 0; gap: 0; }
+  }
+</style>
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
@@ -181,7 +194,7 @@
         <div class="nav-item"><a href="/storm-damage/">Storm Damage</a></div>
         <div class="nav-item"><a href="/about/">About</a></div>
         <div class="nav-item"><a href="/blog/">Blog</a></div>
-        <a href="/residential/#contact" class="nav-cta">Get a Quote</a>
+        <a href="/roof-estimate/" class="nav-cta">Instant Estimate →</a>
       </div>
       <button class="mobile-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">
         <span></span><span></span><span></span>
