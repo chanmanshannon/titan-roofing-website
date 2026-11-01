@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Roof Replacement Cost Estimator | Compare Your Roofing Quote — Titan Roofing Houston</title>
-<meta name="description" content="Got a roofing quote? Check it against Titan's in 60 seconds. Free Houston roof replacement estimator: satellite-measured roof, real CertainTeed pricing, line-by-line quote comparison. No phone number required.">
+<meta name="description" content="Got a roofing quote? Check it against Titan's in under 5 minutes. Free Houston roof replacement estimator: satellite-measured roof, upload a competitor's estimate, line-by-line comparison. No phone number required.">
 <link rel="canonical" href="https://titanroofingtx.com/roof-estimate/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Got a roof quote? Check it against Titan's in 60 seconds.">
+<meta property="og:title" content="Got a roof quote? Check it against Titan's in under 5 minutes.">
 <meta property="og:description" content="Free roof replacement estimator for Greater Houston. See your price range, compare it to your other quote, and see exactly what's included.">
 <meta property="og:url" content="https://titanroofingtx.com/roof-estimate/">
 <meta property="og:image" content="https://titanroofingtx.com/titanlogorevised_v3.png">
@@ -265,12 +265,14 @@
   .size-num span { font-size: 12px; color: var(--titan-gray); font-weight: 600; }
 
   /* Material cards */
-  .mats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
-  .mat .opt-face { align-items: stretch; text-align: left; justify-content: flex-start; padding: 0; overflow: hidden; gap: 0; }
-  .mat-swatch { height: 64px; width: 100%; display: block; }
-  .mat-swatch svg { width: 100%; height: 64px; max-width: none; display: block; }
+  .mats { display: grid; grid-template-columns: 1fr; gap: 10px; }
+  .mat .opt-face { flex-direction: row; align-items: stretch; text-align: left; justify-content: flex-start; padding: 0; overflow: hidden; gap: 0; }
+  .mat-swatch { width: 120px; flex: none; display: block; position: relative; }
+  .mat-swatch svg { width: 100%; height: 100%; min-height: 92px; max-width: none; display: block; }
+  .mat-body { flex: 1; }
+  .mat-top { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; flex-wrap: wrap; }
   .mat-body { padding: 10px 12px 12px; display: grid; gap: 3px; }
-  .mat-badge { position: absolute; top: 8px; left: 8px; font-family: 'Barlow Condensed', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; padding: 2px 8px; border-radius: 4px; background: rgba(255,255,255,0.94); color: var(--titan-navy); }
+  .mat-badge { position: absolute; bottom: 8px; left: 8px; font-family: 'Barlow Condensed', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; padding: 2px 8px; border-radius: 4px; background: rgba(255,255,255,0.94); color: var(--titan-navy); }
   .mat-price { font-family: 'Bebas Neue', sans-serif; font-size: 22px; letter-spacing: 0.4px; color: var(--titan-navy); line-height: 1.1; margin-top: 4px; font-variant-numeric: tabular-nums; }
   .mat-blurb { font-size: 12.5px; color: var(--titan-gray); line-height: 1.4; }
   .mat-detail { margin-top: 14px; padding: 12px 14px; border-radius: 10px; background: var(--titan-light); font-size: 13.5px; color: var(--titan-ink-2); }
@@ -298,6 +300,56 @@
   .toggle-row { display: flex; align-items: center; gap: 12px; padding: 12px 14px; margin-top: 16px; border-radius: 10px; background: var(--titan-light); cursor: pointer; font-size: 14px; font-weight: 600; }
   .toggle-row input { width: 18px; height: 18px; accent-color: var(--titan-navy); flex: none; }
   .toggle-row small { display: block; font-weight: 500; color: var(--titan-gray); font-size: 12.5px; }
+
+  /* Upload entry + upload step */
+  .or-div { display: flex; align-items: center; gap: 12px; margin: 16px 0 12px; color: #9CA3AF; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; }
+  .or-div::before, .or-div::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+  .start-alt { width: 100%; display: grid; grid-template-columns: 44px 1fr auto; gap: 14px; align-items: center; text-align: left; padding: 14px 16px; border: 1.5px solid #DADFE6; border-radius: 12px; background: var(--titan-warm); cursor: pointer; transition: border-color 0.18s, background 0.18s, transform 0.18s; }
+  .start-alt:hover { border-color: var(--titan-navy); background: white; transform: translateY(-1px); }
+  .start-alt-ico { width: 44px; height: 44px; border-radius: 10px; background: var(--titan-navy); color: var(--titan-gold); display: grid; place-items: center; }
+  .start-alt-ico svg { width: 22px; height: 22px; }
+  .start-alt strong { display: block; font-size: 15.5px; color: var(--titan-navy); }
+  .start-alt small { display: block; font-size: 13px; color: var(--titan-gray); line-height: 1.4; }
+  .start-alt-arrow { color: var(--titan-red); font-weight: 800; font-size: 18px; }
+  .drop { display: grid; justify-items: center; gap: 4px; text-align: center; padding: 30px 20px; border: 2px dashed #C9D0DA; border-radius: 14px; background: var(--titan-select); cursor: pointer; transition: border-color 0.18s, background 0.18s; }
+  .drop:hover, .drop.is-over { border-color: var(--titan-red); background: white; }
+  .drop svg { width: 40px; height: 40px; color: var(--titan-navy); margin-bottom: 6px; }
+  .drop strong { font-size: 16px; color: var(--titan-navy); }
+  .drop span { font-size: 13.5px; color: var(--titan-gray); }
+  .drop input { position: absolute; width: 1px; height: 1px; opacity: 0; }
+  .parse-status { display: flex; gap: 10px; align-items: center; margin-top: 12px; padding: 12px 14px; border-radius: 10px; font-size: 14px; font-weight: 600; }
+  .parse-status[hidden] { display: none; }
+  .parse-status.is-busy { background: var(--titan-select); color: var(--titan-navy); }
+  .parse-status.is-ok { background: var(--good-bg); color: var(--good); }
+  .parse-status.is-warn { background: var(--warn-bg); color: var(--warn); }
+  .parse-status .spin { width: 18px; height: 18px; border: 2.5px solid #D1D5DB; border-top-color: var(--titan-red); border-radius: 50%; animation: spin 0.8s linear infinite; flex: none; }
+  .paste { margin-top: 12px; }
+  .paste summary, .type-own { cursor: pointer; font-weight: 600; font-size: 14px; color: var(--titan-navy); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: rgba(27,42,74,0.35); list-style: none; padding: 6px 0; background: none; border: none; }
+  .paste summary::-webkit-details-marker { display: none; }
+  .paste textarea { width: 100%; margin-top: 8px; padding: 12px 14px; border: 1.5px solid #D5DAE1; border-radius: 10px; font: 15px/1.5 'Barlow', sans-serif; resize: vertical; }
+  .paste textarea:focus { outline: none; border-color: var(--titan-navy); }
+  .paste .btn { margin-top: 8px; padding: 10px 18px; font-size: 14px; }
+  .upload-links { display: flex; flex-wrap: wrap; gap: 4px 18px; align-items: center; }
+  .parsed { margin-top: 8px; }
+  .parsed[hidden] { display: none; }
+  .parsed-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .unit-field { display: flex; align-items: center; border: 1.5px solid #D5DAE1; border-radius: 10px; padding: 0 14px; height: 54px; background: white; }
+  .unit-field:focus-within { border-color: var(--titan-navy); box-shadow: 0 0 0 3px rgba(27,42,74,0.1); }
+  .unit-field input { flex: 1; min-width: 0; border: none; background: transparent; font-family: 'Bebas Neue', sans-serif; font-size: 28px; letter-spacing: 0.5px; color: var(--titan-navy); font-variant-numeric: tabular-nums; }
+  .unit-field input:focus { outline: none; }
+  .fld .unit-field input { height: auto; padding: 0; border: none; box-shadow: none; background: transparent; font-size: 28px; }
+  .opt.compact input:checked + .opt-face::after { top: -7px; right: -7px; box-shadow: 0 0 0 2px white; }
+  .opt.compact .opt-face { padding: 12px 6px; }
+  .unit-field span { font-family: 'Bebas Neue', sans-serif; font-size: 22px; color: var(--titan-gray); }
+  .unit-field.pre span { margin-right: 4px; }
+  .fld .detected { font-size: 11px; font-weight: 700; color: var(--good); letter-spacing: 0.4px; margin-left: 6px; }
+  .mini-up { display: inline-flex; align-items: center; gap: 8px; margin: 14px 0 0; padding: 8px 12px; border-radius: 8px; border: 1.5px dashed #C9D0DA; background: var(--titan-select); color: var(--titan-navy); font-weight: 700; font-size: 13.5px; cursor: pointer; }
+  .mini-up:hover { border-color: var(--titan-navy); }
+  .mini-up svg { width: 16px; height: 16px; }
+  .tier-link { font-size: 13px; font-weight: 600; color: var(--titan-red); text-decoration: none; }
+  .tier-link:hover { text-decoration: underline; }
+  .sq-note { margin-top: 16px; display: flex; gap: 10px; padding: 14px 16px; border-radius: 12px; background: var(--warn-bg); color: #5C4310; font-size: 14px; }
+  .sq-note svg { flex: none; width: 20px; height: 20px; margin-top: 1px; }
 
   /* ── RESULTS ── */
   .res { padding: 4px 0 6px; }
@@ -496,11 +548,11 @@
     .progress li::before { margin-bottom: 0; }
     .step-title { font-size: 30px; }
     .opts-4 { grid-template-columns: repeat(2, 1fr); }
-    .mats { grid-template-columns: 1fr; }
-    .mat .opt-face { flex-direction: row; }
-    .mat-swatch { width: 92px; height: auto; flex: none; }
-    .mat-swatch svg { height: 100%; min-height: 96px; }
-    .mat-badge { top: auto; bottom: 8px; left: 6px; font-size: 9.5px; padding: 2px 5px; }
+    .mat-swatch { width: 84px; }
+    .mat-badge { left: 5px; bottom: 6px; font-size: 9.5px; padding: 2px 5px; }
+    .parsed-grid { grid-template-columns: 1fr; }
+    .opt.compact .opt-name { font-size: 13.5px; }
+    .start-alt { grid-template-columns: 40px 1fr auto; gap: 12px; padding: 12px; }
     .measure-stats .mstat b { font-size: 24px; }
     .chk { grid-template-columns: 1fr; gap: 6px; padding: 10px 12px; }
     .seg { width: 100%; }
@@ -562,7 +614,7 @@
     {
       "@type": "Question",
       "name": "How accurate is the online roof estimate?",
-      "acceptedAnswer": { "@type": "Answer", "text": "When we can measure your roof from satellite imagery, the range is usually close to the final bid. If you enter your home size instead, the range is wider. The final price is set after a free inspection, which checks decking condition, the number of existing layers and ventilation." }
+      "acceptedAnswer": { "@type": "Answer", "text": "It's a pre-inspection range based on your roof's size, stories, shape, pitch and shingle choice. Satellite measurement or a size from another roofer's estimate is more precise than home square footage. Your fixed price is set after a free inspection, which checks decking condition, the number of existing layers and ventilation." }
     },
     {
       "@type": "Question",
@@ -572,7 +624,7 @@
     {
       "@type": "Question",
       "name": "Why can Titan sometimes beat another roofer's quote?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Titan has installed more than 30,000 roofs since 2002 with its own crews, not subcontractors, and most homes are finished in a single day. That volume and efficiency can let us price a better roofing system for the same money or less." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Titan's crews have been with the company for years, its supplier relationships go back 25 years and its overhead is established, so its costs are lower. That lets Titan price modestly below typical Houston pricing without cutting corners." }
     },
     {
       "@type": "Question",
@@ -653,7 +705,7 @@
       <div class="hero-copy">
         <div class="hero-label">Free instant roof estimate</div>
         <h1>Got a roof quote?<br><em>Check it</em> against Titan's.</h1>
-        <p>See what a Titan roof would cost for your home in about 60 seconds, then see exactly how it compares to the quote you already have. No phone number needed to see your price.</p>
+        <p>See what a Titan roof would cost for your home, then see exactly how it compares to the quote you already have. Honest pricing, no salesman, no phone number needed to see your price.</p>
         <ul class="hero-points">
           <li>
             <svg viewBox="0 0 26 26" fill="none" aria-hidden="true"><circle cx="13" cy="13" r="12" stroke="#D4A853" stroke-width="1.5"/><path d="M8 13.5l3.2 3L18 9.5" stroke="#D4A853" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -661,17 +713,17 @@
           </li>
           <li>
             <svg viewBox="0 0 26 26" fill="none" aria-hidden="true"><circle cx="13" cy="13" r="12" stroke="#D4A853" stroke-width="1.5"/><path d="M8 13.5l3.2 3L18 9.5" stroke="#D4A853" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            <span><strong>Line-by-line comparison.</strong> See your potential savings, and what the other quote may be leaving out.</span>
+            <span><strong>Upload their estimate.</strong> We read it, price the same roof and show your potential savings line by line.</span>
           </li>
           <li>
             <svg viewBox="0 0 26 26" fill="none" aria-hidden="true"><circle cx="13" cy="13" r="12" stroke="#D4A853" stroke-width="1.5"/><path d="M8 13.5l3.2 3L18 9.5" stroke="#D4A853" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            <span><strong>Real Titan pricing.</strong> CertainTeed systems installed by our own crews, not subcontractors.</span>
+            <span><strong>Fair pricing, shown first.</strong> Modestly below typical Houston pricing, with no add-on surprises.</span>
           </li>
         </ul>
         <div class="hero-trust">
-          <div>30<span class="accent">K+</span><small>Roofs installed</small></div>
+          <div>&lt; 5 <span class="accent">min</span><small>Estimate time</small></div>
           <div>Top <span class="accent">1%</span><small>CertainTeed certified</small></div>
-          <div>2002<small>Serving Houston since</small></div>
+          <div>30<span class="accent">K+</span><small>Roofs installed</small></div>
         </div>
       </div>
 
@@ -679,7 +731,7 @@
       <div class="wiz" id="estimator" aria-label="Roof estimate calculator">
         <div class="wiz-head">
           <ol class="progress" id="progress" aria-label="Progress">
-            <li>Address</li><li>Roof</li><li>Material</li><li>Compare</li><li>Estimate</li>
+            <li>Start</li><li>Roof</li><li>Material</li><li>Compare</li><li>Estimate</li>
           </ol>
         </div>
 
@@ -725,6 +777,12 @@
               <p class="field-error" id="addrErr" role="alert"></p>
               <button type="submit" class="btn btn-primary btn-block">Measure my roof →</button>
             </form>
+            <div class="or-div">or</div>
+            <button type="button" class="start-alt" data-go="upload">
+              <span class="start-alt-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg></span>
+              <span><strong>Upload another roofer's estimate</strong><small>We read it and price the same roof, line by line</small></span>
+              <span class="start-alt-arrow" aria-hidden="true">→</span>
+            </button>
             <div class="alt-row"><button type="button" class="link-btn" data-go="manual">Rather not share your address? Use home size instead</button></div>
             <p class="micro">
               <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 1a3.5 3.5 0 0 0-3.5 3.5V6H4a1 1 0 0 0-1 1v6.5a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1h-.5V4.5A3.5 3.5 0 0 0 8 1zm2 5H6V4.5a2 2 0 1 1 4 0V6z"/></svg>
@@ -768,8 +826,8 @@
             </div>
             <div class="q-label">Roof shape <span class="q-hint">We guessed from the planes. Adjust if needed.</span></div>
             <div class="opts opts-3" data-group="complexity"></div>
-            <div class="q-label">Stories</div>
-            <div class="opts opts-2" data-group="stories"></div>
+            <div class="q-label">Stories <span class="q-hint">Upper floors add labor for safety setup and access</span></div>
+            <div class="opts opts-3" data-group="stories"></div>
             <div class="alt-row"><button type="button" class="link-btn" data-go="manual">Not my home? Enter size instead</button></div>
           </section>
 
@@ -783,8 +841,8 @@
               <input type="range" id="homeSize" min="800" max="6000" step="50" value="2200" aria-describedby="homeSizeOut">
               <div class="size-num"><input id="homeSizeNum" type="text" inputmode="numeric" value="2,200" aria-label="Home size in square feet"><span>sq ft</span></div>
             </div>
-            <div class="q-label">Stories</div>
-            <div class="opts opts-2" data-group="stories"></div>
+            <div class="q-label">Stories <span class="q-hint">Upper floors add labor for safety setup and access</span></div>
+            <div class="opts opts-3" data-group="stories"></div>
             <div class="q-label">Attached garage under the same roof?</div>
             <div class="opts opts-2" data-group="garage"></div>
             <div class="q-label">Roof shape <span class="q-hint">Seen from above</span></div>
@@ -795,8 +853,8 @@
 
           <!-- STEP: MATERIAL -->
           <section class="step" data-step="material" hidden aria-labelledby="t-material">
-            <h2 class="step-title" id="t-material">Pick your roof</h2>
-            <p class="step-sub">Prices are for your roof, fully installed. Tap one to compare.</p>
+            <h2 class="step-title" id="t-material">Pick your shingle</h2>
+            <p class="step-sub">Prices are for your roof, fully installed with a complete tear-off. <a class="tier-link" href="/residential.html#shingle-anatomy" target="_blank" rel="noopener">Compare shingle tiers →</a></p>
             <div class="mats" data-group="material"></div>
             <div class="mat-detail" id="matDetail"></div>
           </section>
@@ -807,16 +865,62 @@
             <p class="step-sub">Add it and we'll show you the difference, line by line. Optional.</p>
             <div class="opts opts-2" data-group="hasQuote"></div>
             <div class="quote-box" id="quoteBox" hidden>
+              <button type="button" class="mini-up" data-go="upload"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 16V4M7 9l5-5 5 5M5 20h14"/></svg>Have their PDF? Upload it and we'll fill this in</button>
               <div class="q-label"><label for="quoteAmt">Their total price</label></div>
               <div class="money-field"><span>$</span><input id="quoteAmt" type="text" inputmode="numeric" placeholder="16,500" autocomplete="off"></div>
               <p class="field-error" id="quoteErr" role="alert"></p>
               <div class="q-label">What does their quote include? <span class="q-hint">Check the paperwork</span></div>
-              <div class="checks" id="checks"></div>
+              <div class="checks" data-checks></div>
             </div>
             <label class="toggle-row">
               <input type="checkbox" id="insurance">
               <span>This is for hail or storm damage<small>Insurance may cover most of the cost</small></span>
             </label>
+          </section>
+
+          <!-- STEP: UPLOAD (competitor estimate) -->
+          <section class="step" data-step="upload" hidden aria-labelledby="t-upload">
+            <h2 class="step-title" id="t-upload">Upload their estimate</h2>
+            <p class="step-sub">We read the roof size, total and shingle type, then price the same roof. Your file is read in your browser and never stored.</p>
+            <label class="drop" id="drop" for="fileIn">
+              <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M24 4H11a3 3 0 0 0-3 3v26a3 3 0 0 0 3 3h18a3 3 0 0 0 3-3V12z"/><path d="M24 4v8h8"/><path d="M20 29V18M15.5 22.5 20 18l4.5 4.5" stroke="#C41E3A"/></svg>
+              <strong>Drop the PDF here</strong>
+              <span>or tap to choose a file</span>
+              <input type="file" id="fileIn" accept=".pdf,application/pdf">
+            </label>
+            <div class="parse-status" id="parseStatus" role="status" hidden></div>
+            <div class="upload-links">
+              <details class="paste" id="pasteBox">
+                <summary>No PDF? Paste the estimate text</summary>
+                <textarea id="pasteText" rows="5" placeholder="Paste the estimate text, including the roof size (for example 28.5 SQ) and the total."></textarea>
+                <button type="button" class="btn btn-ghost" id="pasteBtn">Read this text</button>
+              </details>
+              <button type="button" class="type-own" id="typeOwn">Or just type the numbers</button>
+            </div>
+            <div class="parsed" id="parsedBox" hidden>
+              <div class="q-label">Their numbers <span class="q-hint">Fix anything we read wrong</span></div>
+              <div class="parsed-grid">
+                <div class="fld"><label for="upSq">Roof size<span class="detected" id="upSqTag"></span></label><div class="unit-field"><input id="upSq" inputmode="decimal" placeholder="28.5" autocomplete="off"><span>SQ</span></div></div>
+                <div class="fld"><label for="upTotal">Their total<span class="detected" id="upTotalTag"></span></label><div class="unit-field pre"><span>$</span><input id="upTotal" inputmode="numeric" placeholder="19,750" autocomplete="off"></div></div>
+              </div>
+              <div class="q-label">Shingle in their quote</div>
+              <div class="opts opts-3" data-group="tier"></div>
+              <div class="q-label">What's included <span class="q-hint">We filled in what we could find. Check the rest</span></div>
+              <div class="checks" data-checks></div>
+            </div>
+            <p class="field-error" id="upErr" role="alert"></p>
+          </section>
+
+          <!-- STEP: DETAILS (upload path) -->
+          <section class="step" data-step="details" hidden aria-labelledby="t-details">
+            <h2 class="step-title" id="t-details">A few quick details</h2>
+            <p class="step-sub">Their estimate gives us the roof size. These set the labor. We pre-filled what we found.</p>
+            <div class="q-label">Stories <span class="q-hint">Upper floors add labor for safety setup and access</span></div>
+            <div class="opts opts-3" data-group="stories"></div>
+            <div class="q-label">Roof shape <span class="q-hint">Seen from above</span></div>
+            <div class="opts opts-3" data-group="complexity"></div>
+            <div class="q-label">Roof pitch <span class="q-hint">Not sure? Most Houston homes are Standard</span></div>
+            <div class="opts opts-4" data-group="pitch"></div>
           </section>
 
           <!-- STEP: RESULTS -->
@@ -847,20 +951,20 @@
       <div class="how-card">
         <div class="n">01</div>
         <svg viewBox="0 0 54 54" fill="none" aria-hidden="true"><circle cx="27" cy="27" r="25" stroke="currentColor" stroke-width="2"/><rect x="14" y="17" width="26" height="20" stroke="currentColor" stroke-width="2"/><path d="M14 17l8 10h10l8-10M14 37l8-10M32 27l8 10" stroke="#C41E3A" stroke-width="2"/></svg>
-        <h3>We measure your roof</h3>
-        <p>Enter your address and we pull your roof's size, pitch and number of planes from satellite imagery. No address? Your home's square footage works too.</p>
+        <h3>We size your roof</h3>
+        <p>Enter your address and we measure your roof's size and pitch from satellite imagery. Or upload another roofer's estimate and we'll read the size from it.</p>
       </div>
       <div class="how-card">
         <div class="n">02</div>
         <svg viewBox="0 0 54 54" fill="none" aria-hidden="true"><rect x="6" y="10" width="42" height="34" rx="4" stroke="currentColor" stroke-width="2"/><path d="M6 21h42M6 32h42" stroke="currentColor" stroke-width="2"/><path d="M14 10v11M24 21v11M18 32v12M34 10v11M40 21v11M30 32v12" stroke="#C41E3A" stroke-width="2"/></svg>
         <h3>You pick the shingle</h3>
-        <p>See installed prices for every CertainTeed option we install, from our standard Landmark system to Class 4 impact-resistant shingles and standing seam metal.</p>
+        <p>See installed prices for each tier, from budget 3-tab to our standard CertainTeed Landmark architectural shingle to Class 4 impact-resistant.</p>
       </div>
       <div class="how-card">
         <div class="n">03</div>
         <svg viewBox="0 0 54 54" fill="none" aria-hidden="true"><path d="M8 44V22M20 44V12M32 44V28M44 44V18" stroke="currentColor" stroke-width="5" stroke-linecap="round"/><path d="M4 48h46" stroke="#C41E3A" stroke-width="2"/></svg>
         <h3>You compare</h3>
-        <p>Add your other quote and see the price gap, your potential savings, and which items it may be leaving out. Then decide, with or without us.</p>
+        <p>See Titan's range next to your other quote and typical Houston pricing, your potential savings, and what each quote includes. Then decide, with or without us.</p>
       </div>
     </div>
   </div>
@@ -896,8 +1000,9 @@
       <div class="promise">
         <h3>Our promise about this estimate</h3>
         <ul>
-          <li><span><b>No bait pricing.</b> The range is built from Titan's own installed prices, not a teaser rate.</span></li>
-          <li><span><b>No contact details required</b> to see your number or your comparison.</span></li>
+          <li><span><b>Price first.</b> No contact details required to see your number or your comparison.</span></li>
+          <li><span><b>Fair for Titan, fair for you.</b> Long-tenured crews and 25-year supplier relationships keep our costs down, so our prices sit modestly below typical Houston pricing.</span></li>
+          <li><span><b>Your competitor's estimate stays private.</b> It's read in your browser and never stored.</span></li>
           <li><span><b>Full tear-off included</b> on every reroof. We never lay new shingles over old.</span></li>
           <li><span><b>Straight answers.</b> If your other quote is a better deal for the same roof, we'll tell you.</span></li>
         </ul>
@@ -916,7 +1021,7 @@
     <div class="faq-list">
       <details>
         <summary>How accurate is the online estimate?</summary>
-        <p>When we can measure your roof from satellite imagery, the range is usually close to the final bid. If you enter your home size instead, the range is wider. The final price is set after a free inspection, which checks decking condition, the number of existing layers and ventilation.</p>
+        <p>It's a pre-inspection range based on your roof's size, stories, shape, pitch and shingle choice. Satellite measurement or a size from another roofer's estimate is more precise than home square footage. Your fixed price is set after a free inspection, which checks decking condition, the number of existing layers and ventilation. If anything changes, we tell you before work starts.</p>
       </details>
       <details>
         <summary>Do I have to give my phone number to see a price?</summary>
@@ -924,11 +1029,15 @@
       </details>
       <details>
         <summary>Why can Titan sometimes beat another roofer's quote?</summary>
-        <p>We've installed more than 30,000 roofs since 2002 with our own crews, not subcontractors, and most homes are finished in a single day. That volume and efficiency can let us price a better roofing system for the same money or less.</p>
+        <p>Our crews have been with us for years, our supplier relationships go back 25 years, and our overhead is established, so our costs are lower. We've installed more than 30,000 roofs since 2002 and most homes are finished in a single day. That lets us price modestly below typical Houston pricing without cutting corners.</p>
       </details>
       <details>
         <summary>What if my other quote is lower than Titan's estimate?</summary>
         <p>Then compare what's included. Lower quotes often skip a full tear-off, synthetic underlayment, valley protection or new pipe boots. The estimator shows what those items would add so you can compare like for like. Want a second opinion? Download <a href="/7-questions-to-ask-your-roofer.pdf">7 Questions to Ask Before You Sign</a>.</p>
+      </details>
+      <details>
+        <summary>What happens to the estimate I upload?</summary>
+        <p>Nothing leaves your device. The file is read in your browser to pull out the roof size, total and shingle type, and it isn't stored. Only the numbers are sent to us, and only if you ask for an inspection.</p>
       </details>
       <details>
         <summary>Does insurance change what I pay?</summary>
