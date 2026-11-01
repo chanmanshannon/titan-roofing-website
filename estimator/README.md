@@ -10,7 +10,9 @@ Satellite measuring: `netlify/functions/roof-measure.mjs`.
    multipliers come from the Titan Instant Estimate prototype (Chandler's "fair for Titan"
    positioning). Check them against Titan's real completed-job cost per square, and confirm
    whether the per-square price applies to measured roof area or to ordered squares
-   including waste. Then set `pricesConfirmed: true`. Until then every result shows a
+   including waste (Chandler checking). If it's ordered squares, add a waste factor
+   (about 1.10–1.15) to satellite and home-size measurements; uploaded estimates
+   already include waste. Then set `pricesConfirmed: true`. Until then every result shows a
    "Draft pricing" banner and leads are tagged DRAFT. Also confirm: decking (5 sheets
    included, $85/sheet after), second layer (+$32/SQ), very-steep pitch multiplier (1.25,
    extrapolated), and the workmanship warranty wording.
@@ -27,9 +29,10 @@ Satellite measuring: `netlify/functions/roof-measure.mjs`.
      in the Google Maps Platform pricing page.
 3. **Send a test lead** from the live site and confirm it lands in
    info@titanroofingtx.com (sent via FormSubmit, same as the contact forms).
-4. Have Titan sign off on the page copy, especially "Our promise about this estimate".
-5. **Phone number**: the tool uses Colin (936) 827-1550 (`contact` in pricing-config.js and
-   the page's top bar / CTA). The prototype handoff said (936) 827-9644; pick one.
+4. Have Titan sign off on the page copy. (Chandler approved the "we'll tell you if your
+   other quote is a better deal" promise on 2026-11-01.)
+5. ~~Phone number~~ Decided 2026-11-01: Colin (936) 827-1550 on the estimator, same as the
+   rest of the site. Set in `contact` in pricing-config.js and the page's top bar / CTA.
 6. **Quick legal look** at the competitor-upload feature (estimates are read in the
    browser and not stored; competitor figures are shown as user-provided).
 7. **FormSubmit activation**: the first submission from a new form triggers an
